@@ -64,18 +64,11 @@ body {
     padding-right: 20px !important;
 }
 
-#menu {
-    /* justify-items: center; */
-}
 
 .course {
     font-weight: bold;
     margin-top: 20px !important;
     margin-bottom: 5px !important;
-}
-
-.dish-name {
-    /* font-weight: bold; */
 }
 
 .dish-description {
