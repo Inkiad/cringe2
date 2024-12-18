@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--go away jo-->
+<!-- 
+  \    /\
+   )  ( ')
+  (  /  )
+   \(__)|
+ -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,16 +22,29 @@
     gtag('config', 'G-VJX83TXMC3');
 </script>
 <script>
+    setInterval(moveCat, 35)
+    let catPosition = -100
+    function moveCat() {
+        var cat = document.getElementById('cat');
+        var width = window.innerWidth;
+        cat.style.marginLeft = catPosition + 5 + 'px';
+        catPosition += 5;
+        if (catPosition > width ) {
+            cat.style.marginLeft = '-100px';
+            catPosition = -100;
+        }
+    }
+
     function setmain(page){
-        var children = document.querySelector(".content").children
+        var children = document.getElementsByClassName('tab-content')
         var foundmatch = false;
         for (var i = 0; i < children.length; i++) {
             if (children[i].id == page){
-                children[i].className = ""
+                children[i].classList.remove('hideme')
                 foundmatch = true;
             }
             else{
-                children[i].className = "hideme"
+                children[i].classList.add("hideme")
             }
         }
         if (!foundmatch) {
@@ -35,32 +54,64 @@
 </script>
 <body>
     <div class="sidebar">
-        <a href="#" onclick="setmain('welcome')">hi</a>
-        <a href="#menu" onclick="setmain('menu')">menu</a>
-        <a href="#general-info" onclick="setmain('general')">general information</a>
+        <a href="#" class='tab-title' onclick="setmain('welcome')">hi</a>
+        <a href="#menu" class='tab-title' onclick="setmain('menu')">menu</a>
+        <a href="#general-info" class='tab-title' onclick="setmain('general')">general information</a>
     </div>
     <img class="background" src="cat4.png" alt="Background">
     <div class="content">
-        <div id="welcome" class="">
+        <div id="welcome" class="tab-content">
             <h1>welcome</br>to inkys party</h1>
         </div>
 
 
-        <div id="menu" class="hideme">
-            <h1>
-                we'll have food. </br>
-                more details later.
-            </h1>
+        <div id="menu" class="tab-content hideme">
+            <h4 class="course">the bar</h4>
+            <span class="dish-name">lebronessy |</span> <span class="dish-description">goat juice</span><br>
+            <span class="dish-name">juicebox |</span> <span class="dish-description">tequila infused fruit cocktail</span><br>
+            <span class="dish-name">g&t |</span> <span class="dish-description">gin and tonic</span><br>
+            <span class="dish-name">french 75 |</span> <span class="dish-description">gin, champagne, lemon</span><br>
+            <span class="dish-name">beer |</span> <span class="dish-description">ultra, sapporo, taiwanese lychee</span><br>
+            <span class="dish-name">wine |</span> <span class="dish-description">jo's premium selection</span><br>
+
+            <h4 class="course">amuse-bouche</h4>
+            <span class="dish-name">charcuterie |</span> <span class="dish-description">cheese and crackers</span><br>
+            <span class="dish-name">serrano ham |</span> <span class="dish-description">eighteen month dry-aged</span><br>
+            <span class="dish-name">stuffed mikeys |</span> <span class="dish-description">stuffed mushrooms</span><br>
+            <span class="dish-name">artichoke dip |</span> <span class="dish-description">spinach and artichoke</span>
+            
+            <h4 class="course">mains</h4>
+            <span class="dish-name">inkyacos |</span> <span class="dish-description">chicken tinga and braised beef</span><br>
+            <span class="dish-name">pizza |</span> <span class="dish-description">kirkland's finest</span><br>
+            
+            <h4 class="course">sweet treat</h4>
+            <span class="dish-name">lizookie |</span> <span class="dish-description">chocolate chip and snickerdoodle</span><br>
+
+            <h4 class="course">refreshments</h4>
+            <span class="dish-name">water |</span> <span class="dish-description">los angeles tap</span><br>
+            <span class="dish-name">coke zero |</span> <span class="dish-description">caramel and aspartame</span><br>
+
         </div>
 
 
-        <div id="general" class="hideme">
+        <div id="general" class="tab-content hideme">
             <h1>
                 location: my house</br>
                 time: 6pm
             </h1>
+            <h4>any drinks will be appreciated</h4>
+            <h4>pls hide any alc entering the home in a bag<br>
+                my mommy will see (on camera)
+            </h4>
+            <h4>beware: the cat is always looking to escape</h4>
         </div>
 
+    </div>
+    <div id="cat">
+        <span>    \&nbsp;&nbsp;&nbsp;&nbsp;/\ </span><br>
+        <span>    &nbsp;)&nbsp;&nbsp;(&nbsp;')</span><br>
+        <span>   (&nbsp;&nbsp;/&nbsp;&nbsp;)</span><br>
+        <span>   &nbsp;\(__)|</span> <br>
     </div>
 
 </body>

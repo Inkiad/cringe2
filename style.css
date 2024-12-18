@@ -59,3 +59,37 @@ body {
     object-fit: cover;
     opacity: 0.05;
 }
+
+.tab-title {
+    padding-right: 20px !important;
+}
+
+#menu {
+    /* justify-items: center; */
+}
+
+.course {
+    font-weight: bold;
+    margin-top: 20px !important;
+    margin-bottom: 5px !important;
+}
+
+.dish-name {
+    /* font-weight: bold; */
+}
+
+.dish-description {
+    font-style: italic;
+}
+
+#cat {
+    position: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    /* right: 0; */
+    margin-left: -100px;
+    bottom: 0;
+}
+
+#cat span {
+    line-height: 0 !important;
+}
