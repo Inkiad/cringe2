@@ -75,6 +75,10 @@ body {
     font-style: italic;
 }
 
+.dish-failed {
+    text-decoration: line-through;
+}
+
 #cat {
     position: fixed;
     font-family: 'Courier New', Courier, monospace;
