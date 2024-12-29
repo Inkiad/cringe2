@@ -24,15 +24,15 @@
 </script>
 <script>
     setInterval(moveCat, 35)
-    let catPosition = -100
+    let catPosition = window.innerWidth
     function moveCat() {
         var cat = document.getElementById('cat');
         var width = window.innerWidth;
         cat.style.marginLeft = catPosition + 5 + 'px';
-        catPosition += 5;
-        if (catPosition > width ) {
-            cat.style.marginLeft = '-100px';
-            catPosition = -100;
+        catPosition -= 5;
+        if (catPosition < -100) {
+            cat.style.marginLeft = window.innerWidth + 'px';
+            catPosition = window.innerWidth;
         }
     }
 
@@ -61,9 +61,10 @@
 </script>
 <body>
     <div class="sidebar">
-        <a href="#" class='tab-title' onclick="setmain('welcome')">hi</a>
-        <a href="#menu" class='tab-title' onclick="setmain('menu')">menu</a>
-        <a href="#general" class='tab-title' onclick="setmain('general')">general information</a>
+<!--        <a href="#" class='tab-title' onclick="setmain('welcome')">hi</a>-->
+<!--        <a href="#menu" class='tab-title' onclick="setmain('menu')">menu</a>-->
+<!--        <a href="#general" class='tab-title' onclick="setmain('general')">general information</a>-->
+        <a href="#thanks" class='tab-title' onclick="setmain('thanks')">thanks</a>
     </div>
     <img class="background" src="cat4.png" alt="Background">
     <div class="content">
@@ -83,7 +84,8 @@
 
             <h4 class="course">amuse-bouche</h4>
             <span class="dish-name">charcuterie |</span> <span class="dish-description">cheese and crackers</span><br>
-            <span class="dish-failed"><span class="dish-name">serrano ham |</span> <span class="dish-description">eighteen month dry-aged</span></span><br>
+            <span class="dish-failed" title="inky fumbled"><span class="dish-name">serrano ham |</span> <span class="dish-description">eighteen month dry-aged</span></span><br>
+            <span class="dish-name">cured meats |</span> <span class="dish-description"></span><br>
             <span class="dish-name">stuffed mikeys |</span> <span class="dish-description">stuffed mushrooms</span><br>
             <span class="dish-name">artichoke dip |</span> <span class="dish-description">spinach and artichoke</span>
             
@@ -112,6 +114,9 @@
                 my mommy will see (on camera)
             </h4>
             <h4>beware: the cat is always looking to escape</h4>
+        </div>
+        <div id="thanks" class="tab-content hideme">
+            <h1>thanks for coming</br>to inkys party</h1>
         </div>
 
     </div>
