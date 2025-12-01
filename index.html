@@ -28,14 +28,13 @@
     function moveCat() {
         var cat = document.getElementById('cat');
         var width = window.innerWidth;
-        cat.style.marginLeft = catPosition + 5 + 'px';
-        catPosition -= 5;
-        if (catPosition < -100) {
-            cat.style.marginLeft = window.innerWidth + 'px';
-            catPosition = window.innerWidth;
-        }
+        cat.style.marginLeft = catPosition + 'px';
+        catPosition += 5;  // Changed from -= to +=
+        if (catPosition > width + 100) {  // Changed from < -100 to > width + 100
+          cat.style.marginLeft = '-100px';  // Changed starting position
+          catPosition = -100;  // Changed starting position
     }
-
+}
     function setmain(page){
         var children = document.getElementsByClassName('tab-content')
         var foundmatch = false;
