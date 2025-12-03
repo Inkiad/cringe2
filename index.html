@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--go away jo-->
-<!-- 
-  \    /\
-   )  ( ')
-  (  /  )
-   \(__)|
- -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,17 +17,18 @@
 </script>
 <script>
     setInterval(moveCat, 35)
-    let catPosition = window.innerWidth
+    let catPosition = -100
     function moveCat() {
         var cat = document.getElementById('cat');
         var width = window.innerWidth;
         cat.style.marginLeft = catPosition + 'px';
-        catPosition += 5;  // Changed from -= to +=
-        if (catPosition > width + 100) {  // Changed from < -100 to > width + 100
-          cat.style.marginLeft = '-100px';  // Changed starting position
-          catPosition = -100;  // Changed starting position
+        catPosition += 5;
+        if (catPosition > width + 100) {
+            cat.style.marginLeft = '-100px';
+            catPosition = -100;
+        }
     }
-}
+
     function setmain(page){
         var children = document.getElementsByClassName('tab-content')
         var foundmatch = false;
@@ -48,29 +42,27 @@
             }
         }
         if (!foundmatch) {
-            document.getElementById("thanks").classList.remove("hideme");
+            document.getElementById("welcome").classList.remove("hideme");
         }
     }
 
     addEventListener('load', function(){
-        console.log(window.location.hash.replace('#',''));
-
         setmain(window.location.hash.replace('#',''));
     })
 </script>
 <body>
     <div class="sidebar">
-        <a href="#" class='tab-title' onclick="setmain('welcome')">hi</a>
+        <a href="#welcome" class='tab-title' onclick="setmain('welcome')">hi</a>
         <a href="#menu" class='tab-title' onclick="setmain('menu')">menu</a>
         <a href="#general" class='tab-title' onclick="setmain('general')">general information</a>
-<!-- a href="#thanks" class='tab-title' onclick="setmain('thanks')">thanks</a>-->
+        <a href="rsvp.html" class='tab-title'>rsvp</a>
+        <a href="#thanks" class='tab-title' onclick="setmain('thanks')">thanks</a>
     </div>
     <img class="background" src="cat4.png" alt="Background">
     <div class="content">
         <div id="welcome" class="tab-content">
             <h1>welcome</br>to inkys party</h1>
         </div>
-
 
         <div id="menu" class="tab-content hideme">
             <h4 class="course">the bar</h4>
@@ -98,14 +90,12 @@
             <h4 class="course">refreshments</h4>
             <span class="dish-name">water |</span> <span class="dish-description">los angeles tap</span><br>
             <span class="dish-name">coke zero |</span> <span class="dish-description">caramel and aspartame</span><br>
-
         </div>
-
 
         <div id="general" class="tab-content hideme">
             <h1>
                 location: my house</br>
-                date: 12/28<br>
+                date: TBD<br>
                 time: 6pm
             </h1>
             <h4>any drinks will be appreciated</h4>
@@ -114,17 +104,17 @@
             </h4>
             <h4>beware: the cat is always looking to escape</h4>
         </div>
+
         <div id="thanks" class="tab-content hideme">
             <h1>thanks for coming</br>to inkys party</h1>
         </div>
-
     </div>
+    
     <div id="cat">
         <span>    \&nbsp;&nbsp;&nbsp;&nbsp;/\ </span><br>
         <span>    &nbsp;)&nbsp;&nbsp;(&nbsp;')</span><br>
         <span>   (&nbsp;&nbsp;/&nbsp;&nbsp;)</span><br>
         <span>   &nbsp;\(__)|</span> <br>
     </div>
-
 </body>
 </html>
