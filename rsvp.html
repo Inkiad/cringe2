@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rsvp - inkys party</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/x-icon" href="cat4.png">
+</head>
+<script>
+    setInterval(moveCat, 35)
+    let catPosition = -100
+    function moveCat() {
+        var cat = document.getElementById('cat');
+        var width = window.innerWidth;
+        cat.style.marginLeft = catPosition + 'px';
+        catPosition += 5;
+        if (catPosition > width + 100) {
+            cat.style.marginLeft = '-100px';
+            catPosition = -100;
+        }
+    }
+    
+    addEventListener('load', function(){
+        moveCat();
+    })
+
+    async function submitRSVP(event) {
+        event.preventDefault();
+        
+        const form = event.target;
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const statusDiv = document.getElementById('status');
+        
+        // Get form data
+        const formData = {
+            name: form.name.value,
+            date: form.date.value,
+            format: form.format.value,
+            dietary: form.dietary.value,
+            comments: form.comments.value,
+            timestamp: new Date().toISOString()
+        };
+        
+        // Disable submit button
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'submitting...';
+        statusDiv.textContent = '';
+        
+        try {
+            // Store the RSVP using Cloudflare Pages storage
+            const storageKey = `rsvp:${Date.now()}:${formData.name.replace(/\s/g, '_')}`;
+            const result = await window.storage.set(storageKey, JSON.stringify(formData), false);
+            
+            if (result) {
+                statusDiv.className = 'status success';
+                statusDiv.textContent = '✓ your rsvp has been submitted! thank you~';
+                form.reset();
+                
+                // Show success message for a bit
+                setTimeout(() => {
+                    statusDiv.textContent = '';
+                }, 5000);
+            } else {
+                throw new Error('Storage failed');
+            }
+        } catch (error) {
+            console.error('RSVP submission error:', error);
+            statusDiv.className = 'status error';
+            statusDiv.textContent = '✗ oops! something went wrong. please try again or text inky directly.';
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'submit rsvp';
+        }
+    }
+</script>
+<body>
+    <div class="sidebar">
+        <a href="index.html#welcome" class='tab-title'>hi</a>
+        <a href="index.html#menu" class='tab-title'>menu</a>
+        <a href="index.html#general" class='tab-title'>general information</a>
+        <a href="rsvp.html" class='tab-title'>rsvp</a>
+        <a href="index.html#thanks" class='tab-title'>thanks</a>
+    </div>
+    <img class="background" src="cat4.png" alt="Background">
+    
+    <div class="content">
+        <div class="rsvp-container">
+            <h1>rsvp for inkys party</h1>
+            
+            <div class="cat-separator">
+                <span>🐱 ~ ~ ~ 🐱</span>
+            </div>
+            
+            <p class="intro-text">
+                help inky plan the purrfect party! let us know your preferences below~
+            </p>
+            
+            <form onsubmit="submitRSVP(event)" class="rsvp-form">
+                <div class="form-group">
+                    <label for="name">your name *</label>
+                    <input type="text" id="name" name="name" required placeholder="ex: whiskers">
+                </div>
+                
+                <div class="form-group">
+                    <label>which date works best for you? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="date" value="dec31" required>
+                            <span>december 31 (new year's eve)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="date" value="jan2" required>
+                            <span>january 2</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="date" value="jan3" required>
+                            <span>january 3</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>what type of party sounds better? *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="format" value="dinner" required>
+                            <span>intimate dinner party (inky cooks a set menu)</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="format" value="house" required>
+                            <span>larger house party (more people, casual vibes)</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dietary">dietary restrictions / allergies</label>
+                    <input type="text" id="dietary" name="dietary" placeholder="ex: vegetarian, allergic to fish">
+                    <small>only needed if we do a dinner party!</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="comments">any other thoughts?</label>
+                    <textarea id="comments" name="comments" rows="3" placeholder="suggestions, song requests, anything~"></textarea>
+                </div>
+                
+                <div id="status" class="status"></div>
+                
+                <button type="submit" class="submit-btn">submit rsvp</button>
+            </form>
+            
+            <div class="cat-separator">
+                <span>🐱 ~ ~ ~ 🐱</span>
+            </div>
+            
+            <p class="footer-note">
+                * responses are private and only visible to inky<br>
+                beware: the cat may try to escape while you're here
+            </p>
+        </div>
+    </div>
+    
+    <div id="cat">
+        <span>    \&nbsp;&nbsp;&nbsp;&nbsp;/\ </span><br>
+        <span>    &nbsp;)&nbsp;&nbsp;(&nbsp;')</span><br>
+        <span>   (&nbsp;&nbsp;/&nbsp;&nbsp;)</span><br>
+        <span>   &nbsp;\(__)|</span> <br>
+    </div>
+</body>
+</html>
