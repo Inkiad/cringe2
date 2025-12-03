@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin - rsvp responses</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/x-icon" href="cat4.png">
+    <style>
+        .admin-container {
+            max-width: 1000px;
+            width: 100%;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .admin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .response-card {
+            background: #fafafa;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+
+        .response-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ddd;
+        }
+
+        .response-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .response-time {
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .response-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .detail-item {
+            margin: 5px 0;
+        }
+
+        .detail-label {
+            font-weight: 600;
+            color: #555;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .detail-value {
+            color: #333;
+        }
+
+        .choice-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .badge-dec31 { background: #fff3cd; color: #856404; }
+        .badge-jan2 { background: #d1ecf1; color: #0c5460; }
+        .badge-jan3 { background: #d4edda; color: #155724; }
+        .badge-dinner { background: #f8d7da; color: #721c24; }
+        .badge-house { background: #d1ecf1; color: #0c5460; }
+
+        .no-responses {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .refresh-btn {
+            padding: 10px 20px;
+            background: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.95em;
+        }
+
+        .refresh-btn:hover {
+            background: #555;
+        }
+
+        .export-btn {
+            padding: 10px 20px;
+            background: #666;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.95em;
+            margin-left: 10px;
+        }
+
+        .export-btn:hover {
+            background: #888;
+        }
+
+        @media (max-width: 768px) {
+            .admin-container {
+                padding: 20px;
+            }
+            
+            .response-header {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html#welcome" class='tab-title'>hi</a>
+        <a href="index.html#menu" class='tab-title'>menu</a>
+        <a href="index.html#general" class='tab-title'>general information</a>
+        <a href="rsvp.html" class='tab-title'>rsvp</a>
+        <a href="admin.html" class='tab-title'>admin</a>
+    </div>
+    <img class="background" src="cat4.png" alt="Background">
+    
+    <div class="content">
+        <div class="admin-container">
+            <div class="admin-header">
+                <h1>rsvp responses</h1>
+                <div>
+                    <button onclick="loadResponses()" class="refresh-btn">🔄 refresh</button>
+                    <button onclick="exportCSV()" class="export-btn">📥 export csv</button>
+                </div>
+            </div>
+
+            <div class="stats" id="stats">
+                <div class="stat-card">
+                    <div class="stat-label">total responses</div>
+                    <div class="stat-value" id="total-count">-</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">prefer dinner party</div>
+                    <div class="stat-value" id="dinner-count">-</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">prefer house party</div>
+                    <div class="stat-value" id="house-count">-</div>
+                </div>
+            </div>
+
+            <div id="responses-container">
+                <div class="loading">loading responses...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let allResponses = [];
+
+        async function loadResponses() {
+            const container = document.getElementById('responses-container');
+            container.innerHTML = '<div class="loading">loading responses...</div>';
+
+            try {
+                // Get all keys that start with "rsvp:"
+                const result = await window.storage.list('rsvp:', false);
+                
+                if (!result || !result.keys || result.keys.length === 0) {
+                    container.innerHTML = '<div class="no-responses">no responses yet! share the rsvp link with your friends 🐱</div>';
+                    updateStats([]);
+                    return;
+                }
+
+                // Fetch each response
+                const responses = [];
+                for (const key of result.keys) {
+                    try {
+                        const data = await window.storage.get(key, false);
+                        if (data && data.value) {
+                            const parsed = JSON.parse(data.value);
+                            responses.push(parsed);
+                        }
+                    } catch (err) {
+                        console.error(`Error loading ${key}:`, err);
+                    }
+                }
+
+                // Sort by timestamp (newest first)
+                responses.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+                
+                allResponses = responses;
+                displayResponses(responses);
+                updateStats(responses);
+
+            } catch (error) {
+                console.error('Error loading responses:', error);
+                container.innerHTML = '<div class="no-responses">error loading responses. please refresh the page.</div>';
+            }
+        }
+
+        function displayResponses(responses) {
+            const container = document.getElementById('responses-container');
+            
+            if (responses.length === 0) {
+                container.innerHTML = '<div class="no-responses">no responses yet! share the rsvp link with your friends 🐱</div>';
+                return;
+            }
+
+            container.innerHTML = responses.map(r => {
+                const date = new Date(r.timestamp);
+                const dateStr = date.toLocaleString();
+                
+                const dateBadgeClass = `badge-${r.date}`;
+                const formatBadgeClass = `badge-${r.format}`;
+                
+                const dateLabels = {
+                    'dec31': 'December 31',
+                    'jan2': 'January 2',
+                    'jan3': 'January 3'
+                };
+                
+                const formatLabels = {
+                    'dinner': 'Intimate Dinner Party',
+                    'house': 'Larger House Party'
+                };
+
+                return `
+                    <div class="response-card">
+                        <div class="response-header">
+                            <div class="response-name">${escapeHtml(r.name)}</div>
+                            <div class="response-time">${dateStr}</div>
+                        </div>
+                        <div class="response-details">
+                            <div>
+                                <div class="detail-item">
+                                    <span class="detail-label">preferred date:</span>
+                                    <span class="choice-badge ${dateBadgeClass}">${dateLabels[r.date]}</span>
+                                </div>
+                                <div class="detail-item">
+                                    <span class="detail-label">party format:</span>
+                                    <span class="choice-badge ${formatBadgeClass}">${formatLabels[r.format]}</span>
+                                </div>
+                            </div>
+                            ${r.dietary ? `
+                            <div class="detail-item">
+                                <span class="detail-label">dietary restrictions:</span>
+                                <span class="detail-value">${escapeHtml(r.dietary)}</span>
+                            </div>
+                            ` : ''}
+                            ${r.comments ? `
+                            <div class="detail-item">
+                                <span class="detail-label">comments:</span>
+                                <span class="detail-value">${escapeHtml(r.comments)}</span>
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateStats(responses) {
+            document.getElementById('total-count').textContent = responses.length;
+            
+            const dinnerCount = responses.filter(r => r.format === 'dinner').length;
+            const houseCount = responses.filter(r => r.format === 'house').length;
+            
+            document.getElementById('dinner-count').textContent = dinnerCount;
+            document.getElementById('house-count').textContent = houseCount;
+        }
+
+        function exportCSV() {
+            if (allResponses.length === 0) {
+                alert('No responses to export yet!');
+                return;
+            }
+
+            const headers = ['Name', 'Date Preference', 'Party Format', 'Dietary Restrictions', 'Comments', 'Timestamp'];
+            const rows = allResponses.map(r => [
+                r.name,
+                r.date,
+                r.format,
+                r.dietary || '',
+                r.comments || '',
+                r.timestamp
+            ]);
+
+            const csv = [
+                headers.join(','),
+                ...rows.map(row => row.map(cell => `"${cell}"`).join(','))
+            ].join('\n');
+
+            const blob = new Blob([csv], { type: 'text/csv' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `rsvp-responses-${new Date().toISOString().split('T')[0]}.csv`;
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Load responses on page load
+        window.addEventListener('load', loadResponses);
+    </script>
+</body>
+</html>
