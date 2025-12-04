@@ -8,22 +8,35 @@
     <link rel="icon" type="image/x-icon" href="cat4.png">
 </head>
 <script>
-    setInterval(moveCat, 35)
-    let catPosition = -100
+    let catPosition = -100;
+    let catSpeed = 5;
+    let catInterval;
+    
     function moveCat() {
         var cat = document.getElementById('cat');
         var width = window.innerWidth;
         cat.style.marginLeft = catPosition + 'px';
-        catPosition += 5;
+        catPosition += catSpeed;
+        
+        // Speed up much faster over time
+        catSpeed += 0.15;
+        
         if (catPosition > width + 100) {
             cat.style.marginLeft = '-100px';
             catPosition = -100;
+            // Reset speed but keep it much faster than before
+            catSpeed = Math.min(catSpeed * 0.9, 100); // Cap at 100 for max chaos
         }
     }
     
     addEventListener('load', function(){
-        moveCat();
-    })
+        catInterval = setInterval(moveCat, 35);
+        
+        // Make cat clickable
+        document.getElementById('cat').addEventListener('click', function() {
+            window.open('https://www.youtube.com/watch?v=hp_4Ex4mVWE', '_blank');
+        });
+    });
 
     async function submitRSVP(event) {
         event.preventDefault();
@@ -125,6 +138,10 @@
                             <input type="radio" name="date" value="jan3" required>
                             <span>january 3</span>
                         </label>
+                        <label class="radio-label">
+                            <input type="radio" name="date" value="none" required>
+                            <span>i can't make any of these dates 😿</span>
+                        </label>
                     </div>
                 </div>
                 
@@ -168,7 +185,7 @@
         </div>
     </div>
     
-    <div id="cat">
+    <div id="cat" style="cursor: pointer;">
         <span>    \&nbsp;&nbsp;&nbsp;&nbsp;/\ </span><br>
         <span>    &nbsp;)&nbsp;&nbsp;(&nbsp;')</span><br>
         <span>   (&nbsp;&nbsp;/&nbsp;&nbsp;)</span><br>
