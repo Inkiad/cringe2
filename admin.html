@@ -110,6 +110,7 @@
         .badge-dec31 { background: #fff3cd; color: #856404; }
         .badge-jan2 { background: #d1ecf1; color: #0c5460; }
         .badge-jan3 { background: #d4edda; color: #155724; }
+        .badge-none { background: #f8d7da; color: #721c24; }
         .badge-dinner { background: #f8d7da; color: #721c24; }
         .badge-house { background: #d1ecf1; color: #0c5460; }
 
@@ -276,19 +277,33 @@
                 const date = new Date(r.timestamp);
                 const dateStr = date.toLocaleString();
                 
-                const dateBadgeClass = `badge-${r.date}`;
                 const formatBadgeClass = `badge-${r.format}`;
                 
                 const dateLabels = {
                     'dec31': 'December 31',
                     'jan2': 'January 2',
-                    'jan3': 'January 3'
+                    'jan3': 'January 3',
+                    'none': 'Cannot attend'
                 };
                 
                 const formatLabels = {
                     'dinner': 'Intimate Dinner Party',
                     'house': 'Larger House Party'
                 };
+
+                // Handle both old single date format and new multiple dates format
+                let datesDisplay = '';
+                if (Array.isArray(r.dates)) {
+                    // New format: array of dates
+                    datesDisplay = r.dates.map(d => {
+                        const badgeClass = `badge-${d}`;
+                        return `<span class="choice-badge ${badgeClass}">${dateLabels[d]}</span>`;
+                    }).join(' ');
+                } else if (r.date) {
+                    // Old format: single date (for backwards compatibility)
+                    const badgeClass = `badge-${r.date}`;
+                    datesDisplay = `<span class="choice-badge ${badgeClass}">${dateLabels[r.date]}</span>`;
+                }
 
                 return `
                     <div class="response-card">
@@ -299,8 +314,10 @@
                         <div class="response-details">
                             <div>
                                 <div class="detail-item">
-                                    <span class="detail-label">preferred date:</span>
-                                    <span class="choice-badge ${dateBadgeClass}">${dateLabels[r.date]}</span>
+                                    <span class="detail-label">preferred date${Array.isArray(r.dates) && r.dates.length > 1 ? 's' : ''}:</span>
+                                    <div style="display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px;">
+                                        ${datesDisplay}
+                                    </div>
                                 </div>
                                 <div class="detail-item">
                                     <span class="detail-label">party format:</span>
@@ -341,15 +358,25 @@
                 return;
             }
 
-            const headers = ['Name', 'Date Preference', 'Party Format', 'Dietary Restrictions', 'Comments', 'Timestamp'];
-            const rows = allResponses.map(r => [
-                r.name,
-                r.date,
-                r.format,
-                r.dietary || '',
-                r.comments || '',
-                r.timestamp
-            ]);
+            const headers = ['Name', 'Date Preferences', 'Party Format', 'Dietary Restrictions', 'Comments', 'Timestamp'];
+            const rows = allResponses.map(r => {
+                // Handle both array and single date formats
+                let dateValue = '';
+                if (Array.isArray(r.dates)) {
+                    dateValue = r.dates.join('; ');
+                } else if (r.date) {
+                    dateValue = r.date;
+                }
+                
+                return [
+                    r.name,
+                    dateValue,
+                    r.format,
+                    r.dietary || '',
+                    r.comments || '',
+                    r.timestamp
+                ];
+            });
 
             const csv = [
                 headers.join(','),
