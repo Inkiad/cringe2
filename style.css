@@ -256,11 +256,15 @@ textarea:focus {
 /* Responsive design */
 @media (max-width: 768px) {
     .content {
-        padding: 120px 15px 15px 15px; /* Increased from 60px to 120px */
+        padding: 80px 15px 15px 15px;
+        align-items: flex-start; /* Start at top instead of center */
+        padding-top: 80px;
+        min-height: 100vh;
     }
     
     .rsvp-container {
         padding: 25px;
+        margin-top: 0;
     }
     
     .rsvp-container h1 {
