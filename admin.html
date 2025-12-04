@@ -208,7 +208,28 @@
     </div>
 
     <script>
-        let allResponses = [];
+                // Add this at the very top of your script section
+        const ADMIN_PASSWORD = "lily"; // Change this!
+        
+        function checkAuth() {
+            const savedPassword = sessionStorage.getItem('adminAuth');
+            
+            if (savedPassword !== ADMIN_PASSWORD) {
+                const password = prompt('Enter admin password:');
+                if (password !== ADMIN_PASSWORD) {
+                    alert('Incorrect password!');
+                    window.location.href = '/';
+                    return false;
+                }
+                sessionStorage.setItem('adminAuth', password);
+            }
+            return true;
+        }
+        
+        // Call this before loading anything
+        if (!checkAuth()) {
+            document.body.innerHTML = '<div style="text-align:center;padding:50px;">Access Denied</div>';
+                let allResponses = [];
 
         async function loadResponses() {
             const container = document.getElementById('responses-container');
