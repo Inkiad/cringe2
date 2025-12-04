@@ -1,0 +1,43 @@
+# Cache control for all HTML pages - always fetch fresh
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# Root level HTML files
+/
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
+
+# CSS and JS files - short cache
+/*.css
+  Cache-Control: max-age=300, must-revalidate
+
+/*.js
+  Cache-Control: max-age=300, must-revalidate
+
+# Images - cache for longer (they rarely change)
+/*.png
+  Cache-Control: public, max-age=2592000
+
+/*.jpg
+  Cache-Control: public, max-age=2592000
+
+/*.jpeg
+  Cache-Control: public, max-age=2592000
+
+/*.gif
+  Cache-Control: public, max-age=2592000
+
+/*.svg
+  Cache-Control: public, max-age=2592000
+
+/*.ico
+  Cache-Control: public, max-age=2592000
+
+# API endpoints - never cache
+/api/*
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+  Expires: 0
