@@ -45,10 +45,21 @@
         const submitBtn = form.querySelector('button[type="submit"]');
         const statusDiv = document.getElementById('status');
         
+        // Get all checked dates
+        const checkedDates = Array.from(form.querySelectorAll('.date-checkbox:checked'))
+            .map(checkbox => checkbox.value);
+        
+        // Validate at least one date is selected
+        if (checkedDates.length === 0) {
+            statusDiv.className = 'status error';
+            statusDiv.textContent = '✗ please select at least one date option';
+            return;
+        }
+        
         // Get form data
         const formData = {
             name: form.name.value,
-            date: form.date.value,
+            dates: checkedDates, // Changed from 'date' to 'dates' array
             format: form.format.value,
             dietary: form.dietary.value,
             comments: form.comments.value,
@@ -124,22 +135,22 @@
                 </div>
                 
                 <div class="form-group">
-                    <label>which date works best for you? *</label>
+                    <label>which dates work for you? (select all that apply) *</label>
                     <div class="radio-group">
                         <label class="radio-label">
-                            <input type="radio" name="date" value="dec31" required>
+                            <input type="checkbox" name="date" value="dec31" class="date-checkbox">
                             <span>december 31 (new year's eve)</span>
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="date" value="jan2" required>
+                            <input type="checkbox" name="date" value="jan2" class="date-checkbox">
                             <span>january 2</span>
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="date" value="jan3" required>
+                            <input type="checkbox" name="date" value="jan3" class="date-checkbox">
                             <span>january 3</span>
                         </label>
                         <label class="radio-label">
-                            <input type="radio" name="date" value="none" required>
+                            <input type="checkbox" name="date" value="none" class="date-checkbox">
                             <span>i can't make any of these dates 😿</span>
                         </label>
                     </div>
