@@ -6,8 +6,8 @@ export async function onRequestPost(context) {
     // Get form data
     const formData = await request.json();
     
-    // Validate required fields
-    if (!formData.name || !formData.date || !formData.format) {
+    // Validate required fields - updated to accept 'dates' array
+    if (!formData.name || (!formData.dates && !formData.date) || !formData.format) {
       return new Response(JSON.stringify({ 
         success: false, 
         error: 'Missing required fields' 
