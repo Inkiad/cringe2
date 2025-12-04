@@ -49,11 +49,18 @@
         statusDiv.textContent = '';
         
         try {
-            // Store the RSVP using Cloudflare Pages storage
-            const storageKey = `rsvp:${Date.now()}:${formData.name.replace(/\s/g, '_')}`;
-            const result = await window.storage.set(storageKey, JSON.stringify(formData), false);
+            // Submit to Cloudflare Pages Function
+            const response = await fetch('/api/rsvp', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
             
-            if (result) {
+            const result = await response.json();
+            
+            if (result.success) {
                 statusDiv.className = 'status success';
                 statusDiv.textContent = '✓ your rsvp has been submitted! thank you~';
                 form.reset();
@@ -63,7 +70,7 @@
                     statusDiv.textContent = '';
                 }, 5000);
             } else {
-                throw new Error('Storage failed');
+                throw new Error(result.error || 'Submission failed');
             }
         } catch (error) {
             console.error('RSVP submission error:', error);
