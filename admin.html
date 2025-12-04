@@ -215,31 +215,21 @@
             container.innerHTML = '<div class="loading">loading responses...</div>';
 
             try {
-                // Get all keys that start with "rsvp:"
-                const result = await window.storage.list('rsvp:', false);
+                // Fetch from Cloudflare Pages Function
+                const response = await fetch('/api/get-rsvps');
+                const result = await response.json();
                 
-                if (!result || !result.keys || result.keys.length === 0) {
+                if (!result.success) {
+                    throw new Error(result.error || 'Failed to load');
+                }
+                
+                const responses = result.rsvps || [];
+
+                if (responses.length === 0) {
                     container.innerHTML = '<div class="no-responses">no responses yet! share the rsvp link with your friends 🐱</div>';
                     updateStats([]);
                     return;
                 }
-
-                // Fetch each response
-                const responses = [];
-                for (const key of result.keys) {
-                    try {
-                        const data = await window.storage.get(key, false);
-                        if (data && data.value) {
-                            const parsed = JSON.parse(data.value);
-                            responses.push(parsed);
-                        }
-                    } catch (err) {
-                        console.error(`Error loading ${key}:`, err);
-                    }
-                }
-
-                // Sort by timestamp (newest first)
-                responses.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
                 
                 allResponses = responses;
                 displayResponses(responses);
