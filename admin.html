@@ -208,7 +208,7 @@
     </div>
 
     <script>
-                // Add this at the very top of your script section
+        // Add this at the very top of your script section
         const ADMIN_PASSWORD = "lily"; // Change this!
         
         function checkAuth() {
@@ -229,7 +229,9 @@
         // Call this before loading anything
         if (!checkAuth()) {
             document.body.innerHTML = '<div style="text-align:center;padding:50px;">Access Denied</div>';
-                let allResponses = [];
+        }
+
+        let allResponses = [];
 
         async function loadResponses() {
             const container = document.getElementById('responses-container');
