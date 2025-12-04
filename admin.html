@@ -216,7 +216,7 @@
 
             try {
                 // Fetch from Cloudflare Pages Function
-                const response = await fetch('/api/get-rsvps');
+                const response = await fetch('/api/get-rsvp');
                 const result = await response.json();
                 
                 if (!result.success) {
