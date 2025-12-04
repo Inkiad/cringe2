@@ -30,6 +30,7 @@ body {
     color: white;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     position: fixed;
     top: 0;
     width: 100%;
@@ -255,7 +256,7 @@ textarea:focus {
 /* Responsive design */
 @media (max-width: 768px) {
     .content {
-        padding: 60px 15px 15px 15px;
+        padding: 120px 15px 15px 15px; /* Increased from 60px to 120px */
     }
     
     .rsvp-container {
@@ -264,5 +265,14 @@ textarea:focus {
     
     .rsvp-container h1 {
         font-size: 1.6rem;
+    }
+    
+    .sidebar {
+        padding: 8px;
+    }
+    
+    .sidebar a {
+        font-size: 0.9rem;
+        margin: 5px 0;
     }
 }
