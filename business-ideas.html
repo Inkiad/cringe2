@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>business ideas - inky's shame</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/x-icon" href="cat4.png">
+    <style>
+        .business-container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .business-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .idea-card {
+            background: #fafafa;
+            border: 2px solid #ddd;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .idea-card:hover {
+            border-color: #999;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .idea-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .idea-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .idea-badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .idea-description {
+            color: #555;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .idea-link {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            margin-top: 10px;
+        }
+
+        .idea-link:hover {
+            background: #555;
+            transform: scale(1.05);
+        }
+
+        .shame-meter {
+            background: #f9f9f9;
+            border: 2px dashed #ddd;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .shame-meter h3 {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .shame-count {
+            font-size: 3em;
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        .footer-note {
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 40px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .business-container {
+                padding: 25px;
+            }
+            
+            .idea-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="index.html#welcome" class='tab-title'>hi</a>
+        <a href="index.html#menu" class='tab-title'>menu</a>
+        <a href="index.html#general" class='tab-title'>general information</a>
+        <a href="rsvp.html" class='tab-title'>rsvp</a>
+        <a href="business-ideas.html" class='tab-title'>business ideas</a>
+        <a href="admin.html" class='tab-title'>admin</a>
+    </div>
+    <img class="background" src="cat4.png" alt="Background">
+    
+    <div class="content">
+        <div class="business-container">
+            <h1>🚨 business ideas hall of shame 🚨</h1>
+            
+            <div class="intro">
+                a collection of punishment websites created for saying "business idea" 
+                while vibe coding. this is what happens when you can't stop yourself.
+            </div>
+
+            <div class="shame-meter">
+                <h3>times "business idea" was said:</h3>
+                <div class="shame-count">1</div>
+                <p style="color: #666; margin-top: 10px;">and counting...</p>
+            </div>
+
+            <div class="idea-card">
+                <div class="idea-header">
+                    <div class="idea-title">🥒 PickleSalts™</div>
+                    <div class="idea-badge">PUNISHMENT #1</div>
+                </div>
+                <div class="idea-description">
+                    <strong>The Crime:</strong> Suggesting seasoning salt containers flavored like different pickled goods 
+                    (dill pickles, pickled red onions, kimchi, mango achaar, etc.) would make a good business.
+                    <br><br>
+                    <strong>The Punishment:</strong> A gloriously tacky 2000s-era website selling fake pickle-flavored salts. 
+                    Complete with rainbow gradients, Comic Sans, marquees, and fake testimonials. 
+                    <br><br>
+                    <strong>Lesson Learned:</strong> TBD (probably none)
+                </div>
+                <a href="picklesalts.html" class="idea-link">view the shame →</a>
+            </div>
+
+            <div class="footer-note">
+                more terrible business ideas coming soon™<br>
+                (please stop saying "business idea")
+            </div>
+        </div>
+    </div>
+</body>
+</html>
