@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PickleSalts - Seasoning Reimagined</title>
+    <title>PickleSalts - A New Kind of Flavor</title>
     <style>
         * {
             margin: 0;
@@ -12,11 +12,24 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: #ffffff;
-            color: #1d1d1f;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(180deg, #e8d5f2 0%, #d5f2f0 50%, #f2e8d5 100%);
+            color: #4a4a4a;
             line-height: 1.6;
             overflow-x: hidden;
+        }
+
+        /* Subtle texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="%23ffffff" opacity="0.03"/><circle cx="1" cy="1" r="1" fill="%23000000" opacity="0.02"/></svg>');
+            pointer-events: none;
+            z-index: 9999;
         }
 
         /* Navigation */
@@ -24,43 +37,49 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(20px);
             z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid rgba(200, 170, 220, 0.3);
         }
 
         .nav-content {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 20px 40px;
+            padding: 25px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-weight: 600;
-            color: #1d1d1f;
+            background: linear-gradient(135deg, #d4a5f6 0%, #6ec5b8 50%, #f6a5c8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             text-decoration: none;
+            letter-spacing: 0.02em;
         }
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 35px;
             align-items: center;
         }
 
         .nav-links a {
-            color: #1d1d1f;
+            color: #6a5a7d;
             text-decoration: none;
             font-size: 0.95em;
-            transition: opacity 0.3s;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
         }
 
         .nav-links a:hover {
-            opacity: 0.6;
+            color: #6ec5b8;
         }
 
         /* Hero Section */
@@ -69,119 +88,320 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 100px 40px 60px;
-            background: linear-gradient(135deg, #f5f5f7 0%, #ffffff 100%);
+            padding: 120px 40px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Layered window frames in hero */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 15%;
+            right: 10%;
+            width: 400px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(110, 197, 184, 0.3);
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(110, 197, 184, 0.2);
+            transform: rotate(-5deg);
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 20%;
+            left: 8%;
+            width: 350px;
+            height: 280px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(246, 165, 200, 0.3);
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(246, 165, 200, 0.2);
+            transform: rotate(8deg);
+            z-index: 0;
         }
 
         .hero-content {
-            max-width: 1200px;
+            max-width: 1000px;
             text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-label {
+            color: #6ec5b8;
+            font-size: 0.9em;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            opacity: 0.8;
+            font-weight: 500;
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
+            font-size: clamp(3.5rem, 9vw, 7rem);
+            font-weight: 300;
             letter-spacing: -0.02em;
             margin-bottom: 30px;
-            color: #1d1d1f;
+            background: linear-gradient(135deg, #6a5a7d 0%, #6ec5b8 50%, #d4a5f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
         }
 
         .hero-subtitle {
-            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
-            color: #6e6e73;
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: #9a8aad;
             margin-bottom: 50px;
             font-weight: 400;
+            letter-spacing: 0.03em;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 16px 40px;
-            background: #1d1d1f;
+            padding: 16px 45px;
+            background: linear-gradient(135deg, #6ec5b8 0%, #d4a5f6 100%);
             color: #ffffff;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.1em;
+            font-size: 1em;
             font-weight: 500;
-            transition: all 0.3s;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(110, 197, 184, 0.3);
+            letter-spacing: 0.05em;
         }
 
         .cta-button:hover {
-            background: #424245;
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(110, 197, 184, 0.4);
         }
 
-        /* Product Grid */
+        /* Floral vine divider */
+        .vine-divider {
+            width: 100%;
+            height: 120px;
+            position: relative;
+            overflow: visible;
+            margin: -60px 0;
+            z-index: 10;
+        }
+
+        .vine-divider svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Products Section */
         .products-section {
             padding: 100px 40px;
             max-width: 1400px;
             margin: 0 auto;
+            position: relative;
+        }
+
+        /* Layered windows behind products */
+        .products-section::before {
+            content: '';
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            width: 300px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 165, 246, 0.3);
+            border-radius: 8px;
+            transform: rotate(-3deg);
+            z-index: 0;
+        }
+
+        .products-section::after {
+            content: '';
+            position: absolute;
+            bottom: 15%;
+            right: 8%;
+            width: 280px;
+            height: 220px;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(110, 197, 184, 0.3);
+            border-radius: 8px;
+            transform: rotate(5deg);
+            z-index: 0;
+        }
+
+        .section-label {
+            color: #f6a5c8;
+            font-size: 0.85em;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
         }
 
         .section-title {
             font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
+            font-weight: 300;
             text-align: center;
-            margin-bottom: 80px;
-            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+            color: #6a5a7d;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: #9a8aad;
+            margin-bottom: 70px;
+            letter-spacing: 0.02em;
+            position: relative;
+            z-index: 1;
         }
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 60px;
-            margin-bottom: 80px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 1;
         }
 
         .product-card {
-            text-align: center;
-            transition: transform 0.3s ease;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            padding: 35px;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(200, 170, 220, 0.2);
+            position: relative;
+        }
+
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(200, 170, 220, 0.15);
+            border-radius: 20px;
+            z-index: -1;
+            transition: all 0.4s ease;
         }
 
         .product-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(110, 197, 184, 0.25);
+            border-color: rgba(110, 197, 184, 0.4);
+        }
+
+        .product-card:hover::before {
+            top: -8px;
+            right: -8px;
         }
 
         .product-image {
             width: 100%;
             aspect-ratio: 1;
-            background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ed 100%);
-            border-radius: 20px;
-            margin-bottom: 30px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f4fc 100%);
+            border-radius: 15px;
+            margin-bottom: 25px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5rem;
-            transition: all 0.3s ease;
+            border: 1px solid rgba(200, 170, 220, 0.2);
+            position: relative;
+            overflow: hidden;
         }
 
-        .product-card:hover .product-image {
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        .product-card:nth-child(1) .product-image {
+            background: linear-gradient(135deg, #d5f2f0 0%, #b8e8e3 100%);
+            border-color: rgba(110, 197, 184, 0.3);
+        }
+
+        .product-card:nth-child(2) .product-image {
+            background: linear-gradient(135deg, #ffe8f0 0%, #ffd4e5 100%);
+            border-color: rgba(246, 165, 200, 0.3);
+        }
+
+        .product-card:nth-child(3) .product-image {
+            background: linear-gradient(135deg, #ffeee8 0%, #ffe0d4 100%);
+            border-color: rgba(246, 185, 165, 0.3);
+        }
+
+        .product-card:nth-child(4) .product-image {
+            background: linear-gradient(135deg, #e8e8ff 0%, #d4d4ff 100%);
+            border-color: rgba(165, 165, 246, 0.3);
         }
 
         .product-name {
             font-size: 1.5em;
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #1d1d1f;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: #6a5a7d;
+            letter-spacing: 0.01em;
         }
 
         .product-description {
-            font-size: 1em;
-            color: #6e6e73;
+            font-size: 0.95em;
+            color: #9a8aad;
             margin-bottom: 20px;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .product-price {
-            font-size: 1.2em;
-            font-weight: 500;
-            color: #1d1d1f;
+            font-size: 1.3em;
+            font-weight: 600;
+            background: linear-gradient(135deg, #6ec5b8 0%, #d4a5f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 0.02em;
         }
 
         /* Feature Section */
         .features {
-            background: #f5f5f7;
-            padding: 120px 40px;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 100px 40px;
+            border-top: 1px solid rgba(200, 170, 220, 0.2);
+            border-bottom: 1px solid rgba(200, 170, 220, 0.2);
+            position: relative;
+        }
+
+        .features::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            left: 20%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(246, 165, 200, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .features::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            right: 15%;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(110, 197, 184, 0.2) 0%, transparent 70%);
+            border-radius: 50%;
         }
 
         .features-content {
@@ -189,112 +409,302 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 60px;
+            gap: 50px;
+            position: relative;
+            z-index: 1;
         }
 
         .feature {
             text-align: center;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(200, 170, 220, 0.2);
         }
 
         .feature-icon {
-            font-size: 3em;
-            margin-bottom: 20px;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #6ec5b8 0%, #d4a5f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+
+        .feature:nth-child(2) .feature-icon {
+            background: linear-gradient(135deg, #f6a5c8 0%, #6ec5b8 100%);
+        }
+
+        .feature:nth-child(3) .feature-icon {
+            background: linear-gradient(135deg, #d4a5f6 0%, #f6b9a5 100%);
+        }
+
+        .feature:nth-child(4) .feature-icon {
+            background: linear-gradient(135deg, #a5c8f6 0%, #f6a5c8 100%);
         }
 
         .feature h3 {
-            font-size: 1.5em;
-            margin-bottom: 15px;
-            font-weight: 600;
+            font-size: 1.3em;
+            margin-bottom: 12px;
+            font-weight: 500;
+            color: #6a5a7d;
+            letter-spacing: 0.01em;
         }
 
         .feature p {
-            color: #6e6e73;
-            font-size: 1em;
-            line-height: 1.5;
+            color: #9a8aad;
+            font-size: 0.95em;
+            line-height: 1.6;
         }
 
-        /* Large Image Section */
+        /* Showcase Section */
         .showcase {
-            padding: 120px 40px;
+            padding: 100px 40px;
             max-width: 1400px;
             margin: 0 auto;
+            position: relative;
+        }
+
+        /* Layered windows in showcase */
+        .showcase::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: 15%;
+            width: 250px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(165, 200, 246, 0.3);
+            border-radius: 8px;
+            transform: rotate(-8deg);
+            z-index: 0;
+        }
+
+        .showcase-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .showcase-text {
+            padding: 40px 0;
+        }
+
+        .showcase-label {
+            color: #6ec5b8;
+            font-size: 0.85em;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .showcase-text h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: -0.01em;
+            background: linear-gradient(135deg, #6a5a7d 0%, #6ec5b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .showcase-text p {
+            font-size: 1.05em;
+            color: #9a8aad;
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
         .showcase-image {
             width: 100%;
-            height: 600px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 30px;
+            height: 550px;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 2em;
-            font-weight: 600;
+            border: 1px solid rgba(110, 197, 184, 0.3);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(110, 197, 184, 0.2);
+        }
+
+        .showcase-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(212, 165, 246, 0.2);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        /* CTA Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, rgba(212, 165, 246, 0.15) 0%, rgba(110, 197, 184, 0.15) 100%);
+            padding: 90px 40px;
+            text-align: center;
+            border-top: 1px solid rgba(200, 170, 220, 0.2);
+            position: relative;
+        }
+
+        .cta-banner::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 80px;
+            background: rgba(246, 165, 200, 0.2);
+            border-radius: 50%;
+            filter: blur(30px);
+        }
+
+        .cta-banner h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 300;
+            margin-bottom: 35px;
+            color: #6a5a7d;
+            letter-spacing: -0.01em;
+        }
+
+        .cta-banner-button {
+            display: inline-block;
+            padding: 16px 45px;
+            background: linear-gradient(135deg, #f6a5c8 0%, #6ec5b8 100%);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1em;
+            font-weight: 500;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(246, 165, 200, 0.3);
+            letter-spacing: 0.05em;
+        }
+
+        .cta-banner-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(246, 165, 200, 0.4);
         }
 
         /* Footer */
         footer {
-            background: #1d1d1f;
-            color: #ffffff;
-            padding: 60px 40px 40px;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            color: #9a8aad;
+            padding: 70px 40px 40px;
+            border-top: 1px solid rgba(200, 170, 220, 0.2);
         }
 
         .footer-content {
             max-width: 1400px;
             margin: 0 auto;
-            text-align: center;
         }
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
+        .footer-top {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
         }
 
-        .footer-links a {
-            color: #ffffff;
+        .footer-section h4 {
+            font-size: 1em;
+            margin-bottom: 18px;
+            font-weight: 600;
+            color: #6a5a7d;
+            letter-spacing: 0.03em;
+        }
+
+        .footer-section a {
+            display: block;
+            color: #9a8aad;
             text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+            font-size: 0.95em;
         }
 
-        .footer-links a:hover {
-            opacity: 1;
+        .footer-section a:hover {
+            color: #6ec5b8;
         }
 
-        .copyright {
-            color: #6e6e73;
+        .footer-bottom {
+            border-top: 1px solid rgba(200, 170, 220, 0.2);
+            padding-top: 30px;
+            text-align: center;
             font-size: 0.9em;
-            margin-top: 20px;
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
-            .nav-content {
-                padding: 15px 20px;
+        @media (max-width: 968px) {
+            .hero::before,
+            .hero::after,
+            .products-section::before,
+            .products-section::after,
+            .showcase::before {
+                display: none;
             }
 
-            .nav-links {
-                gap: 20px;
-            }
-
-            .hero {
-                padding: 80px 20px 40px;
-            }
-
-            .products-section {
-                padding: 60px 20px;
-            }
-
-            .products-grid {
+            .showcase-content {
+                grid-template-columns: 1fr;
                 gap: 40px;
             }
 
+            .showcase-text {
+                order: 2;
+                padding: 0;
+            }
+
+            .showcase-image {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-content {
+                padding: 20px 20px;
+            }
+
+            .nav-links {
+                gap: 25px;
+            }
+
+            .hero {
+                padding: 100px 20px 60px;
+            }
+
+            .vine-divider {
+                height: 80px;
+                margin: -40px 0;
+            }
+
+            .products-section {
+                padding: 70px 20px;
+            }
+
+            .products-grid {
+                gap: 30px;
+            }
+
             .features {
-                padding: 80px 20px;
+                padding: 70px 20px;
             }
 
             .features-content {
@@ -302,11 +712,19 @@
             }
 
             .showcase {
-                padding: 60px 20px;
+                padding: 70px 20px;
             }
 
             .showcase-image {
                 height: 400px;
+            }
+
+            .cta-banner {
+                padding: 60px 20px;
+            }
+
+            .footer-top {
+                gap: 40px;
             }
         }
     </style>
@@ -327,92 +745,194 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Seasoning Reimagined</h1>
-            <p class="hero-subtitle">Pickle-inspired salts that transform every dish</p>
-            <a href="#products" class="cta-button">Explore Flavors</a>
+            <div class="hero-label">New Classic</div>
+            <h1>Seasoning<br>Reimagined</h1>
+            <p class="hero-subtitle">Pickle-inspired salts for the modern kitchen</p>
+            <a href="#products" class="cta-button">Explore</a>
         </div>
     </section>
+
+    <!-- Vine Divider -->
+    <div class="vine-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,60 Q150,20 300,60 T600,60 T900,60 T1200,60" 
+                  fill="none" 
+                  stroke="rgba(110, 197, 184, 0.4)" 
+                  stroke-width="2"/>
+            <circle cx="150" cy="30" r="8" fill="rgba(246, 165, 200, 0.6)"/>
+            <circle cx="300" cy="50" r="6" fill="rgba(212, 165, 246, 0.6)"/>
+            <circle cx="450" cy="35" r="7" fill="rgba(110, 197, 184, 0.6)"/>
+            <circle cx="600" cy="55" r="8" fill="rgba(246, 165, 200, 0.6)"/>
+            <circle cx="750" cy="40" r="6" fill="rgba(165, 200, 246, 0.6)"/>
+            <circle cx="900" cy="50" r="7" fill="rgba(212, 165, 246, 0.6)"/>
+            <circle cx="1050" cy="35" r="8" fill="rgba(110, 197, 184, 0.6)"/>
+            <path d="M140,35 Q145,25 150,30" fill="none" stroke="rgba(110, 197, 184, 0.4)" stroke-width="1.5"/>
+            <path d="M155,30 Q160,35 165,28" fill="none" stroke="rgba(110, 197, 184, 0.4)" stroke-width="1.5"/>
+            <path d="M290,55 Q295,45 300,50" fill="none" stroke="rgba(110, 197, 184, 0.4)" stroke-width="1.5"/>
+            <path d="M440,40 Q445,30 450,35" fill="none" stroke="rgba(110, 197, 184, 0.4)" stroke-width="1.5"/>
+            <path d="M590,60 Q595,50 600,55" fill="none" stroke="rgba(110, 197, 184, 0.4)" stroke-width="1.5"/>
+            <path d="M740,45 Q745,35 750,40" fill="none" stroke="rgba(110, 197, 184, 0.4)" stroke-width="1.5"/>
+            <path d="M890,55 Q895,45 900,50" fill="none" stroke="rgba(110, 197, 184, 0.4)" stroke-width="1.5"/>
+            <path d="M1040,40 Q1045,30 1050,35" fill="none" stroke="rgba(110, 197, 184, 0.4)" stroke-width="1.5"/>
+        </svg>
+    </div>
 
     <!-- Products Section -->
     <section class="products-section" id="products">
-        <h2 class="section-title">Our Collection</h2>
+        <div class="section-label">Collection</div>
+        <h2 class="section-title">Four Flavors</h2>
+        <p class="section-subtitle">Inspired by traditional pickling from around the world</p>
         <div class="products-grid">
             <div class="product-card">
-                <div class="product-image">🥒</div>
+                <div class="product-image"></div>
                 <h3 class="product-name">Classic Dill</h3>
-                <p class="product-description">The original. Bright, tangy, unmistakable.</p>
+                <p class="product-description">Bright, tangy, unmistakable. The foundation of pickle flavor.</p>
                 <p class="product-price">$18</p>
             </div>
 
             <div class="product-card">
-                <div class="product-image">🧅</div>
+                <div class="product-image"></div>
                 <h3 class="product-name">Pickled Onion</h3>
-                <p class="product-description">Sweet, sharp, sophisticated.</p>
+                <p class="product-description">Sweet and sharp. Adds sophistication to any dish.</p>
                 <p class="product-price">$18</p>
             </div>
 
             <div class="product-card">
-                <div class="product-image">🌶️</div>
+                <div class="product-image"></div>
                 <h3 class="product-name">Kimchi</h3>
-                <p class="product-description">Fermented heat meets umami depth.</p>
+                <p class="product-description">Fermented heat meets umami depth. Bold and complex.</p>
                 <p class="product-price">$20</p>
             </div>
 
             <div class="product-card">
-                <div class="product-image">🥭</div>
+                <div class="product-image"></div>
                 <h3 class="product-name">Mango Achaar</h3>
-                <p class="product-description">Complex spice with tropical notes.</p>
+                <p class="product-description">South Asian spice blend with tropical notes.</p>
                 <p class="product-price">$20</p>
             </div>
         </div>
     </section>
+
+    <!-- Vine Divider -->
+    <div class="vine-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,60 Q150,80 300,60 T600,60 T900,60 T1200,60" 
+                  fill="none" 
+                  stroke="rgba(246, 165, 200, 0.4)" 
+                  stroke-width="2"/>
+            <circle cx="200" cy="70" r="7" fill="rgba(110, 197, 184, 0.6)"/>
+            <circle cx="350" cy="55" r="6" fill="rgba(212, 165, 246, 0.6)"/>
+            <circle cx="500" cy="65" r="8" fill="rgba(246, 185, 165, 0.6)"/>
+            <circle cx="650" cy="50" r="7" fill="rgba(165, 200, 246, 0.6)"/>
+            <circle cx="800" cy="70" r="6" fill="rgba(246, 165, 200, 0.6)"/>
+            <circle cx="950" cy="55" r="8" fill="rgba(110, 197, 184, 0.6)"/>
+            <path d="M190,75 Q195,65 200,70" fill="none" stroke="rgba(246, 165, 200, 0.4)" stroke-width="1.5"/>
+            <path d="M340,60 Q345,50 350,55" fill="none" stroke="rgba(246, 165, 200, 0.4)" stroke-width="1.5"/>
+            <path d="M490,70 Q495,60 500,65" fill="none" stroke="rgba(246, 165, 200, 0.4)" stroke-width="1.5"/>
+            <path d="M640,55 Q645,45 650,50" fill="none" stroke="rgba(246, 165, 200, 0.4)" stroke-width="1.5"/>
+        </svg>
+    </div>
 
     <!-- Features Section -->
     <section class="features">
         <div class="features-content">
             <div class="feature">
-                <div class="feature-icon">🧂</div>
+                <div class="feature-icon"></div>
                 <h3>All Natural</h3>
-                <p>Pure ingredients, no additives</p>
+                <p>Pure ingredients, no additives or preservatives</p>
             </div>
 
             <div class="feature">
-                <div class="feature-icon">🌱</div>
+                <div class="feature-icon"></div>
                 <h3>Small Batch</h3>
-                <p>Crafted in limited quantities</p>
+                <p>Crafted in limited quantities for quality</p>
             </div>
 
             <div class="feature">
-                <div class="feature-icon">✨</div>
+                <div class="feature-icon"></div>
                 <h3>Versatile</h3>
-                <p>Elevate any dish</p>
+                <p>Elevate everything from eggs to cocktails</p>
             </div>
 
             <div class="feature">
-                <div class="feature-icon">📦</div>
-                <h3>Premium Packaging</h3>
-                <p>Designed to impress</p>
+                <div class="feature-icon"></div>
+                <h3>Premium</h3>
+                <p>Thoughtfully designed packaging</p>
             </div>
         </div>
     </section>
 
+    <!-- Vine Divider -->
+    <div class="vine-divider">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,60 Q150,40 300,60 T600,60 T900,60 T1200,60" 
+                  fill="none" 
+                  stroke="rgba(165, 200, 246, 0.4)" 
+                  stroke-width="2"/>
+            <circle cx="250" cy="50" r="8" fill="rgba(212, 165, 246, 0.6)"/>
+            <circle cx="400" cy="65" r="6" fill="rgba(110, 197, 184, 0.6)"/>
+            <circle cx="550" cy="55" r="7" fill="rgba(246, 165, 200, 0.6)"/>
+            <circle cx="700" cy="60" r="8" fill="rgba(165, 200, 246, 0.6)"/>
+            <circle cx="850" cy="50" r="6" fill="rgba(246, 185, 165, 0.6)"/>
+            <circle cx="1000" cy="65" r="7" fill="rgba(110, 197, 184, 0.6)"/>
+            <path d="M240,55 Q245,45 250,50" fill="none" stroke="rgba(165, 200, 246, 0.4)" stroke-width="1.5"/>
+            <path d="M255,50 Q260,55 265,48" fill="none" stroke="rgba(165, 200, 246, 0.4)" stroke-width="1.5"/>
+            <path d="M390,70 Q395,60 400,65" fill="none" stroke="rgba(165, 200, 246, 0.4)" stroke-width="1.5"/>
+            <path d="M540,60 Q545,50 550,55" fill="none" stroke="rgba(165, 200, 246, 0.4)" stroke-width="1.5"/>
+        </svg>
+    </div>
+
     <!-- Showcase Section -->
     <section class="showcase" id="about">
-        <div class="showcase-image">
-            [Hero Product Image]
+        <div class="showcase-content">
+            <div class="showcase-text">
+                <div class="showcase-label">Our Story</div>
+                <h2>Flavor<br>Elevated</h2>
+                <p>We took the bold, tangy flavors you love from pickled foods and transformed them into versatile seasoning salts.</p>
+                <p>Each blend is carefully crafted to bring complexity and brightness to your everyday cooking.</p>
+            </div>
+            <div class="showcase-image"></div>
         </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <h2>Ready to transform your cooking?</h2>
+        <a href="#" class="cta-banner-button">Shop Now</a>
     </section>
 
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
-            <div class="footer-links">
-                <a href="#">Instagram</a>
-                <a href="#">Shop</a>
-                <a href="#">Press</a>
-                <a href="#">Contact</a>
+            <div class="footer-top">
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <a href="#">All Products</a>
+                    <a href="#">Bundles</a>
+                    <a href="#">Gift Sets</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Press</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="#">Contact</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Shipping</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">TikTok</a>
+                </div>
             </div>
-            <p class="copyright">© 2024 PickleSalts. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>© 2024 PickleSalts. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 </body>
