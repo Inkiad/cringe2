@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 80px 20px 20px 20px;
+    /* padding: 20px 20px 20px 20px; */
     overflow-y: auto;
 }
 
@@ -72,7 +72,7 @@ body {
 }
 
 .tab-content {
-    padding-top: 50px;
+    padding: 70px 20px 20px 20px;
 }
 
 .course {
@@ -266,9 +266,9 @@ textarea:focus {
 /* Responsive design */
 @media (max-width: 768px) {
     .content {
-        padding: 80px 15px 15px 15px;
+        /* padding: 15px 15px 15px 15px; */
         align-items: flex-start; /* Start at top instead of center */
-        padding-top: 80px;
+        /* padding-top: 80px; */
         min-height: 100vh;
     }
     
