@@ -71,6 +71,10 @@ body {
     padding-right: 20px !important;
 }
 
+.tab-content {
+    padding-top: 50px;
+}
+
 .course {
     font-weight: bold;
     margin-top: 20px !important;
