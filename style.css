@@ -53,16 +53,6 @@ body {
     text-decoration: underline;
 }
 
-.background {
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    object-fit: contain;
-    opacity: 0.08;
-    filter: invert(1);
-}
 
 .page-content {
     padding: 70px 20px 20px 20px;
@@ -100,7 +90,58 @@ body {
     line-height: 0 !important;
 }
 
-/* --- Projects / Business ideas pages --- */
+/* --- Projects page --- */
+.projects-list {
+    max-width: 600px;
+    width: 100%;
+    padding: 70px 20px 20px 20px;
+}
+
+.projects-list h1 {
+    color: #e8e8e8;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.project-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-name {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: #e8e8e8;
+    margin-bottom: 6px;
+}
+
+.project-description {
+    color: #888;
+    font-size: 0.95em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.project-links a:hover {
+    color: #e8e8e8;
+}
+
+/* --- Business ideas page --- */
 .business-container {
     max-width: 800px;
     width: 100%;
