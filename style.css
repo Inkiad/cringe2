@@ -90,6 +90,108 @@ body {
     line-height: 0 !important;
 }
 
+/* --- Experiences page --- */
+.experiences-container {
+    max-width: 700px;
+    width: 100%;
+    padding: 70px 20px 60px 20px;
+}
+
+.content:has(.experiences-container) {
+    align-items: flex-start;
+}
+
+.exp-section {
+    margin-bottom: 40px;
+}
+
+.exp-section-title {
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #666;
+    border-bottom: 1px solid #2c2c2c;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.exp-entry {
+    margin-bottom: 24px;
+}
+
+.exp-org {
+    font-size: 1em;
+    font-weight: 600;
+    color: #e8e8e8;
+    margin-bottom: 3px;
+}
+
+.exp-role-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.exp-role {
+    font-style: italic;
+    color: #888;
+    font-size: 0.9em;
+}
+
+.exp-date {
+    color: #555;
+    font-size: 0.85em;
+    white-space: nowrap;
+}
+
+.exp-coursework {
+    color: #666;
+    font-size: 0.85em;
+    line-height: 1.6;
+}
+
+.exp-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exp-bullets li {
+    color: #aaa;
+    font-size: 0.9em;
+    line-height: 1.6;
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.exp-bullets li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: #555;
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skill-row {
+    font-size: 0.9em;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+.skill-label {
+    color: #e8e8e8;
+    font-weight: 600;
+}
+
 /* --- Projects page --- */
 .projects-list {
     max-width: 600px;
