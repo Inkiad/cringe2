@@ -138,29 +138,6 @@
       display: block;
     }
 
-    .district-path {
-      stroke: #1a1a1a;
-      stroke-width: 1;
-      cursor: pointer;
-      transition: fill 0.12s;
-    }
-
-    .district-path.party-D { fill: #4a7fc1; }
-    .district-path.party-R { fill: #c14a4a; }
-    .district-path.party-vacant { fill: #555; }
-
-    .district-path:hover, .district-path.hovered {
-      fill: #e8e8e8;
-      stroke: #888;
-      stroke-width: 1;
-    }
-
-    .district-path.selected {
-      fill: #e8e8e8;
-      stroke: #888;
-      stroke-width: 1.5;
-    }
-
     /* --- Info panel --- */
     .info-panel {
       width: 240px;
@@ -298,229 +275,67 @@
   </div>
 
   <script>
-    // ─── Config ───────────────────────────────────────────────────────────────
-    const LAYER_CONFIG = {
-      house: {
-        label: 'US House',
-        file: 'data/ca-congressional.geojson',
-        districtKey: 'district',
-        roleLabel: (d) => `US House · District ${d}`,
-      },
-      state_senate: {
-        label: 'State Senate',
-        file: 'data/ca-state-senate.geojson',
-        districtKey: 'district',
-        roleLabel: (d) => `CA State Senate · District ${d}`,
-      },
-      assembly: {
-        label: 'Assembly',
-        file: 'data/ca-assembly.geojson',
-        districtKey: 'district',
-        roleLabel: (d) => `CA Assembly · District ${d}`,
-      },
-    };
-
-    // ─── State ────────────────────────────────────────────────────────────────
-    let repsData = null;
-    let activeLayer = 'house';
-    let geoCache = {};         // cached GeoJSON per layer
-    let selectedDistrict = null;
-    let lockedDistrict = null; // clicked / locked
-
-    // ─── D3 setup ─────────────────────────────────────────────────────────────
     const svg = d3.select('#map');
     const g = svg.append('g');
-    let projection, pathGen;
 
-    function setupProjection(features) {
-      const wrapper = svg.node().parentElement;
-      // offsetWidth/offsetHeight are reliable in flex layouts (unlike getBoundingClientRect)
-      const w = wrapper.offsetWidth || (window.innerWidth - 240);
-      const h = wrapper.offsetHeight || (window.innerHeight - 90);
-
-      // Set both attrs and viewBox to the same dimensions — no scaling/letterboxing
-      svg.attr('width', w).attr('height', h).attr('viewBox', `0 0 ${w} ${h}`);
-
-      const fc = { type: 'FeatureCollection', features };
-      projection = d3.geoMercator()
-        .fitExtent([[10, 10], [w - 10, h - 10]], fc);
-      pathGen = d3.geoPath().projection(projection);
-    }
-
-    // ─── Render map ───────────────────────────────────────────────────────────
-    function getRep(district) {
-      if (!repsData) return null;
-      const layer = repsData[activeLayer];
-      return layer ? (layer[String(district)] || null) : null;
-    }
-
-    function renderMap(features) {
-      g.selectAll('.district-path').remove();
-
-      setupProjection(features);
-
-      g.selectAll('.district-path')
-        .data(features)
-        .join('path')
-        .attr('class', d => {
-          const dist = d.properties.district;
-          const rep = getRep(dist);
-          const party = rep && rep.party ? rep.party : 'vacant';
-          return `district-path party-${party}`;
-        })
-        .attr('d', pathGen)
-        .on('mouseenter', function(event, d) {
-          if (lockedDistrict !== null) return;
-          const dist = d.properties.district;
-          showInfo(dist);
-          d3.selectAll('.district-path').classed('hovered', false);
-          d3.select(this).classed('hovered', true);
-        })
-        .on('mouseleave', function() {
-          if (lockedDistrict !== null) return;
-          d3.selectAll('.district-path').classed('hovered', false);
-          resetInfo();
-        })
-        .on('click', function(event, d) {
-          const dist = d.properties.district;
-          if (lockedDistrict === dist) {
-            // unlock
-            lockedDistrict = null;
-            d3.selectAll('.district-path').classed('selected', false).classed('hovered', false);
-            resetInfo();
-          } else {
-            lockedDistrict = dist;
-            d3.selectAll('.district-path').classed('selected', false).classed('hovered', false);
-            d3.select(this).classed('selected', true);
-            showInfo(dist);
-          }
-        });
-    }
-
-    // ─── Info panel ───────────────────────────────────────────────────────────
-    function showInfo(district) {
-      const rep = getRep(district);
-      const cfg = LAYER_CONFIG[activeLayer];
-      const panel = document.getElementById('info-panel');
-
-      if (!rep) {
-        panel.innerHTML = `
-          <div class="info-district">${cfg.roleLabel(district)}</div>
-          <div class="info-name info-vacant">No data available</div>
-        `;
-        return;
-      }
-
-      const isVacant = rep.name === 'Vacant' || rep.name === '';
-      const partyLabel = rep.party === 'D' ? 'Democrat' : rep.party === 'R' ? 'Republican' : '';
-      const websiteHtml = rep.website
-        ? `<a class="info-link" href="https://${rep.website}" target="_blank" rel="noopener">official site →</a>`
-        : '';
-      const noteHtml = rep.note
-        ? `<div class="info-note">${rep.note}</div>`
-        : '';
-      const lockHint = lockedDistrict === district
-        ? '<div class="click-hint">click again to unlock</div>'
-        : '<div class="click-hint">click to lock</div>';
-
-      panel.innerHTML = `
-        <div class="info-district">${cfg.roleLabel(district)}</div>
-        ${isVacant
-          ? `<div class="info-name info-vacant">Vacant</div>${noteHtml}`
-          : `
-            <div class="info-name">${rep.name}</div>
-            <div class="info-party party-${rep.party}">${partyLabel}</div>
-            <div class="info-role">${cfg.roleLabel(district).split(' · ')[0]}</div>
-            ${websiteHtml}
-            ${noteHtml}
-          `
-        }
-        ${lockHint}
-      `;
-    }
-
-    function resetInfo() {
-      document.getElementById('info-panel').innerHTML =
-        '<div class="info-placeholder">hover over a district</div>';
-    }
-
-    // ─── Senators bar ─────────────────────────────────────────────────────────
-    function renderSenators(senators) {
+    // Senators bar (separate from map, known to work)
+    d3.json('data/ca-reps.json').then(data => {
       const bar = document.getElementById('senators-bar');
-      const parts = senators.map(s => `
+      const parts = data.us_senators.map(s => `
         <div class="senator">
           <span class="senator-name">${s.name}</span>
           <a class="senator-link" href="https://${s.website}" target="_blank" rel="noopener">↗</a>
         </div>
       `).join('<span class="sep">·</span>');
-
       bar.innerHTML = `<span style="color:#444;font-size:.8rem;margin-right:4px">US Senators:</span>${parts}`;
-    }
+    }).catch(e => console.warn('senators:', e));
 
-    // ─── Layer switching ──────────────────────────────────────────────────────
-    async function loadLayer(layerKey) {
-      const cfg = LAYER_CONFIG[layerKey];
+    // Draw California — no district styling, just the shape
+    async function drawCalifornia() {
       const overlay = document.getElementById('map-overlay');
+      overlay.style.display = 'flex';
+      overlay.textContent = 'loading...';
 
-      // unlock any locked district
-      lockedDistrict = null;
-      d3.selectAll('.district-path').classed('selected', false).classed('hovered', false);
-      resetInfo();
-
-      if (geoCache[layerKey]) {
-        renderMap(geoCache[layerKey]);
-        overlay.style.display = 'none';
+      let geo;
+      try {
+        geo = await d3.json('data/ca-congressional.geojson');
+      } catch (e) {
+        overlay.textContent = 'error loading map';
+        console.error('geojson load failed:', e);
         return;
       }
 
-      overlay.style.display = 'flex';
-      overlay.textContent = 'loading map...';
-
-      try {
-        const geo = await d3.json(cfg.file);
-        geoCache[layerKey] = geo.features;
-        renderMap(geo.features);
-        overlay.style.display = 'none';
-      } catch (err) {
-        overlay.textContent = 'error loading map data';
-        console.error(err);
-      }
-    }
-
-    // ─── Toggle buttons ───────────────────────────────────────────────────────
-    document.querySelectorAll('.toggle-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (btn.dataset.layer === activeLayer) return;
-        document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeLayer = btn.dataset.layer;
-        loadLayer(activeLayer);
-      });
-    });
-
-    // ─── Resize handling ──────────────────────────────────────────────────────
-    window.addEventListener('resize', () => {
-      clearTimeout(window._resizeTimer);
-      window._resizeTimer = setTimeout(() => {
-        if (geoCache[activeLayer]) renderMap(geoCache[activeLayer]);
-      }, 150);
-    });
-
-    // ─── Init ─────────────────────────────────────────────────────────────────
-    async function init() {
-      // Load reps data
-      try {
-        repsData = await d3.json('data/ca-reps.json');
-        renderSenators(repsData.us_senators);
-      } catch (err) {
-        console.error('Failed to load reps data:', err);
+      if (!geo?.features?.length) {
+        overlay.textContent = 'map data empty';
+        return;
       }
 
-      // Load default layer
-      await loadLayer(activeLayer);
+      const wrapper = svg.node().parentElement;
+      const w = wrapper.offsetWidth;
+      const h = wrapper.offsetHeight;
+      console.log('[map] container:', w, 'x', h, '| features:', geo.features.length);
+
+      svg.attr('width', w).attr('height', h).attr('viewBox', `0 0 ${w} ${h}`);
+
+      const fc = { type: 'FeatureCollection', features: geo.features };
+      const projection = d3.geoMercator().fitExtent([[20, 20], [w - 20, h - 20]], fc);
+      const path = d3.geoPath().projection(projection);
+
+      console.log('[map] sample path:', path(geo.features[0])?.slice(0, 100) ?? 'NULL');
+
+      // All same fill + stroke so district boundaries are invisible
+      g.selectAll('path')
+        .data(geo.features)
+        .join('path')
+        .attr('d', path)
+        .attr('fill', '#2a3f5a')
+        .attr('stroke', '#2a3f5a')
+        .attr('stroke-width', 1.5);
+
+      overlay.style.display = 'none';
     }
 
-    init();
+    drawCalifornia();
   </script>
 </body>
 </html>
