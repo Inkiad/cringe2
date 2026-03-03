@@ -290,7 +290,7 @@
       bar.innerHTML = `<span style="color:#444;font-size:.8rem;margin-right:4px">US Senators:</span>${parts}`;
     }).catch(e => console.warn('senators:', e));
 
-    // Draw California — no district styling, just the shape
+    // Draw California — single state outline, no districts
     async function drawCalifornia() {
       const overlay = document.getElementById('map-overlay');
       overlay.style.display = 'flex';
@@ -298,39 +298,32 @@
 
       let geo;
       try {
-        geo = await d3.json('data/ca-congressional.geojson');
+        geo = await d3.json('data/ca-state.geojson');
       } catch (e) {
         overlay.textContent = 'error loading map';
         console.error('geojson load failed:', e);
         return;
       }
 
-      if (!geo?.features?.length) {
-        overlay.textContent = 'map data empty';
-        return;
-      }
-
       const wrapper = svg.node().parentElement;
       const w = wrapper.offsetWidth;
       const h = wrapper.offsetHeight;
-      console.log('[map] container:', w, 'x', h, '| features:', geo.features.length);
+      console.log('[map] container:', w, 'x', h);
 
       svg.attr('width', w).attr('height', h).attr('viewBox', `0 0 ${w} ${h}`);
 
-      const fc = { type: 'FeatureCollection', features: geo.features };
-      const projection = d3.geoMercator().fitExtent([[20, 20], [w - 20, h - 20]], fc);
+      const projection = d3.geoMercator().fitExtent([[20, 20], [w - 20, h - 20]], geo);
       const path = d3.geoPath().projection(projection);
 
       console.log('[map] sample path:', path(geo.features[0])?.slice(0, 100) ?? 'NULL');
 
-      // All same fill + stroke so district boundaries are invisible
-      g.selectAll('path')
-        .data(geo.features)
-        .join('path')
+      // Single California outline
+      g.append('path')
+        .datum(geo.features[0])
         .attr('d', path)
         .attr('fill', '#2a3f5a')
-        .attr('stroke', '#2a3f5a')
-        .attr('stroke-width', 1.5);
+        .attr('stroke', '#4a6f8a')
+        .attr('stroke-width', 1);
 
       overlay.style.display = 'none';
     }
