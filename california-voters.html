@@ -138,6 +138,24 @@
       display: block;
     }
 
+    /* --- Tooltip --- */
+    .tooltip {
+      position: fixed;
+      background: #111;
+      color: #e8e8e8;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 0.82rem;
+      pointer-events: none;
+      display: none;
+      border: 1px solid #2a2a2a;
+      z-index: 100;
+    }
+
+    .district {
+      cursor: pointer;
+    }
+
     /* --- Info panel --- */
     .info-panel {
       width: 240px;
@@ -277,8 +295,9 @@
   <script>
     const svg = d3.select('#map');
     const g = svg.append('g');
+    const tooltip = d3.select('body').append('div').attr('class', 'tooltip');
 
-    // Senators bar (separate from map, known to work)
+    // Senators bar
     d3.json('data/ca-reps.json').then(data => {
       const bar = document.getElementById('senators-bar');
       const parts = data.us_senators.map(s => `
@@ -290,45 +309,67 @@
       bar.innerHTML = `<span style="color:#444;font-size:.8rem;margin-right:4px">US Senators:</span>${parts}`;
     }).catch(e => console.warn('senators:', e));
 
-    // Draw California — single state outline, no districts
-    async function drawCalifornia() {
+    async function drawMap() {
       const overlay = document.getElementById('map-overlay');
       overlay.style.display = 'flex';
       overlay.textContent = 'loading...';
 
-      let geo;
+      let stateGeo, districtGeo;
       try {
-        geo = await d3.json('data/ca-state.geojson');
+        [stateGeo, districtGeo] = await Promise.all([
+          d3.json('data/ca-state.geojson'),
+          d3.json('data/ca-congressional.geojson'),
+        ]);
       } catch (e) {
         overlay.textContent = 'error loading map';
-        console.error('geojson load failed:', e);
+        console.error(e);
         return;
       }
 
       const wrapper = svg.node().parentElement;
       const w = wrapper.offsetWidth;
       const h = wrapper.offsetHeight;
-      console.log('[map] container:', w, 'x', h);
 
       svg.attr('width', w).attr('height', h).attr('viewBox', `0 0 ${w} ${h}`);
 
-      const projection = d3.geoMercator().fitExtent([[20, 20], [w - 20, h - 20]], geo);
+      const projection = d3.geoMercator().fitExtent([[20, 20], [w - 20, h - 20]], stateGeo);
       const path = d3.geoPath().projection(projection);
 
-      console.log('[map] sample path:', path(geo.features[0])?.slice(0, 100) ?? 'NULL');
-
-      // Single California outline
+      // Base layer: California fill
       g.append('path')
-        .datum(geo.features[0])
+        .datum(stateGeo.features[0])
         .attr('d', path)
         .attr('fill', '#2a3f5a')
         .attr('stroke', '#4a6f8a')
         .attr('stroke-width', 1);
 
+      // District overlay with hover
+      g.selectAll('.district')
+        .data(districtGeo.features)
+        .join('path')
+        .attr('class', 'district')
+        .attr('d', path)
+        .attr('fill', 'transparent')
+        .attr('stroke', 'rgba(255,255,255,0.15)')
+        .attr('stroke-width', 0.5)
+        .on('mouseenter', function(event, d) {
+          d3.select(this).attr('fill', 'rgba(255,255,255,0.08)');
+          tooltip.style('display', 'block').text(`District ${d.properties.district}`);
+        })
+        .on('mousemove', function(event) {
+          tooltip
+            .style('left', (event.clientX + 14) + 'px')
+            .style('top', (event.clientY - 32) + 'px');
+        })
+        .on('mouseleave', function() {
+          d3.select(this).attr('fill', 'transparent');
+          tooltip.style('display', 'none');
+        });
+
       overlay.style.display = 'none';
     }
 
-    drawCalifornia();
+    drawMap();
   </script>
 </body>
 </html>
