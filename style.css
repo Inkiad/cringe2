@@ -60,7 +60,8 @@ body {
     height: 100%;
     z-index: -1;
     object-fit: cover;
-    opacity: 0.04;
+    opacity: 0.08;
+    filter: invert(1);
 }
 
 .page-content {
