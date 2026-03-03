@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>california representatives - inky</title>
+  <link rel="icon" type="image/x-icon" href="images/cat4.png">
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #1a1a1a;
+      color: #e8e8e8;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* --- Nav --- */
+    .nav {
+      background: #111;
+      padding: 8px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+      z-index: 10;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .nav a:hover { color: #e8e8e8; }
+
+    .nav-title {
+      color: #e8e8e8;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    /* --- Senators bar --- */
+    .senators-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: #888;
+    }
+
+    .senators-bar .senator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .senator-name {
+      color: #e8e8e8;
+      font-weight: 600;
+    }
+
+    .senator-link {
+      color: #666;
+      text-decoration: none;
+      font-size: 0.78rem;
+    }
+
+    .senator-link:hover { color: #aaa; }
+
+    .sep { color: #333; }
+
+    /* --- Toggle row --- */
+    .controls {
+      background: #1e1e1e;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .toggle-btn {
+      background: #2a2a2a;
+      color: #888;
+      border: 1px solid #333;
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-family: Arial, sans-serif;
+      transition: all 0.15s;
+    }
+
+    .toggle-btn:hover { color: #e8e8e8; border-color: #555; }
+
+    .toggle-btn.active {
+      background: #333;
+      color: #e8e8e8;
+      border-color: #666;
+    }
+
+    .controls-label {
+      color: #555;
+      font-size: 0.8rem;
+      margin-right: 4px;
+    }
+
+    /* --- Main layout --- */
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* --- Map --- */
+    .map-wrapper {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #map {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .district-path {
+      stroke: #1a1a1a;
+      stroke-width: 0.5;
+      cursor: pointer;
+      transition: opacity 0.1s;
+    }
+
+    .district-path.party-D { fill: #1e3a5f; }
+    .district-path.party-R { fill: #5f1e1e; }
+    .district-path.party-  { fill: #2a2a2a; }
+
+    .district-path:hover, .district-path.hovered {
+      opacity: 0.75;
+      stroke-width: 1.5;
+      stroke: #e8e8e8;
+    }
+
+    .district-path.selected {
+      opacity: 0.9;
+      stroke-width: 2;
+      stroke: #e8e8e8;
+    }
+
+    /* --- Info panel --- */
+    .info-panel {
+      width: 240px;
+      flex-shrink: 0;
+      background: #111;
+      border-left: 1px solid #2a2a2a;
+      padding: 20px 16px;
+      overflow-y: auto;
+    }
+
+    .info-placeholder {
+      color: #444;
+      font-size: 0.85rem;
+      margin-top: 8px;
+    }
+
+    .info-district {
+      font-size: 0.75rem;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+
+    .info-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #e8e8e8;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .info-party {
+      font-size: 0.85rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .info-party.party-D { color: #4a90d9; }
+    .info-party.party-R { color: #d9504a; }
+
+    .info-role {
+      font-size: 0.8rem;
+      color: #888;
+      margin-bottom: 16px;
+    }
+
+    .info-link {
+      display: inline-block;
+      color: #aaa;
+      text-decoration: none;
+      font-size: 0.8rem;
+      padding: 5px 10px;
+      border: 1px solid #333;
+      border-radius: 3px;
+      margin-top: 4px;
+    }
+
+    .info-link:hover { color: #e8e8e8; border-color: #666; }
+
+    .info-note {
+      color: #555;
+      font-size: 0.75rem;
+      margin-top: 12px;
+      line-height: 1.5;
+    }
+
+    .info-vacant {
+      color: #666;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    .click-hint {
+      color: #444;
+      font-size: 0.75rem;
+      margin-top: 12px;
+    }
+
+    /* --- Loading / Error --- */
+    .map-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #1a1a1a;
+      color: #555;
+      font-size: 0.9rem;
+      pointer-events: none;
+    }
+
+    /* --- Responsive --- */
+    @media (max-width: 700px) {
+      .main { flex-direction: column; }
+      .info-panel {
+        width: 100%;
+        height: 160px;
+        border-left: none;
+        border-top: 1px solid #2a2a2a;
+        padding: 12px 16px;
+      }
+      .senators-bar { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="projects.html">← projects</a>
+      <span class="nav-title">california representatives</span>
+    </div>
+    <div class="senators-bar" id="senators-bar">
+      <!-- populated by JS -->
+    </div>
+  </nav>
+
+  <div class="controls">
+    <span class="controls-label">show:</span>
+    <button class="toggle-btn active" data-layer="house">US House</button>
+    <button class="toggle-btn" data-layer="state_senate">State Senate</button>
+    <button class="toggle-btn" data-layer="assembly">Assembly</button>
+  </div>
+
+  <div class="main">
+    <div class="map-wrapper">
+      <svg id="map"></svg>
+      <div class="map-overlay" id="map-overlay">loading map...</div>
+    </div>
+
+    <div class="info-panel" id="info-panel">
+      <div class="info-placeholder">hover over a district</div>
+    </div>
+  </div>
+
+  <script>
+    // ─── Config ───────────────────────────────────────────────────────────────
+    const LAYER_CONFIG = {
+      house: {
+        label: 'US House',
+        file: 'data/ca-congressional.geojson',
+        districtKey: 'district',
+        roleLabel: (d) => `US House · District ${d}`,
+      },
+      state_senate: {
+        label: 'State Senate',
+        file: 'data/ca-state-senate.geojson',
+        districtKey: 'district',
+        roleLabel: (d) => `CA State Senate · District ${d}`,
+      },
+      assembly: {
+        label: 'Assembly',
+        file: 'data/ca-assembly.geojson',
+        districtKey: 'district',
+        roleLabel: (d) => `CA Assembly · District ${d}`,
+      },
+    };
+
+    // ─── State ────────────────────────────────────────────────────────────────
+    let repsData = null;
+    let activeLayer = 'house';
+    let geoCache = {};         // cached GeoJSON per layer
+    let selectedDistrict = null;
+    let lockedDistrict = null; // clicked / locked
+
+    // ─── D3 setup ─────────────────────────────────────────────────────────────
+    const svg = d3.select('#map');
+    const g = svg.append('g');
+    let projection, pathGen;
+
+    function setupProjection(features) {
+      const bbox = svg.node().getBoundingClientRect();
+      const w = bbox.width || 600;
+      const h = bbox.height || 600;
+
+      projection = d3.geoAlbers()
+        .rotate([120, 0])
+        .parallels([34, 40.5]);
+
+      const fc = { type: 'FeatureCollection', features };
+      projection.fitExtent([[20, 20], [w - 20, h - 20]], fc);
+      pathGen = d3.geoPath().projection(projection);
+    }
+
+    // ─── Render map ───────────────────────────────────────────────────────────
+    function getRep(district) {
+      if (!repsData) return null;
+      const layer = repsData[activeLayer];
+      return layer ? (layer[String(district)] || null) : null;
+    }
+
+    function renderMap(features) {
+      g.selectAll('.district-path').remove();
+
+      setupProjection(features);
+
+      g.selectAll('.district-path')
+        .data(features)
+        .join('path')
+        .attr('class', d => {
+          const dist = d.properties.district;
+          const rep = getRep(dist);
+          const party = rep ? rep.party : '';
+          return `district-path party-${party}`;
+        })
+        .attr('d', pathGen)
+        .on('mouseenter', function(event, d) {
+          if (lockedDistrict !== null) return;
+          const dist = d.properties.district;
+          showInfo(dist);
+          d3.selectAll('.district-path').classed('hovered', false);
+          d3.select(this).classed('hovered', true);
+        })
+        .on('mouseleave', function() {
+          if (lockedDistrict !== null) return;
+          d3.selectAll('.district-path').classed('hovered', false);
+          resetInfo();
+        })
+        .on('click', function(event, d) {
+          const dist = d.properties.district;
+          if (lockedDistrict === dist) {
+            // unlock
+            lockedDistrict = null;
+            d3.selectAll('.district-path').classed('selected', false).classed('hovered', false);
+            resetInfo();
+          } else {
+            lockedDistrict = dist;
+            d3.selectAll('.district-path').classed('selected', false).classed('hovered', false);
+            d3.select(this).classed('selected', true);
+            showInfo(dist);
+          }
+        });
+    }
+
+    // ─── Info panel ───────────────────────────────────────────────────────────
+    function showInfo(district) {
+      const rep = getRep(district);
+      const cfg = LAYER_CONFIG[activeLayer];
+      const panel = document.getElementById('info-panel');
+
+      if (!rep) {
+        panel.innerHTML = `
+          <div class="info-district">${cfg.roleLabel(district)}</div>
+          <div class="info-name info-vacant">No data available</div>
+        `;
+        return;
+      }
+
+      const isVacant = rep.name === 'Vacant' || rep.name === '';
+      const partyLabel = rep.party === 'D' ? 'Democrat' : rep.party === 'R' ? 'Republican' : '';
+      const websiteHtml = rep.website
+        ? `<a class="info-link" href="https://${rep.website}" target="_blank" rel="noopener">official site →</a>`
+        : '';
+      const noteHtml = rep.note
+        ? `<div class="info-note">${rep.note}</div>`
+        : '';
+      const lockHint = lockedDistrict === district
+        ? '<div class="click-hint">click again to unlock</div>'
+        : '<div class="click-hint">click to lock</div>';
+
+      panel.innerHTML = `
+        <div class="info-district">${cfg.roleLabel(district)}</div>
+        ${isVacant
+          ? `<div class="info-name info-vacant">Vacant</div>${noteHtml}`
+          : `
+            <div class="info-name">${rep.name}</div>
+            <div class="info-party party-${rep.party}">${partyLabel}</div>
+            <div class="info-role">${cfg.roleLabel(district).split(' · ')[0]}</div>
+            ${websiteHtml}
+            ${noteHtml}
+          `
+        }
+        ${lockHint}
+      `;
+    }
+
+    function resetInfo() {
+      document.getElementById('info-panel').innerHTML =
+        '<div class="info-placeholder">hover over a district</div>';
+    }
+
+    // ─── Senators bar ─────────────────────────────────────────────────────────
+    function renderSenators(senators) {
+      const bar = document.getElementById('senators-bar');
+      const parts = senators.map(s => `
+        <div class="senator">
+          <span class="senator-name">${s.name}</span>
+          <a class="senator-link" href="https://${s.website}" target="_blank" rel="noopener">↗</a>
+        </div>
+      `).join('<span class="sep">·</span>');
+
+      bar.innerHTML = `<span style="color:#444;font-size:.8rem;margin-right:4px">US Senators:</span>${parts}`;
+    }
+
+    // ─── Layer switching ──────────────────────────────────────────────────────
+    async function loadLayer(layerKey) {
+      const cfg = LAYER_CONFIG[layerKey];
+      const overlay = document.getElementById('map-overlay');
+
+      // unlock any locked district
+      lockedDistrict = null;
+      d3.selectAll('.district-path').classed('selected', false).classed('hovered', false);
+      resetInfo();
+
+      if (geoCache[layerKey]) {
+        renderMap(geoCache[layerKey]);
+        overlay.style.display = 'none';
+        return;
+      }
+
+      overlay.style.display = 'flex';
+      overlay.textContent = 'loading map...';
+
+      try {
+        const geo = await d3.json(cfg.file);
+        geoCache[layerKey] = geo.features;
+        renderMap(geo.features);
+        overlay.style.display = 'none';
+      } catch (err) {
+        overlay.textContent = 'error loading map data';
+        console.error(err);
+      }
+    }
+
+    // ─── Toggle buttons ───────────────────────────────────────────────────────
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.dataset.layer === activeLayer) return;
+        document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeLayer = btn.dataset.layer;
+        loadLayer(activeLayer);
+      });
+    });
+
+    // ─── Resize handling ──────────────────────────────────────────────────────
+    function onResize() {
+      const bbox = svg.node().parentElement.getBoundingClientRect();
+      svg.attr('width', bbox.width).attr('height', bbox.height);
+      if (geoCache[activeLayer]) {
+        renderMap(geoCache[activeLayer]);
+      }
+    }
+
+    window.addEventListener('resize', () => {
+      clearTimeout(window._resizeTimer);
+      window._resizeTimer = setTimeout(onResize, 150);
+    });
+
+    // ─── Init ─────────────────────────────────────────────────────────────────
+    async function init() {
+      // Size SVG
+      const bbox = svg.node().parentElement.getBoundingClientRect();
+      svg.attr('width', bbox.width).attr('height', bbox.height);
+
+      // Load reps data
+      try {
+        repsData = await d3.json('data/ca-reps.json');
+        renderSenators(repsData.us_senators);
+      } catch (err) {
+        console.error('Failed to load reps data:', err);
+      }
+
+      // Load default layer
+      await loadLayer(activeLayer);
+    }
+
+    init();
+  </script>
+</body>
+</html>
