@@ -139,8 +139,8 @@
     }
 
     .district-path {
-      stroke: #1a1a1a;
-      stroke-width: 0.5;
+      stroke: rgba(0,0,0,0.5);
+      stroke-width: 0.8;
       cursor: pointer;
       transition: fill 0.12s;
     }
@@ -355,6 +355,10 @@
       g.selectAll('.district-path').remove();
 
       setupProjection(features);
+
+      // diagnostic: log feature count and sample path to verify rendering
+      const samplePath = pathGen(features[0]);
+      console.log('[map] features:', features.length, '| sample path start:', samplePath ? samplePath.slice(0, 80) : 'NULL');
 
       g.selectAll('.district-path')
         .data(features)
