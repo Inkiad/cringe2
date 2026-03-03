@@ -335,14 +335,12 @@
     let projection, pathGen;
 
     function setupProjection(features) {
-      const bbox = svg.node().getBoundingClientRect();
-      const w = bbox.width || 600;
-      const h = bbox.height || 600;
+      const wrapper = svg.node().parentElement;
+      const w = wrapper.clientWidth || 600;
+      const h = wrapper.clientHeight || 600;
+      svg.attr('width', w).attr('height', h);
 
-      projection = d3.geoAlbers()
-        .rotate([120, 0])
-        .parallels([34, 40.5]);
-
+      projection = d3.geoMercator();
       const fc = { type: 'FeatureCollection', features };
       projection.fitExtent([[20, 20], [w - 20, h - 20]], fc);
       pathGen = d3.geoPath().projection(projection);
@@ -500,25 +498,15 @@
     });
 
     // ─── Resize handling ──────────────────────────────────────────────────────
-    function onResize() {
-      const bbox = svg.node().parentElement.getBoundingClientRect();
-      svg.attr('width', bbox.width).attr('height', bbox.height);
-      if (geoCache[activeLayer]) {
-        renderMap(geoCache[activeLayer]);
-      }
-    }
-
     window.addEventListener('resize', () => {
       clearTimeout(window._resizeTimer);
-      window._resizeTimer = setTimeout(onResize, 150);
+      window._resizeTimer = setTimeout(() => {
+        if (geoCache[activeLayer]) renderMap(geoCache[activeLayer]);
+      }, 150);
     });
 
     // ─── Init ─────────────────────────────────────────────────────────────────
     async function init() {
-      // Size SVG
-      const bbox = svg.node().parentElement.getBoundingClientRect();
-      svg.attr('width', bbox.width).attr('height', bbox.height);
-
       // Load reps data
       try {
         repsData = await d3.json('data/ca-reps.json');
