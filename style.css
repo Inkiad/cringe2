@@ -59,7 +59,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    object-fit: cover;
+    object-fit: contain;
     opacity: 0.08;
     filter: invert(1);
 }
