@@ -36,8 +36,3 @@
 /*.ico
   Cache-Control: public, max-age=2592000
 
-# API endpoints - never cache
-/api/*
-  Cache-Control: no-cache, no-store, must-revalidate
-  Pragma: no-cache
-  Expires: 0
