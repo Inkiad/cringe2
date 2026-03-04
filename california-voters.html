@@ -444,7 +444,7 @@
       const wrapper = document.getElementById('map-wrapper');
       const w = wrapper.offsetWidth, h = wrapper.offsetHeight;
       const scale = Math.min(20, 0.85 / Math.max((x1 - x0) / w, (y1 - y0) / h));
-      svgSel.transition().duration(700).call(
+      svgSel.transition().duration(400).call(
         zoomBehavior.transform,
         d3.zoomIdentity.translate(w / 2 - scale * (x0 + x1) / 2, h / 2 - scale * (y0 + y1) / 2).scale(scale)
       );
@@ -484,6 +484,7 @@
         })
         .on('click', function(event, d) {
           event.stopPropagation();
+          svgSel.interrupt(); // cancel any in-flight zoom transition immediately
           const num = String(d.properties.district);
           const rep = repMap[num];
           districts.classed('highlighted', false);
@@ -491,7 +492,7 @@
             highlighted = null;
             locked = null;
             infoContent.innerHTML = '<div class="info-placeholder">hover over a district</div>';
-            svgSel.transition().duration(600).call(zoomBehavior.transform, d3.zoomIdentity);
+            svgSel.transition().duration(400).call(zoomBehavior.transform, d3.zoomIdentity);
           } else {
             highlighted = d;
             locked = { num, rep, layerKey };
@@ -633,7 +634,8 @@
     }
 
     function setSheetHeight(h) {
-      infoPanel.style.height = Math.max(PEEK, Math.min(snapPoints()[2], h)) + 'px';
+      const snaps = snapPoints();
+      infoPanel.style.height = Math.max(PEEK, Math.min(snaps[snaps.length - 1], h)) + 'px';
     }
 
     function snapSheet(currentH, velocityPxPerMs) {
