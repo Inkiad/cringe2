@@ -124,10 +124,20 @@
       pointer-events: none; display: none; border: 1px solid #2a2a2a; z-index: 100;
     }
 
+    /* --- Resize handle --- */
+    .resize-handle {
+      width: 4px;
+      flex-shrink: 0;
+      background: #2a2a2a;
+      cursor: col-resize;
+      transition: background 0.15s;
+    }
+    .resize-handle:hover, .resize-handle.dragging { background: #555; }
+
     /* --- Info panel --- */
     .info-panel {
       width: 240px; flex-shrink: 0; background: #111;
-      border-left: 1px solid #2a2a2a; padding: 20px 16px; overflow-y: auto;
+      padding: 20px 16px; overflow-y: auto;
     }
     .info-placeholder { color: #444; font-size: 0.85rem; margin-top: 8px; }
     .info-district { font-size: 0.75rem; color: #555; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
@@ -184,6 +194,7 @@
       <div id="search-status"></div>
       <button id="reset-btn">reset zoom</button>
     </div>
+    <div class="resize-handle" id="resize-handle"></div>
     <div class="info-panel" id="info-panel">
       <div class="info-placeholder">hover over a district</div>
     </div>
@@ -416,6 +427,26 @@
         updatePanel(num, rep, activeLayer);
       });
     }
+
+    // Resizable sidebar
+    const resizeHandle = document.getElementById('resize-handle');
+    resizeHandle.addEventListener('mousedown', e => {
+      e.preventDefault();
+      const startX     = e.clientX;
+      const startWidth = infoPanel.offsetWidth;
+      resizeHandle.classList.add('dragging');
+      const onMove = e => {
+        const w = Math.max(180, Math.min(520, startWidth + (startX - e.clientX)));
+        infoPanel.style.width = w + 'px';
+      };
+      const onUp = () => {
+        resizeHandle.classList.remove('dragging');
+        document.removeEventListener('mousemove', onMove);
+        document.removeEventListener('mouseup', onUp);
+      };
+      document.addEventListener('mousemove', onMove);
+      document.addEventListener('mouseup', onUp);
+    });
 
     init();
   </script>
