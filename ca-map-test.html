@@ -27,20 +27,8 @@
       .text('loading...');
 
     d3.json('data/ca-congressional.geojson').then(geo => {
-      const caBBox = {
-        type: 'Feature',
-        geometry: {
-          type: 'Polygon',
-          coordinates: [[
-            [-124.48, 32.53], [-114.13, 32.53],
-            [-114.13, 42.01], [-124.48, 42.01],
-            [-124.48, 32.53]
-          ]]
-        }
-      };
-
       const projection = d3.geoMercator()
-        .fitExtent([[40, 40], [w - 40, h - 40]], caBBox);
+        .fitExtent([[40, 40], [w - 40, h - 40]], geo);
 
       const path = d3.geoPath().projection(projection);
 
