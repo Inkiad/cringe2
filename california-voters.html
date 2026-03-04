@@ -446,10 +446,6 @@
             d3.select(this).classed('highlighted', true);
             zoomToFeature(d);
             updatePanel(num, rep, layerKey);
-            // On mobile, expand sheet fully so all content is visible without dragging
-            if (window.innerWidth <= 700) {
-              infoPanel.style.height = snapPoints()[2] + 'px';
-            }
           }
         });
     }
@@ -584,12 +580,21 @@
       return snaps.reduce((prev, cur) => Math.abs(cur - h) < Math.abs(prev - h) ? cur : prev);
     }
 
-    function setSheetHeight(h, animate) {
-      infoPanel.classList.toggle('dragging', !animate);
+    function setSheetHeight(h) {
       infoPanel.style.height = Math.max(PEEK, Math.min(snapPoints()[2], h)) + 'px';
     }
 
-    let sheetStartY = 0, sheetStartH = 0, sheetActive = false;
+    function snapSheet(currentH, velocityPxPerMs) {
+      const snaps = snapPoints();
+      // Flick gesture: snap directionally regardless of current position
+      if (Math.abs(velocityPxPerMs) > 0.3) {
+        if (velocityPxPerMs > 0) return snaps.find(s => s > currentH) ?? snaps[snaps.length - 1];
+        else return [...snaps].reverse().find(s => s < currentH) ?? snaps[0];
+      }
+      return snapTo(currentH);
+    }
+
+    let sheetStartY = 0, sheetStartH = 0, sheetStartTime = 0, sheetActive = false;
 
     mobileHandle.addEventListener('touchstart', e => {
       if (window.innerWidth > 700) return;
@@ -597,23 +602,42 @@
       sheetActive = true;
       sheetStartY = e.touches[0].clientY;
       sheetStartH = infoPanel.offsetHeight;
-      infoPanel.classList.add('dragging');
+      sheetStartTime = Date.now();
+      infoPanel.style.transition = 'none';
     }, { passive: false });
 
     mobileHandle.addEventListener('touchmove', e => {
       if (!sheetActive) return;
       e.stopPropagation();
-      const dy = sheetStartY - e.touches[0].clientY;
-      setSheetHeight(sheetStartH + dy, false);
+      setSheetHeight(sheetStartH + (sheetStartY - e.touches[0].clientY));
     }, { passive: false });
 
-    mobileHandle.addEventListener('touchend', () => {
+    mobileHandle.addEventListener('touchend', e => {
       if (!sheetActive) return;
       sheetActive = false;
-      infoPanel.classList.remove('dragging');
+      const elapsed  = Date.now() - sheetStartTime;
+      const dy       = sheetStartY - e.changedTouches[0].clientY;
+      const velocity = elapsed > 0 ? dy / elapsed : 0;
       infoPanel.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1)';
-      infoPanel.style.height = snapTo(infoPanel.offsetHeight) + 'px';
+      infoPanel.style.height = snapSheet(infoPanel.offsetHeight, velocity) + 'px';
     });
+
+    // ── Mobile tap-to-expand (iOS Safari: D3 zoom eats click events on SVG) ──
+    // Detect taps on district paths via touchend at the SVG level instead.
+    let mapTouchMoved = false;
+    document.getElementById('map').addEventListener('touchstart', () => { mapTouchMoved = false; }, { passive: true });
+    document.getElementById('map').addEventListener('touchmove',  () => { mapTouchMoved = true;  }, { passive: true });
+    document.getElementById('map').addEventListener('touchend', e => {
+      if (mapTouchMoved || window.innerWidth > 700) return;
+      if (e.target.classList.contains('district')) {
+        infoPanel.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1)';
+        infoPanel.style.height = snapPoints()[2] + 'px';
+      } else {
+        // Tapped map background — collapse
+        infoPanel.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1)';
+        infoPanel.style.height = PEEK + 'px';
+      }
+    }, { passive: true });
 
     // Resizable sidebar
     const resizeHandle = document.getElementById('resize-handle');
