@@ -703,6 +703,51 @@
       }
     }, { passive: true });
 
+    // ── Keyboard navigation ───────────────────────────────────────────────────
+    document.addEventListener('keydown', e => {
+      // Don't hijack keys while typing in the search box
+      if (document.activeElement === document.getElementById('search-input')) return;
+
+      if (e.key === 'Escape') {
+        svgSel.interrupt();
+        highlighted = null;
+        locked = null;
+        if (districts) districts.classed('highlighted', false);
+        infoContent.innerHTML = '<div class="info-placeholder">hover over a district</div>';
+        svgSel.transition().duration(400).call(zoomBehavior.transform, d3.zoomIdentity);
+        if (window.innerWidth <= 700) infoPanel.style.height = PEEK + 'px';
+        return;
+      }
+
+      if ((e.key === 'ArrowLeft' || e.key === 'ArrowRight') && districts && geoCache[activeLayer]) {
+        e.preventDefault(); // prevent page scroll
+        const geo    = geoCache[activeLayer];
+        const repMap = repsData[LAYERS[activeLayer].key];
+        const nums   = geo.features.map(f => parseInt(f.properties.district)).sort((a, b) => a - b);
+        const curIdx = locked ? nums.indexOf(parseInt(locked.num)) : -1;
+
+        let nextIdx;
+        if (e.key === 'ArrowRight') {
+          nextIdx = curIdx === -1 ? 0 : (curIdx + 1) % nums.length;
+        } else {
+          nextIdx = curIdx === -1 ? nums.length - 1 : (curIdx - 1 + nums.length) % nums.length;
+        }
+
+        const nextNum     = String(nums[nextIdx]);
+        const nextFeature = geo.features.find(f => String(f.properties.district) === nextNum);
+        const rep         = repMap[nextNum];
+
+        svgSel.interrupt();
+        districts.classed('highlighted', false);
+        districts.filter(d => String(d.properties.district) === nextNum).classed('highlighted', true);
+        highlighted = nextFeature;
+        locked = { num: nextNum, rep, layerKey: activeLayer };
+        zoomToFeature(nextFeature);
+        updatePanel(nextNum, rep, activeLayer);
+        return;
+      }
+    });
+
     // Resizable sidebar
     const resizeHandle = document.getElementById('resize-handle');
     resizeHandle.addEventListener('mousedown', e => {
