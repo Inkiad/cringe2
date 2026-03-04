@@ -48,8 +48,20 @@
 
       info.text(`scale:${scale.toFixed(0)} | LA:${la[0].toFixed(0)},${la[1].toFixed(0)} | SF:${sf[0].toFixed(0)},${sf[1].toFixed(0)} | expected LA~1380,900`);
 
+      // Reverse ring winding order so D3 fills the district interior, not the complement
+      const rev = ring => ring.slice().reverse();
+      const fixed = geo.features.map(f => ({
+        ...f,
+        geometry: {
+          ...f.geometry,
+          coordinates: f.geometry.type === 'Polygon'
+            ? f.geometry.coordinates.map(rev)
+            : f.geometry.coordinates.map(poly => poly.map(rev))
+        }
+      }));
+
       svg.selectAll('.district')
-        .data(geo.features)
+        .data(fixed)
         .join('path')
         .attr('class', 'district')
         .attr('d', path);
