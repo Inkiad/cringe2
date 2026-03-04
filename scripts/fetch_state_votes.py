@@ -17,6 +17,7 @@ import json
 import time
 import os
 import re
+import unicodedata
 
 API_KEY = os.environ.get("LEGISCAN_API_KEY", "e4c7899f760c5abce0a554a8c6ab58d3")
 BASE_URL = "https://api.legiscan.com/"
@@ -267,6 +268,68 @@ def main():
         if i % 20 == 0:
             print(f"  {i}/{len(all_people_ids)}...")
     print(f"  Done ({len(all_people_ids)} legislators resolved)\n")
+
+    # Step 2b: resolve (chamber, district) conflicts caused by CA redistricting.
+    # getPerson returns a legislator's *current* district. Under old maps, a different
+    # person held the same district number, so two people_ids can share one slot.
+    # Keep only the one whose name matches ca-reps.json; discard the other.
+    def norm_name(name):
+        # Some JSON files have double-encoded UTF-8 (e.g., ó stored as Ã³).
+        # Re-encode each char as latin-1 bytes and decode as UTF-8 to recover originals.
+        try:
+            name = name.encode("latin-1").decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            pass  # name was already correct Unicode or mixed; use as-is
+        # Strip accents (NFD decompose, remove combining marks), then ASCII a-z only
+        nfkd = unicodedata.normalize("NFD", name)
+        ascii_only = "".join(c for c in nfkd if unicodedata.category(c) != "Mn")
+        return re.sub(r"[^a-z\s]", "", ascii_only.lower()).split()
+
+    def names_compatible(person_tokens, canonical_tokens):
+        """True if person's name tokens are all present in the canonical name."""
+        return bool(person_tokens) and all(t in canonical_tokens for t in person_tokens)
+
+    reps_canonical = {}  # (chkey, dist) -> normalized name tokens
+    for dist, rep in reps["state_senate"].items():
+        reps_canonical[("state_senate", dist)] = norm_name(rep["name"])
+    for dist, rep in reps["assembly"].items():
+        reps_canonical[("assembly", dist)] = norm_name(rep["name"])
+
+    slot_to_pids = {}
+    for pid, info in _people_cache.items():
+        if not info:
+            continue
+        chkey = chamber_key(info["role"])
+        if not chkey:
+            continue
+        slot_to_pids.setdefault((chkey, info["district"]), []).append(pid)
+
+    conflicts_resolved = 0
+    for slot, pids in slot_to_pids.items():
+        if len(pids) <= 1:
+            continue
+        canonical = reps_canonical.get(slot, [])
+        # Try exact match first, then partial (handles middle-name omissions in LegiScan)
+        match_pid = next(
+            (p for p in pids if norm_name(_people_cache[p]["name"]) == canonical), None
+        )
+        if match_pid is None:
+            match_pid = next(
+                (p for p in pids if names_compatible(norm_name(_people_cache[p]["name"]), canonical)), None
+            )
+        if match_pid is None:
+            # Can't determine current rep — keep all to avoid losing votes
+            print(f"  conflict: unresolved for {slot}, keeping all pids: "
+                  f"{[_people_cache[p]['name'] for p in pids]}")
+            continue
+        for pid in pids:
+            if pid != match_pid:
+                print(f"  conflict: dropping {_people_cache[pid]['name']} ({slot}) in favor of "
+                      f"{_people_cache[match_pid]['name']}")
+                _people_cache[pid] = None
+                conflicts_resolved += 1
+    if conflicts_resolved:
+        print(f"  Resolved {conflicts_resolved} redistricting conflict(s)\n")
 
     # Step 3: apply votes to output
     for cat, label, prog, featured, chkey, rc_id in tasks:

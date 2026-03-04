@@ -258,7 +258,94 @@
       .senators-bar { display: none; }
       .search-form { margin-left: 0; width: 100%; }
       .search-form input { flex: 1; width: auto; }
+
+      .interesting-grid { grid-template-columns: 1fr; }
     }
+
+    /* --- Interesting panel --- */
+    #interesting-panel {
+      display: none;
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 20px 40px;
+    }
+
+    .interesting-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .interesting-col-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #555;
+      border-bottom: 1px solid #2a2a2a;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+
+    .interesting-sub-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin: 14px 0 8px;
+    }
+
+    .interesting-sub-label.rebels { color: #c07a3a; }
+    .interesting-sub-label.strict { color: #3a6ea8; margin-top: 22px; }
+
+    .interesting-empty {
+      color: #444;
+      font-size: 0.78rem;
+      font-style: italic;
+    }
+
+    .rebel-card {
+      background: #1b1b1b;
+      border: 1px solid #2a2a2a;
+      border-radius: 4px;
+      padding: 9px 11px;
+      margin-bottom: 7px;
+    }
+
+    .rebel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 5px;
+    }
+
+    .rebel-name { font-weight: 600; color: #e8e8e8; font-size: 0.88rem; }
+    .rebel-meta { color: #555; font-size: 0.72rem; white-space: nowrap; margin-left: 8px; }
+
+    .rebel-cross {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      padding: 1px 0;
+    }
+
+    .rebel-bill { color: #777; font-size: 0.75rem; line-height: 1.3; }
+
+    .strict-list { display: flex; flex-direction: column; gap: 3px; }
+
+    .strict-item {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      font-size: 0.8rem;
+      padding: 2px 0;
+    }
+
+    .strict-dist { color: #444; font-size: 0.72rem; min-width: 24px; text-align: right; flex-shrink: 0; }
+    .strict-name { color: #aaa; flex: 1; }
+    .strict-party { font-weight: 700; font-size: 0.72rem; flex-shrink: 0; }
   </style>
 </head>
 <body>
@@ -276,6 +363,8 @@
     <button class="toggle-btn active" data-layer="house">US House</button>
     <button class="toggle-btn" data-layer="state_senate">State Senate</button>
     <button class="toggle-btn" data-layer="assembly">Assembly</button>
+    <span class="controls-sep">·</span>
+    <button class="toggle-btn" id="interesting-btn" data-layer="interesting">interesting</button>
     <span class="controls-sep">·</span>
     <form class="search-form" id="search-form">
       <input type="text" id="search-input" placeholder="city, address, or zip…" autocomplete="off" />
@@ -300,6 +389,8 @@
       </div>
     </div>
   </div>
+
+  <div id="interesting-panel"></div>
 
   <div class="tooltip" id="tooltip"></div>
 
@@ -633,6 +724,7 @@
     }
 
     async function loadAndDraw(layerKey) {
+      hideInteresting();
       if (!geoCache[layerKey]) {
         try { geoCache[layerKey] = await d3.json(LAYERS[layerKey].file); }
         catch (e) { console.error(e); return; }
@@ -699,8 +791,8 @@
       overlay.style.display = 'none';
       drawLayer('house');
 
-      // Layer toggle
-      document.querySelectorAll('.toggle-btn').forEach(btn => {
+      // Layer toggle (exclude the interesting button, which has its own handler)
+      document.querySelectorAll('.toggle-btn:not(#interesting-btn)').forEach(btn => {
         btn.addEventListener('click', function() {
           document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
           this.classList.add('active');
@@ -875,6 +967,175 @@
         zoomToFeature(nextFeature);
         updatePanel(nextNum, rep, activeLayer);
         return;
+      }
+    });
+
+    // ── Interesting panel ─────────────────────────────────────────────────────
+    const interestingPanel = document.getElementById('interesting-panel');
+    const mainEl           = document.querySelector('.main');
+    const resizeHandleEl   = document.getElementById('resize-handle');
+    const interestingBtn   = document.getElementById('interesting-btn');
+
+    function analyzeVotes(votes, party) {
+      const crossParty = [];
+      let partyLineCount = 0;
+      let total = 0;
+      for (const v of votes) {
+        if (!v.progressive_vote) continue;
+        if (!v.vote || v.vote === 'Not Voting' || v.vote === 'Absent' || v.vote === 'NV' || v.vote === 'Not Found') continue;
+        const expected = party === 'D' ? v.progressive_vote : (v.progressive_vote === 'Yea' ? 'Nay' : 'Yea');
+        total++;
+        if (v.vote !== expected) {
+          crossParty.push({ label: v.label, vote: v.vote, expected });
+        } else {
+          partyLineCount++;
+        }
+      }
+      return { crossParty, partyLineCount, total };
+    }
+
+    function getShortLabel(label) {
+      const info = BILL_INFO[label] || STATE_BILL_INFO[label];
+      if (info) return info.label;
+      // fallback: strip bill number prefix
+      const m = label.match(/—\s*(.+)/);
+      return m ? m[1].trim() : label;
+    }
+
+    function computeAnalysis() {
+      const result = {
+        house:        { rebels: [], strict: [] },
+        state_senate: { rebels: [], strict: [] },
+        assembly:     { rebels: [], strict: [] },
+      };
+
+      // US House — use all federal votes (skip null progressive_vote)
+      for (const [dist, data] of Object.entries(votesData || {})) {
+        const rep = repsData?.house?.[dist];
+        if (!rep || rep.name === 'Vacant' || !rep.party) continue;
+        const party = rep.party;
+        if (party !== 'D' && party !== 'R') continue;
+        const votes = Object.values(data.votes).flat();
+        const { crossParty, partyLineCount, total } = analyzeVotes(votes, party);
+        const entry = { dist, name: rep.name, party, crossParty, partyLineCount, total };
+        if (crossParty.length > 0) result.house.rebels.push(entry);
+        else if (total > 0) result.house.strict.push(entry);
+      }
+
+      // State Senate + Assembly — use all stored votes (featured and non-featured)
+      for (const chkey of ['state_senate', 'assembly']) {
+        const repsMap  = repsData?.[chkey] || {};
+        const votesMap = stateVotesData?.[chkey] || {};
+        for (const [dist, data] of Object.entries(votesMap)) {
+          const rep = repsMap[dist];
+          if (!rep || rep.name === 'Vacant' || !rep.party) continue;
+          const party = rep.party;
+          if (party !== 'D' && party !== 'R') continue;
+          const votes = Object.values(data.votes).flat();
+          const { crossParty, partyLineCount, total } = analyzeVotes(votes, party);
+          const entry = { dist, name: rep.name, party, crossParty, partyLineCount, total };
+          if (crossParty.length > 0) result[chkey].rebels.push(entry);
+          else if (total > 0) result[chkey].strict.push(entry);
+        }
+      }
+
+      // Sort: rebels by # crossings desc; strict by district number asc
+      for (const ch of Object.values(result)) {
+        ch.rebels.sort((a, b) => b.crossParty.length - a.crossParty.length || parseInt(a.dist) - parseInt(b.dist));
+        ch.strict.sort((a, b) => parseInt(a.dist) - parseInt(b.dist));
+      }
+      return result;
+    }
+
+    function renderInteresting() {
+      if (!votesData || !repsData) {
+        interestingPanel.innerHTML = '<div style="color:#555;padding:40px;text-align:center">Data not loaded yet.</div>';
+        return;
+      }
+      const analysis = computeAnalysis();
+
+      const CHAMBER_LABELS = {
+        house:        'US House',
+        state_senate: 'CA State Senate',
+        assembly:     'CA Assembly',
+      };
+
+      let html = '<div class="interesting-grid">';
+      for (const [chkey, label] of Object.entries(CHAMBER_LABELS)) {
+        const { rebels, strict } = analysis[chkey];
+        html += `<div>
+          <div class="interesting-col-title">${label}</div>
+
+          <div class="interesting-sub-label rebels">crossed party line (${rebels.length})</div>`;
+
+        if (!rebels.length) {
+          html += `<div class="interesting-empty">All members voted with their party on every tracked bill.</div>`;
+        } else {
+          for (const r of rebels) {
+            const pc = r.party === 'D' ? '#4a90d9' : '#d9504a';
+            html += `<div class="rebel-card">
+              <div class="rebel-header">
+                <span class="rebel-name">${r.name}</span>
+                <span class="rebel-meta">Dist.&nbsp;${r.dist}&thinsp;·&thinsp;<span style="color:${pc};font-weight:700">${r.party}</span></span>
+              </div>`;
+            for (const cross of r.crossParty) {
+              const cls  = cross.vote === 'Yea' ? 'vote-yea' : 'vote-nay';
+              const lbl  = getShortLabel(cross.label);
+              html += `<div class="rebel-cross">
+                <span class="vote-cast ${cls}">${cross.vote}</span>
+                <span class="rebel-bill">${lbl}</span>
+              </div>`;
+            }
+            html += `</div>`;
+          }
+        }
+
+        html += `<div class="interesting-sub-label strict">straight party line (${strict.length})</div>`;
+        if (!strict.length) {
+          html += `<div class="interesting-empty">Every tracked member crossed party lines at least once.</div>`;
+        } else {
+          html += `<div class="strict-list">`;
+          for (const s of strict) {
+            const pc = s.party === 'D' ? '#4a90d9' : '#d9504a';
+            html += `<div class="strict-item">
+              <span class="strict-dist">${s.dist}</span>
+              <span class="strict-name">${s.name}</span>
+              <span class="strict-party" style="color:${pc}">${s.party}</span>
+            </div>`;
+          }
+          html += `</div>`;
+        }
+
+        html += `</div>`;
+      }
+      html += `</div>`;
+      interestingPanel.innerHTML = html;
+    }
+
+    function showInteresting() {
+      mainEl.style.display = 'none';
+      resizeHandleEl.style.display = 'none';
+      interestingPanel.style.display = 'block';
+      renderInteresting();
+    }
+
+    function hideInteresting() {
+      interestingPanel.style.display = 'none';
+      mainEl.style.display = '';
+      resizeHandleEl.style.display = '';
+    }
+
+    interestingBtn.addEventListener('click', function () {
+      const isActive = this.classList.contains('active');
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+      if (isActive) {
+        hideInteresting();
+        // restore whichever layer was active
+        document.querySelector(`.toggle-btn[data-layer="${activeLayer}"]`)?.classList.add('active');
+      } else {
+        hideInteresting(); // ensure map state is clean
+        this.classList.add('active');
+        showInteresting();
       }
     });
 

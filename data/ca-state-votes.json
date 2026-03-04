@@ -9,38 +9,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -51,72 +27,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "2": {
@@ -247,38 +173,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -289,72 +191,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "4": {
@@ -485,38 +337,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -527,72 +355,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "6": {
@@ -723,38 +501,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -765,72 +519,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "8": {
@@ -961,38 +665,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -1003,72 +683,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "10": {
@@ -2392,21 +2022,9 @@
           },
           {
             "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           },
           {
             "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
@@ -2418,12 +2036,6 @@
         "healthcare": [
           {
             "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
@@ -2433,12 +2045,6 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           },
           {
             "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
@@ -2461,20 +2067,8 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": false
           },
@@ -2488,19 +2082,7 @@
         "lgbtq": [
           {
             "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
             "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
           },
@@ -2520,21 +2102,9 @@
           },
           {
             "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           },
           {
             "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
@@ -2546,19 +2116,7 @@
         "spending": [
           {
             "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
             "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
           },
@@ -2863,38 +2421,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -2905,72 +2439,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "26": {
@@ -3339,38 +2823,14 @@
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -3381,72 +2841,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "30": {
@@ -3577,38 +2987,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -3619,72 +3005,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "32": {
@@ -4053,38 +3389,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -4095,72 +3407,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "36": {
@@ -4172,38 +3434,14 @@
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -4214,72 +3452,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "37": {
@@ -4291,38 +3479,14 @@
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -4333,72 +3497,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "38": {
@@ -4529,38 +3643,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -4571,72 +3661,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "40": {
@@ -4814,38 +3854,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -4856,72 +3872,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "3": {
@@ -5290,38 +4256,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -5332,72 +4274,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "7": {
@@ -5528,38 +4420,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -5570,72 +4438,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "9": {
@@ -6123,38 +4941,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -6165,72 +4959,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "14": {
@@ -6763,38 +5507,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -6805,72 +5525,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "20": {
@@ -7596,38 +6266,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -7638,72 +6284,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "27": {
@@ -8310,38 +6906,14 @@
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -8352,66 +6924,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "33": {
@@ -8423,38 +6951,14 @@
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -8465,72 +6969,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "34": {
@@ -8780,38 +7234,14 @@
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -8822,72 +7252,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "37": {
@@ -9375,38 +7755,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -9417,72 +7773,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "42": {
@@ -9613,38 +7919,14 @@
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -9655,72 +7937,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "44": {
@@ -9732,38 +7964,14 @@
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -9774,72 +7982,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "45": {
@@ -10610,38 +8768,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -10652,72 +8786,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "53": {
@@ -10729,38 +8813,14 @@
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -10771,72 +8831,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "54": {
@@ -10848,38 +8858,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -10890,72 +8876,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "55": {
@@ -11205,38 +9141,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -11247,72 +9159,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Absent",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "58": {
@@ -11726,38 +9588,14 @@
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -11768,72 +9606,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "63": {
@@ -11845,38 +9633,14 @@
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -11887,66 +9651,15 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
-        "immigration": [
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
-          }
-        ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "lgbtq": [],
+        "immigration": [],
+        "spending": []
       }
     },
     "64": {
@@ -13267,38 +10980,14 @@
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -13309,72 +10998,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Nay",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Nay",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "76": {
@@ -13386,38 +11025,14 @@
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 423 \u2014 Streamlined Multi-Family Housing Approval (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "AB 1033 \u2014 ADU Ownership and Separate Sale (2023)",
-            "vote": "Absent",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "healthcare": [
-          {
-            "label": "SB 525 \u2014 Healthcare Worker Minimum Wage (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
           {
             "label": "AB 45 \u2014 Health Data Location Privacy (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "SB 582 \u2014 Health Data Privacy Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
         "abortion": [
@@ -13428,72 +11043,22 @@
             "featured": true
           },
           {
-            "label": "AB 352 \u2014 Abortion Provider Shield Law (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
             "label": "AB 260 \u2014 Reproductive Health Care Act (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": false
-          },
-          {
-            "label": "SB 541 \u2014 Reproductive Health Services Access (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "lgbtq": [
-          {
-            "label": "AB 1955 \u2014 SAFETY Act: Student Gender Identity Protection (2024)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 407 \u2014 LGBTQ+ Foster Care Family Protections (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ],
+        "lgbtq": [],
         "immigration": [
           {
             "label": "SB 98 \u2014 Limit ICE Enforcement at Schools and Universities (2025)",
             "vote": "Yea",
             "progressive_vote": "Yea",
             "featured": true
-          },
-          {
-            "label": "AB 1306 \u2014 Limit Local Immigration Enforcement Cooperation (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 245/AB 311 \u2014 Food Assistance Regardless of Immigration Status (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": false
           }
         ],
-        "spending": [
-          {
-            "label": "AB 1228 \u2014 Fast Food Minimum Wage ($20/hour) (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          },
-          {
-            "label": "SB 140 \u2014 Early Childcare and Education Funding (2023)",
-            "vote": "Yea",
-            "progressive_vote": "Yea",
-            "featured": true
-          }
-        ]
+        "spending": []
       }
     },
     "77": {
