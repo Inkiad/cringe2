@@ -22,92 +22,142 @@ API_KEY = os.environ.get("LEGISCAN_API_KEY", "e4c7899f760c5abce0a554a8c6ab58d3")
 BASE_URL = "https://api.legiscan.com/"
 
 # Bills: each entry has senate_rc and/or assembly_rc roll call IDs from LegiScan.
-# Note: the immigration 2nd entry uses companion bills — SB 245 senate floor
-# vote + AB 311 assembly floor vote (same policy, passed separately per chamber).
+# "featured": True = shown by default in the UI (top 2 per category, biased toward newer).
+# All bills are stored in the JSON; the UI filters on featured.
+#
+# Note: the immigration 2nd entry (SB 245/AB 311) uses companion bills —
+# SB 245 had the Senate vote, AB 311 had the Assembly vote (same policy).
 BILLS = {
     "housing": [
         {
-            "label": "SB 423 — Streamlined Multi-Family Housing Approval",
+            "label": "SB 79 — Transit-Oriented Housing Development (2025)",
+            "senate_rc": 1584417,    # 21-13
+            "assembly_rc": 1602370,  # 43-19
+            "progressive_vote": "Yea",
+            "featured": True,
+        },
+        {
+            "label": "SB 423 — Streamlined Multi-Family Housing Approval (2023)",
             "senate_rc": 1336335,    # 29-5
             "assembly_rc": 1353456,  # 61-8
             "progressive_vote": "Yea",
+            "featured": True,
         },
         {
-            "label": "AB 1033 — ADU Ownership and Separate Sale",
+            "label": "AB 1033 — ADU Ownership and Separate Sale (2023)",
             "senate_rc": 1353191,    # 21-14
             "assembly_rc": 1338185,  # 50-16
             "progressive_vote": "Yea",
+            "featured": False,
         },
     ],
     "healthcare": [
         {
-            "label": "SB 525 — Healthcare Worker Minimum Wage",
+            "label": "SB 525 — Healthcare Worker Minimum Wage (2023)",
             "senate_rc": 1336368,    # 21-11
             "assembly_rc": 1354816,  # 63-13
             "progressive_vote": "Yea",
+            "featured": True,
         },
         {
-            "label": "SB 582 — Health Data Privacy Protections",
+            "label": "AB 45 — Health Data Location Privacy (2025)",
+            "senate_rc": 1602297,    # 29-9
+            "assembly_rc": 1602298,  # 61-12
+            "progressive_vote": "Yea",
+            "featured": True,
+        },
+        {
+            "label": "SB 582 — Health Data Privacy Protections (2023)",
             "senate_rc": 1332651,    # 39-0 (unanimous in Senate)
             "assembly_rc": 1353513,  # 61-16
             "progressive_vote": "Yea",
+            "featured": False,
         },
     ],
     "abortion": [
         {
-            "label": "AB 352 — Abortion Provider Shield Law",
+            "label": "AB 82 — Healthcare Shield Law (2025)",
+            "senate_rc": 1601680,    # 29-8
+            "assembly_rc": 1602442,  # 61-12
+            "progressive_vote": "Yea",
+            "featured": True,
+        },
+        {
+            "label": "AB 352 — Abortion Provider Shield Law (2023)",
             "senate_rc": 1354379,    # 32-7
             "assembly_rc": 1338102,  # 64-12
             "progressive_vote": "Yea",
+            "featured": True,
         },
         {
-            "label": "SB 541 — Reproductive Health Services Access",
+            "label": "AB 260 — Reproductive Health Care Act (2025)",
+            "senate_rc": 1601536,    # 30-8
+            "assembly_rc": 1602425,  # 61-12
+            "progressive_vote": "Yea",
+            "featured": False,
+        },
+        {
+            "label": "SB 541 — Reproductive Health Services Access (2023)",
             "senate_rc": 1336385,    # 31-9
             "assembly_rc": 1353444,  # 65-11
             "progressive_vote": "Yea",
+            "featured": False,
         },
     ],
     "lgbtq": [
         {
-            "label": "AB 1955 — SAFETY Act: Student Gender Identity Protection",
+            "label": "AB 1955 — SAFETY Act: Student Gender Identity Protection (2024)",
             "senate_rc": 1457334,    # 29-8
             "assembly_rc": 1461238,  # 61-16
             "progressive_vote": "Yea",
+            "featured": True,
         },
         {
-            "label": "SB 407 — LGBTQ+ Foster Care Family Protections",
+            "label": "SB 407 — LGBTQ+ Foster Care Family Protections (2023)",
             "senate_rc": 1332608,    # 31-5
             "assembly_rc": 1354098,  # 61-14
             "progressive_vote": "Yea",
+            "featured": True,
         },
     ],
     "immigration": [
         {
-            "label": "AB 1306 — Limit Local Immigration Enforcement Cooperation",
+            "label": "SB 98 — Limit ICE Enforcement at Schools and Universities (2025)",
+            "senate_rc": 1586398,    # 29-8
+            "assembly_rc": 1600846,  # 59-10
+            "progressive_vote": "Yea",
+            "featured": True,
+        },
+        {
+            "label": "AB 1306 — Limit Local Immigration Enforcement Cooperation (2023)",
             "senate_rc": 1354836,    # 29-9
             "assembly_rc": 1335465,  # 54-18
             "progressive_vote": "Yea",
+            "featured": True,
         },
         {
             # Companion bills on same policy: SB 245 had Senate vote, AB 311 had Assembly vote
-            "label": "SB 245/AB 311 — Food Assistance Regardless of Immigration Status",
+            "label": "SB 245/AB 311 — Food Assistance Regardless of Immigration Status (2023)",
             "senate_rc": 1332612,    # SB 245 Senate floor vote (31-8)
             "assembly_rc": 1338192,  # AB 311 Assembly floor vote (64-15)
             "progressive_vote": "Yea",
+            "featured": False,
         },
     ],
     "spending": [
         {
-            "label": "AB 1228 — Fast Food Minimum Wage ($20/hour)",
+            "label": "AB 1228 — Fast Food Minimum Wage ($20/hour) (2023)",
             "senate_rc": 1354781,    # 32-8
             "assembly_rc": 1338010,  # 42-22
             "progressive_vote": "Yea",
+            "featured": True,
         },
         {
-            "label": "SB 140 — Early Childcare and Education Funding",
+            "label": "SB 140 — Early Childcare and Education Funding (2023)",
             "senate_rc": 1285749,    # 29-8
             "assembly_rc": 1353573,  # 61-10
             "progressive_vote": "Yea",
+            "featured": True,
         },
     ],
 }
@@ -187,21 +237,22 @@ def main():
         },
     }
 
-    # Build list of (category, label, progressive_vote, chamber_key, rc_id)
+    # Build list of (category, label, progressive_vote, featured, chamber_key, rc_id)
     tasks = []
     for cat, bills in BILLS.items():
         for bill in bills:
+            featured = bill.get("featured", False)
             if bill.get("senate_rc"):
-                tasks.append((cat, bill["label"], bill["progressive_vote"], "state_senate", bill["senate_rc"]))
+                tasks.append((cat, bill["label"], bill["progressive_vote"], featured, "state_senate", bill["senate_rc"]))
             if bill.get("assembly_rc"):
-                tasks.append((cat, bill["label"], bill["progressive_vote"], "assembly", bill["assembly_rc"]))
+                tasks.append((cat, bill["label"], bill["progressive_vote"], featured, "assembly", bill["assembly_rc"]))
 
     # Step 1: fetch all roll calls
     print(f"Fetching {len(tasks)} roll calls...\n")
     rc_data = {}
     all_people_ids = set()
     prev_cat = None
-    for cat, label, prog, chkey, rc_id in tasks:
+    for cat, label, prog, featured, chkey, rc_id in tasks:
         if cat != prev_cat:
             print(f"[{cat}]")
             prev_cat = cat
@@ -218,7 +269,7 @@ def main():
     print(f"  Done ({len(all_people_ids)} legislators resolved)\n")
 
     # Step 3: apply votes to output
-    for cat, label, prog, chkey, rc_id in tasks:
+    for cat, label, prog, featured, chkey, rc_id in tasks:
         vote_map = rc_data[rc_id]
         unmatched = []
         for pid, vote_text in vote_map.items():
@@ -234,6 +285,7 @@ def main():
                     "label": label,
                     "vote": vote_text,
                     "progressive_vote": prog,
+                    "featured": featured,
                 })
             else:
                 unmatched.append((info.get("name", pid), dist))
