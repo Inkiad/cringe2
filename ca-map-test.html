@@ -27,8 +27,22 @@
       .text('loading...');
 
     d3.json('data/ca-congressional.geojson').then(geo => {
+      // geoBounds on our GeoJSON returns [-180,-90] to [180,90] (winding order issue),
+      // so we give fitExtent a simple bounding box we know is correct for California.
+      const caBBox = {
+        type: 'Feature',
+        geometry: {
+          type: 'Polygon',
+          coordinates: [[
+            [-124.48, 32.53], [-114.13, 32.53],
+            [-114.13, 42.01], [-124.48, 42.01],
+            [-124.48, 32.53]
+          ]]
+        }
+      };
+
       const projection = d3.geoMercator()
-        .fitExtent([[10, 10], [w - 10, h - 10]], geo);
+        .fitExtent([[10, 10], [w - 10, h - 10]], caBBox);
 
       const path = d3.geoPath().projection(projection);
 
