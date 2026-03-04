@@ -27,29 +27,26 @@
       .text('loading...');
 
     d3.json('data/ca-congressional.geojson').then(geo => {
-      // geoBounds on our GeoJSON returns [-180,-90] to [180,90] (winding order issue),
-      // so we give fitExtent a simple bounding box we know is correct for California.
-      const caBBox = {
-        type: 'Feature',
-        geometry: {
-          type: 'Polygon',
-          coordinates: [[
-            [-124.48, 32.53], [-114.13, 32.53],
-            [-114.13, 42.01], [-124.48, 42.01],
-            [-124.48, 32.53]
-          ]]
-        }
-      };
+      // Bypass fitExtent entirely — compute projection manually from known CA bounds.
+      // CA: lon -124.48 to -114.13 (span 0.1806 rad), Mercator lat span ~0.244 rad
+      const lonSpan = 10.35 * Math.PI / 180;
+      const latSpan = 0.244;
+      const scale = Math.min((w - 40) / lonSpan, (h - 40) / latSpan);
 
+      // Mercator center lat: the latitude whose mercator-y is midway between top and bottom
+      // midY = (ln(tan(π/4 + 42.01°/2)) + ln(tan(π/4 + 32.53°/2))) / 2 ≈ 0.687
+      // → latitude ≈ 36.22°
       const projection = d3.geoMercator()
-        .fitExtent([[10, 10], [w - 10, h - 10]], caBBox);
+        .scale(scale)
+        .center([-119.305, 36.22])
+        .translate([w / 2, h / 2]);
 
       const path = d3.geoPath().projection(projection);
 
-      const geoBounds = d3.geoBounds(geo);
       const la = projection([-118.2, 34.0]);
+      const sf = projection([-122.4, 37.8]);
 
-      info.text(`geoBounds: [[${geoBounds[0].map(v=>v.toFixed(2))}],[${geoBounds[1].map(v=>v.toFixed(2))}]] | features: ${geo.features.length} | LA: ${la[0].toFixed(0)},${la[1].toFixed(0)}`);
+      info.text(`scale:${scale.toFixed(0)} | LA:${la[0].toFixed(0)},${la[1].toFixed(0)} | SF:${sf[0].toFixed(0)},${sf[1].toFixed(0)} | expected LA~1380,900`);
 
       svg.selectAll('.district')
         .data(geo.features)
