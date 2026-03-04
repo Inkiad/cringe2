@@ -1,184 +1,883 @@
 {
   "us_senators": [
-    { "name": "Alex Padilla", "party": "D", "since": 2021, "website": "padilla.senate.gov" },
-    { "name": "Adam Schiff", "party": "D", "since": 2024, "website": "schiff.senate.gov" }
+    {
+      "name": "Alex Padilla",
+      "party": "D",
+      "since": 2021,
+      "website": "padilla.senate.gov"
+    },
+    {
+      "name": "Adam Schiff",
+      "party": "D",
+      "since": 2024,
+      "website": "schiff.senate.gov"
+    }
   ],
   "house": {
-    "1": { "name": "Vacant", "party": "", "website": "clerk.house.gov/members/CA01/vacancy", "note": "Seat vacant since Jan 2026 (LaMalfa death). Special election Aug 2026." },
-    "2": { "name": "Jared Huffman", "party": "D", "website": "huffman.house.gov" },
-    "3": { "name": "Kevin Kiley", "party": "R", "website": "kiley.house.gov" },
-    "4": { "name": "Mike Thompson", "party": "D", "website": "mikethompson.house.gov" },
-    "5": { "name": "Tom McClintock", "party": "R", "website": "mcclintock.house.gov" },
-    "6": { "name": "Ami Bera", "party": "D", "website": "bera.house.gov" },
-    "7": { "name": "Doris Matsui", "party": "D", "website": "matsui.house.gov" },
-    "8": { "name": "John Garamendi", "party": "D", "website": "garamendi.house.gov" },
-    "9": { "name": "Josh Harder", "party": "D", "website": "harder.house.gov" },
-    "10": { "name": "Mark DeSaulnier", "party": "D", "website": "desaulnier.house.gov" },
-    "11": { "name": "Nancy Pelosi", "party": "D", "website": "pelosi.house.gov" },
-    "12": { "name": "Lateefah Simon", "party": "D", "website": "simon.house.gov" },
-    "13": { "name": "Adam Gray", "party": "D", "website": "adamgray.house.gov" },
-    "14": { "name": "Eric Swalwell", "party": "D", "website": "swalwell.house.gov" },
-    "15": { "name": "Kevin Mullin", "party": "D", "website": "mullin.house.gov" },
-    "16": { "name": "Sam Liccardo", "party": "D", "website": "liccardo.house.gov" },
-    "17": { "name": "Ro Khanna", "party": "D", "website": "khanna.house.gov" },
-    "18": { "name": "Zoe Lofgren", "party": "D", "website": "lofgren.house.gov" },
-    "19": { "name": "Jimmy Panetta", "party": "D", "website": "panetta.house.gov" },
-    "20": { "name": "Vince Fong", "party": "R", "website": "fong.house.gov" },
-    "21": { "name": "Jim Costa", "party": "D", "website": "costa.house.gov" },
-    "22": { "name": "David Valadao", "party": "R", "website": "valadao.house.gov" },
-    "23": { "name": "Jay Obernolte", "party": "R", "website": "obernolte.house.gov" },
-    "24": { "name": "Salud Carbajal", "party": "D", "website": "carbajal.house.gov" },
-    "25": { "name": "Raul Ruiz", "party": "D", "website": "ruiz.house.gov" },
-    "26": { "name": "Julia Brownley", "party": "D", "website": "brownley.house.gov" },
-    "27": { "name": "George Whitesides", "party": "D", "website": "whitesides.house.gov" },
-    "28": { "name": "Judy Chu", "party": "D", "website": "chu.house.gov" },
-    "29": { "name": "Luz Rivas", "party": "D", "website": "luzrivas.house.gov" },
-    "30": { "name": "Laura Friedman", "party": "D", "website": "laurafriedman.house.gov" },
-    "31": { "name": "Gilbert Cisneros", "party": "D", "website": "gilbertcisneros.house.gov" },
-    "32": { "name": "Brad Sherman", "party": "D", "website": "bradsherman.house.gov" },
-    "33": { "name": "Pete Aguilar", "party": "D", "website": "aguilar.house.gov" },
-    "34": { "name": "Jimmy Gomez", "party": "D", "website": "jimmygomez.house.gov" },
-    "35": { "name": "Norma Torres", "party": "D", "website": "torres.house.gov" },
-    "36": { "name": "Ted Lieu", "party": "D", "website": "lieu.house.gov" },
-    "37": { "name": "Sydney Kamlager-Dove", "party": "D", "website": "kamlager.house.gov" },
-    "38": { "name": "Linda Sánchez", "party": "D", "website": "lindasanchez.house.gov" },
-    "39": { "name": "Mark Takano", "party": "D", "website": "takano.house.gov" },
-    "40": { "name": "Young Kim", "party": "R", "website": "youngkim.house.gov" },
-    "41": { "name": "Ken Calvert", "party": "R", "website": "calvert.house.gov" },
-    "42": { "name": "Robert Garcia", "party": "D", "website": "robertgarcia.house.gov" },
-    "43": { "name": "Maxine Waters", "party": "D", "website": "waters.house.gov" },
-    "44": { "name": "Nanette Barragán", "party": "D", "website": "barragan.house.gov" },
-    "45": { "name": "Derek Tran", "party": "D", "website": "derektran.house.gov" },
-    "46": { "name": "Luis Correa", "party": "D", "website": "correa.house.gov" },
-    "47": { "name": "Dave Min", "party": "D", "website": "davemin.house.gov" },
-    "48": { "name": "Darrell Issa", "party": "R", "website": "issa.house.gov" },
-    "49": { "name": "Mike Levin", "party": "D", "website": "mikelevin.house.gov" },
-    "50": { "name": "Scott Peters", "party": "D", "website": "scottpeters.house.gov" },
-    "51": { "name": "Sara Jacobs", "party": "D", "website": "sarajacobs.house.gov" },
-    "52": { "name": "Juan Vargas", "party": "D", "website": "vargas.house.gov" }
+    "1": {
+      "name": "Vacant",
+      "party": "",
+      "website": "clerk.house.gov/members/CA01/vacancy",
+      "note": "Seat vacant since Jan 2026 (LaMalfa death). Special election Aug 2026."
+    },
+    "2": {
+      "name": "Jared Huffman",
+      "party": "D",
+      "website": "huffman.house.gov"
+    },
+    "3": {
+      "name": "Kevin Kiley",
+      "party": "R",
+      "website": "kiley.house.gov"
+    },
+    "4": {
+      "name": "Mike Thompson",
+      "party": "D",
+      "website": "mikethompson.house.gov"
+    },
+    "5": {
+      "name": "Tom McClintock",
+      "party": "R",
+      "website": "mcclintock.house.gov"
+    },
+    "6": {
+      "name": "Ami Bera",
+      "party": "D",
+      "website": "bera.house.gov"
+    },
+    "7": {
+      "name": "Doris Matsui",
+      "party": "D",
+      "website": "matsui.house.gov"
+    },
+    "8": {
+      "name": "John Garamendi",
+      "party": "D",
+      "website": "garamendi.house.gov"
+    },
+    "9": {
+      "name": "Josh Harder",
+      "party": "D",
+      "website": "harder.house.gov"
+    },
+    "10": {
+      "name": "Mark DeSaulnier",
+      "party": "D",
+      "website": "desaulnier.house.gov"
+    },
+    "11": {
+      "name": "Nancy Pelosi",
+      "party": "D",
+      "website": "pelosi.house.gov"
+    },
+    "12": {
+      "name": "Lateefah Simon",
+      "party": "D",
+      "website": "simon.house.gov"
+    },
+    "13": {
+      "name": "Adam Gray",
+      "party": "D",
+      "website": "adamgray.house.gov"
+    },
+    "14": {
+      "name": "Eric Swalwell",
+      "party": "D",
+      "website": "swalwell.house.gov"
+    },
+    "15": {
+      "name": "Kevin Mullin",
+      "party": "D",
+      "website": "mullin.house.gov"
+    },
+    "16": {
+      "name": "Sam Liccardo",
+      "party": "D",
+      "website": "liccardo.house.gov"
+    },
+    "17": {
+      "name": "Ro Khanna",
+      "party": "D",
+      "website": "khanna.house.gov"
+    },
+    "18": {
+      "name": "Zoe Lofgren",
+      "party": "D",
+      "website": "lofgren.house.gov"
+    },
+    "19": {
+      "name": "Jimmy Panetta",
+      "party": "D",
+      "website": "panetta.house.gov"
+    },
+    "20": {
+      "name": "Vince Fong",
+      "party": "R",
+      "website": "fong.house.gov"
+    },
+    "21": {
+      "name": "Jim Costa",
+      "party": "D",
+      "website": "costa.house.gov"
+    },
+    "22": {
+      "name": "David Valadao",
+      "party": "R",
+      "website": "valadao.house.gov"
+    },
+    "23": {
+      "name": "Jay Obernolte",
+      "party": "R",
+      "website": "obernolte.house.gov"
+    },
+    "24": {
+      "name": "Salud Carbajal",
+      "party": "D",
+      "website": "carbajal.house.gov"
+    },
+    "25": {
+      "name": "Raul Ruiz",
+      "party": "D",
+      "website": "ruiz.house.gov"
+    },
+    "26": {
+      "name": "Julia Brownley",
+      "party": "D",
+      "website": "brownley.house.gov"
+    },
+    "27": {
+      "name": "George Whitesides",
+      "party": "D",
+      "website": "whitesides.house.gov"
+    },
+    "28": {
+      "name": "Judy Chu",
+      "party": "D",
+      "website": "chu.house.gov"
+    },
+    "29": {
+      "name": "Luz Rivas",
+      "party": "D",
+      "website": "luzrivas.house.gov"
+    },
+    "30": {
+      "name": "Laura Friedman",
+      "party": "D",
+      "website": "laurafriedman.house.gov"
+    },
+    "31": {
+      "name": "Gilbert Cisneros",
+      "party": "D",
+      "website": "gilbertcisneros.house.gov"
+    },
+    "32": {
+      "name": "Brad Sherman",
+      "party": "D",
+      "website": "bradsherman.house.gov"
+    },
+    "33": {
+      "name": "Pete Aguilar",
+      "party": "D",
+      "website": "aguilar.house.gov"
+    },
+    "34": {
+      "name": "Jimmy Gomez",
+      "party": "D",
+      "website": "jimmygomez.house.gov"
+    },
+    "35": {
+      "name": "Norma Torres",
+      "party": "D",
+      "website": "torres.house.gov"
+    },
+    "36": {
+      "name": "Ted Lieu",
+      "party": "D",
+      "website": "lieu.house.gov"
+    },
+    "37": {
+      "name": "Sydney Kamlager-Dove",
+      "party": "D",
+      "website": "kamlager.house.gov"
+    },
+    "38": {
+      "name": "Linda S\u00c3\u00a1nchez",
+      "party": "D",
+      "website": "lindasanchez.house.gov"
+    },
+    "39": {
+      "name": "Mark Takano",
+      "party": "D",
+      "website": "takano.house.gov"
+    },
+    "40": {
+      "name": "Young Kim",
+      "party": "R",
+      "website": "youngkim.house.gov"
+    },
+    "41": {
+      "name": "Ken Calvert",
+      "party": "R",
+      "website": "calvert.house.gov"
+    },
+    "42": {
+      "name": "Robert Garcia",
+      "party": "D",
+      "website": "robertgarcia.house.gov"
+    },
+    "43": {
+      "name": "Maxine Waters",
+      "party": "D",
+      "website": "waters.house.gov"
+    },
+    "44": {
+      "name": "Nanette Barrag\u00c3\u00a1n",
+      "party": "D",
+      "website": "barragan.house.gov"
+    },
+    "45": {
+      "name": "Derek Tran",
+      "party": "D",
+      "website": "derektran.house.gov"
+    },
+    "46": {
+      "name": "Luis Correa",
+      "party": "D",
+      "website": "correa.house.gov"
+    },
+    "47": {
+      "name": "Dave Min",
+      "party": "D",
+      "website": "davemin.house.gov"
+    },
+    "48": {
+      "name": "Darrell Issa",
+      "party": "R",
+      "website": "issa.house.gov"
+    },
+    "49": {
+      "name": "Mike Levin",
+      "party": "D",
+      "website": "mikelevin.house.gov"
+    },
+    "50": {
+      "name": "Scott Peters",
+      "party": "D",
+      "website": "scottpeters.house.gov"
+    },
+    "51": {
+      "name": "Sara Jacobs",
+      "party": "D",
+      "website": "sarajacobs.house.gov"
+    },
+    "52": {
+      "name": "Juan Vargas",
+      "party": "D",
+      "website": "vargas.house.gov"
+    }
   },
   "state_senate": {
-    "1": { "name": "Megan Dahle", "party": "R", "website": "sd01.senate.ca.gov" },
-    "2": { "name": "Mike McGuire", "party": "D", "website": "sd02.senate.ca.gov" },
-    "3": { "name": "Christopher Cabaldon", "party": "D", "website": "sd03.senate.ca.gov" },
-    "4": { "name": "Marie Alvarado-Gil", "party": "R", "website": "sd04.senate.ca.gov" },
-    "5": { "name": "Jerry McNerney", "party": "D", "website": "sd05.senate.ca.gov" },
-    "6": { "name": "Roger Niello", "party": "R", "website": "sd06.senate.ca.gov" },
-    "7": { "name": "Jesse Arreguín", "party": "D", "website": "sd07.senate.ca.gov" },
-    "8": { "name": "Angelique Ashby", "party": "D", "website": "sd08.senate.ca.gov" },
-    "9": { "name": "Tim Grayson", "party": "D", "website": "sd09.senate.ca.gov" },
-    "10": { "name": "Aisha Wahab", "party": "D", "website": "sd10.senate.ca.gov" },
-    "11": { "name": "Scott Wiener", "party": "D", "website": "sd11.senate.ca.gov" },
-    "12": { "name": "Shannon Grove", "party": "R", "website": "sd12.senate.ca.gov" },
-    "13": { "name": "Josh Becker", "party": "D", "website": "sd13.senate.ca.gov" },
-    "14": { "name": "Anna Caballero", "party": "D", "website": "sd14.senate.ca.gov" },
-    "15": { "name": "Dave Cortese", "party": "D", "website": "sd15.senate.ca.gov" },
-    "16": { "name": "Melissa Hurtado", "party": "D", "website": "sd16.senate.ca.gov" },
-    "17": { "name": "John Laird", "party": "D", "website": "sd17.senate.ca.gov" },
-    "18": { "name": "Steve Padilla", "party": "D", "website": "sd18.senate.ca.gov" },
-    "19": { "name": "Rosilicie Ochoa Bogh", "party": "R", "website": "sd19.senate.ca.gov" },
-    "20": { "name": "Caroline Menjivar", "party": "D", "website": "sd20.senate.ca.gov" },
-    "21": { "name": "Monique Limón", "party": "D", "website": "sd21.senate.ca.gov" },
-    "22": { "name": "Susan Rubio", "party": "D", "website": "sd22.senate.ca.gov" },
-    "23": { "name": "Suzette Martinez Valladares", "party": "R", "website": "sd23.senate.ca.gov" },
-    "24": { "name": "Benjamin Allen", "party": "D", "website": "sd24.senate.ca.gov" },
-    "25": { "name": "Sasha Renée Pérez", "party": "D", "website": "sd25.senate.ca.gov" },
-    "26": { "name": "Maria Elena Durazo", "party": "D", "website": "sd26.senate.ca.gov" },
-    "27": { "name": "Henry Stern", "party": "D", "website": "sd27.senate.ca.gov" },
-    "28": { "name": "Lola Smallwood-Cuevas", "party": "D", "website": "sd28.senate.ca.gov" },
-    "29": { "name": "Eloise Gómez Reyes", "party": "D", "website": "sd29.senate.ca.gov" },
-    "30": { "name": "Bob Archuleta", "party": "D", "website": "sd30.senate.ca.gov" },
-    "31": { "name": "Sabrina Cervantes", "party": "D", "website": "sd31.senate.ca.gov" },
-    "32": { "name": "Kelly Seyarto", "party": "R", "website": "sd32.senate.ca.gov" },
-    "33": { "name": "Lena Gonzalez", "party": "D", "website": "sd33.senate.ca.gov" },
-    "34": { "name": "Thomas Umberg", "party": "D", "website": "sd34.senate.ca.gov" },
-    "35": { "name": "Laura Richardson", "party": "D", "website": "sd35.senate.ca.gov" },
-    "36": { "name": "Tony Strickland", "party": "R", "website": "sd36.senate.ca.gov" },
-    "37": { "name": "Steven Choi", "party": "R", "website": "sd37.senate.ca.gov" },
-    "38": { "name": "Catherine Blakespear", "party": "D", "website": "sd38.senate.ca.gov" },
-    "39": { "name": "Akilah Weber Pierson", "party": "D", "website": "sd39.senate.ca.gov" },
-    "40": { "name": "Brian W. Jones", "party": "R", "website": "sd40.senate.ca.gov" }
+    "1": {
+      "name": "Megan Dahle",
+      "party": "R",
+      "website": "sr01.senate.ca.gov"
+    },
+    "2": {
+      "name": "Mike McGuire",
+      "party": "D",
+      "website": "sd02.senate.ca.gov"
+    },
+    "3": {
+      "name": "Christopher Cabaldon",
+      "party": "D",
+      "website": "sd03.senate.ca.gov"
+    },
+    "4": {
+      "name": "Marie Alvarado-Gil",
+      "party": "R",
+      "website": "sr04.senate.ca.gov"
+    },
+    "5": {
+      "name": "Jerry McNerney",
+      "party": "D",
+      "website": "sd05.senate.ca.gov"
+    },
+    "6": {
+      "name": "Roger Niello",
+      "party": "R",
+      "website": "sr06.senate.ca.gov"
+    },
+    "7": {
+      "name": "Jesse Arregu\u00c3\u00adn",
+      "party": "D",
+      "website": "sd07.senate.ca.gov"
+    },
+    "8": {
+      "name": "Angelique Ashby",
+      "party": "D",
+      "website": "sd08.senate.ca.gov"
+    },
+    "9": {
+      "name": "Tim Grayson",
+      "party": "D",
+      "website": "sd09.senate.ca.gov"
+    },
+    "10": {
+      "name": "Aisha Wahab",
+      "party": "D",
+      "website": "sd10.senate.ca.gov"
+    },
+    "11": {
+      "name": "Scott Wiener",
+      "party": "D",
+      "website": "sd11.senate.ca.gov"
+    },
+    "12": {
+      "name": "Shannon Grove",
+      "party": "R",
+      "website": "sr12.senate.ca.gov"
+    },
+    "13": {
+      "name": "Josh Becker",
+      "party": "D",
+      "website": "sd13.senate.ca.gov"
+    },
+    "14": {
+      "name": "Anna Caballero",
+      "party": "D",
+      "website": "sd14.senate.ca.gov"
+    },
+    "15": {
+      "name": "Dave Cortese",
+      "party": "D",
+      "website": "sd15.senate.ca.gov"
+    },
+    "16": {
+      "name": "Melissa Hurtado",
+      "party": "D",
+      "website": "sd16.senate.ca.gov"
+    },
+    "17": {
+      "name": "John Laird",
+      "party": "D",
+      "website": "sd17.senate.ca.gov"
+    },
+    "18": {
+      "name": "Steve Padilla",
+      "party": "D",
+      "website": "sd18.senate.ca.gov"
+    },
+    "19": {
+      "name": "Rosilicie Ochoa Bogh",
+      "party": "R",
+      "website": "sr19.senate.ca.gov"
+    },
+    "20": {
+      "name": "Caroline Menjivar",
+      "party": "D",
+      "website": "sd20.senate.ca.gov"
+    },
+    "21": {
+      "name": "Monique Lim\u00c3\u00b3n",
+      "party": "D",
+      "website": "sd21.senate.ca.gov"
+    },
+    "22": {
+      "name": "Susan Rubio",
+      "party": "D",
+      "website": "sd22.senate.ca.gov"
+    },
+    "23": {
+      "name": "Suzette Martinez Valladares",
+      "party": "R",
+      "website": "sr23.senate.ca.gov"
+    },
+    "24": {
+      "name": "Benjamin Allen",
+      "party": "D",
+      "website": "sd24.senate.ca.gov"
+    },
+    "25": {
+      "name": "Sasha Ren\u00c3\u00a9e P\u00c3\u00a9rez",
+      "party": "D",
+      "website": "sd25.senate.ca.gov"
+    },
+    "26": {
+      "name": "Maria Elena Durazo",
+      "party": "D",
+      "website": "sd26.senate.ca.gov"
+    },
+    "27": {
+      "name": "Henry Stern",
+      "party": "D",
+      "website": "sd27.senate.ca.gov"
+    },
+    "28": {
+      "name": "Lola Smallwood-Cuevas",
+      "party": "D",
+      "website": "sd28.senate.ca.gov"
+    },
+    "29": {
+      "name": "Eloise G\u00c3\u00b3mez Reyes",
+      "party": "D",
+      "website": "sd29.senate.ca.gov"
+    },
+    "30": {
+      "name": "Bob Archuleta",
+      "party": "D",
+      "website": "sd30.senate.ca.gov"
+    },
+    "31": {
+      "name": "Sabrina Cervantes",
+      "party": "D",
+      "website": "sd31.senate.ca.gov"
+    },
+    "32": {
+      "name": "Kelly Seyarto",
+      "party": "R",
+      "website": "sr32.senate.ca.gov"
+    },
+    "33": {
+      "name": "Lena Gonzalez",
+      "party": "D",
+      "website": "sd33.senate.ca.gov"
+    },
+    "34": {
+      "name": "Thomas Umberg",
+      "party": "D",
+      "website": "sd34.senate.ca.gov"
+    },
+    "35": {
+      "name": "Laura Richardson",
+      "party": "D",
+      "website": "sd35.senate.ca.gov"
+    },
+    "36": {
+      "name": "Tony Strickland",
+      "party": "R",
+      "website": "sr36.senate.ca.gov"
+    },
+    "37": {
+      "name": "Steven Choi",
+      "party": "R",
+      "website": "sr37.senate.ca.gov"
+    },
+    "38": {
+      "name": "Catherine Blakespear",
+      "party": "D",
+      "website": "sd38.senate.ca.gov"
+    },
+    "39": {
+      "name": "Akilah Weber Pierson",
+      "party": "D",
+      "website": "sd39.senate.ca.gov"
+    },
+    "40": {
+      "name": "Brian W. Jones",
+      "party": "R",
+      "website": "sr40.senate.ca.gov"
+    }
   },
   "assembly": {
-    "1": { "name": "Heather Hadwick", "party": "R", "website": "ad01.asmdc.org" },
-    "2": { "name": "Chris Rogers", "party": "D", "website": "ad02.asmdc.org" },
-    "3": { "name": "James Gallagher", "party": "R", "website": "ad03.asmdc.org" },
-    "4": { "name": "Cecilia Aguiar-Curry", "party": "D", "website": "ad04.asmdc.org" },
-    "5": { "name": "Joe Patterson", "party": "R", "website": "ad05.asmdc.org" },
-    "6": { "name": "Maggy Krell", "party": "D", "website": "ad06.asmdc.org" },
-    "7": { "name": "Josh Hoover", "party": "R", "website": "ad07.asmdc.org" },
-    "8": { "name": "David Tangipa", "party": "R", "website": "ad08.asmdc.org" },
-    "9": { "name": "Heath Flora", "party": "R", "website": "ad09.asmdc.org" },
-    "10": { "name": "Stephanie Nguyen", "party": "D", "website": "ad10.asmdc.org" },
-    "11": { "name": "Lori Wilson", "party": "D", "website": "ad11.asmdc.org" },
-    "12": { "name": "Damon Connolly", "party": "D", "website": "ad12.asmdc.org" },
-    "13": { "name": "Rhodesia Ransom", "party": "D", "website": "ad13.asmdc.org" },
-    "14": { "name": "Buffy Wicks", "party": "D", "website": "ad14.asmdc.org" },
-    "15": { "name": "Anamarie Avila Farias", "party": "D", "website": "ad15.asmdc.org" },
-    "16": { "name": "Rebecca Bauer-Kahan", "party": "D", "website": "ad16.asmdc.org" },
-    "17": { "name": "Matt Haney", "party": "D", "website": "ad17.asmdc.org" },
-    "18": { "name": "Mia Bonta", "party": "D", "website": "ad18.asmdc.org" },
-    "19": { "name": "Catherine Stefani", "party": "D", "website": "ad19.asmdc.org" },
-    "20": { "name": "Liz Ortega", "party": "D", "website": "ad20.asmdc.org" },
-    "21": { "name": "Diane Papan", "party": "D", "website": "ad21.asmdc.org" },
-    "22": { "name": "Juan Alanis", "party": "R", "website": "ad22.asmdc.org" },
-    "23": { "name": "Marc Berman", "party": "D", "website": "ad23.asmdc.org" },
-    "24": { "name": "Alex Lee", "party": "D", "website": "ad24.asmdc.org" },
-    "25": { "name": "Ash Kalra", "party": "D", "website": "ad25.asmdc.org" },
-    "26": { "name": "Patrick Ahrens", "party": "D", "website": "ad26.asmdc.org" },
-    "27": { "name": "Esmeralda Soria", "party": "D", "website": "ad27.asmdc.org" },
-    "28": { "name": "Gail Pellerin", "party": "D", "website": "ad28.asmdc.org" },
-    "29": { "name": "Robert Rivas", "party": "D", "website": "ad29.asmdc.org" },
-    "30": { "name": "Dawn Addis", "party": "D", "website": "ad30.asmdc.org" },
-    "31": { "name": "Joaquin Arambula", "party": "D", "website": "ad31.asmdc.org" },
-    "32": { "name": "Stan Ellis", "party": "R", "website": "ad32.asmdc.org" },
-    "33": { "name": "Alexandra Macedo", "party": "R", "website": "ad33.asmdc.org" },
-    "34": { "name": "Tom Lackey", "party": "R", "website": "ad34.asmdc.org" },
-    "35": { "name": "Jasmeet Bains", "party": "D", "website": "ad35.asmdc.org" },
-    "36": { "name": "Jeff Gonzalez", "party": "R", "website": "ad36.asmdc.org" },
-    "37": { "name": "Gregg Hart", "party": "D", "website": "ad37.asmdc.org" },
-    "38": { "name": "Steve Bennett", "party": "D", "website": "ad38.asmdc.org" },
-    "39": { "name": "Juan Carrillo", "party": "D", "website": "ad39.asmdc.org" },
-    "40": { "name": "Pilar Schiavo", "party": "D", "website": "ad40.asmdc.org" },
-    "41": { "name": "John Harabedian", "party": "D", "website": "ad41.asmdc.org" },
-    "42": { "name": "Jacqui Irwin", "party": "D", "website": "ad42.asmdc.org" },
-    "43": { "name": "Celeste Rodriguez", "party": "D", "website": "ad43.asmdc.org" },
-    "44": { "name": "Nick Schultz", "party": "D", "website": "ad44.asmdc.org" },
-    "45": { "name": "James Ramos", "party": "D", "website": "ad45.asmdc.org" },
-    "46": { "name": "Jesse Gabriel", "party": "D", "website": "ad46.asmdc.org" },
-    "47": { "name": "Greg Wallis", "party": "R", "website": "ad47.asmdc.org" },
-    "48": { "name": "Blanca Rubio", "party": "D", "website": "ad48.asmdc.org" },
-    "49": { "name": "Mike Fong", "party": "D", "website": "ad49.asmdc.org" },
-    "50": { "name": "Robert Garcia", "party": "D", "website": "ad50.asmdc.org" },
-    "51": { "name": "Rick Chavez Zbur", "party": "D", "website": "ad51.asmdc.org" },
-    "52": { "name": "Jessica Caloza", "party": "D", "website": "ad52.asmdc.org" },
-    "53": { "name": "Michelle Rodriguez", "party": "D", "website": "ad53.asmdc.org" },
-    "54": { "name": "Mark Gonzalez", "party": "D", "website": "ad54.asmdc.org" },
-    "55": { "name": "Isaac Bryan", "party": "D", "website": "ad55.asmdc.org" },
-    "56": { "name": "Lisa Calderon", "party": "D", "website": "ad56.asmdc.org" },
-    "57": { "name": "Sade Elhawary", "party": "D", "website": "ad57.asmdc.org" },
-    "58": { "name": "Leticia Castillo", "party": "R", "website": "ad58.asmdc.org" },
-    "59": { "name": "Phillip Chen", "party": "R", "website": "ad59.asmdc.org" },
-    "60": { "name": "Corey Jackson", "party": "D", "website": "ad60.asmdc.org" },
-    "61": { "name": "Tina McKinnor", "party": "D", "website": "ad61.asmdc.org" },
-    "62": { "name": "Jose Solache", "party": "D", "website": "ad62.asmdc.org" },
-    "63": { "name": "Natasha Johnson", "party": "R", "website": "ad63.asmdc.org" },
-    "64": { "name": "Blanca Pacheco", "party": "D", "website": "ad64.asmdc.org" },
-    "65": { "name": "Mike Gipson", "party": "D", "website": "ad65.asmdc.org" },
-    "66": { "name": "Al Muratsuchi", "party": "D", "website": "ad66.asmdc.org" },
-    "67": { "name": "Sharon Quirk-Silva", "party": "D", "website": "ad67.asmdc.org" },
-    "68": { "name": "Avelino Valencia", "party": "D", "website": "ad68.asmdc.org" },
-    "69": { "name": "Josh Lowenthal", "party": "D", "website": "ad69.asmdc.org" },
-    "70": { "name": "Tri Ta", "party": "R", "website": "ad70.asmdc.org" },
-    "71": { "name": "Kate Sanchez", "party": "R", "website": "ad71.asmdc.org" },
-    "72": { "name": "Diane Dixon", "party": "R", "website": "ad72.asmdc.org" },
-    "73": { "name": "Cottie Petrie-Norris", "party": "D", "website": "ad73.asmdc.org" },
-    "74": { "name": "Laurie Davies", "party": "R", "website": "ad74.asmdc.org" },
-    "75": { "name": "Carl DeMaio", "party": "R", "website": "ad75.asmdc.org" },
-    "76": { "name": "Darshana Patel", "party": "D", "website": "ad76.asmdc.org" },
-    "77": { "name": "Tasha Boerner", "party": "D", "website": "ad77.asmdc.org" },
-    "78": { "name": "Christopher Ward", "party": "D", "website": "ad78.asmdc.org" },
-    "79": { "name": "LaShae Sharp-Collins", "party": "D", "website": "ad79.asmdc.org" },
-    "80": { "name": "David Alvarez", "party": "D", "website": "ad80.asmdc.org" }
+    "1": {
+      "name": "Heather Hadwick",
+      "party": "R",
+      "website": "a1.asmdc.org"
+    },
+    "2": {
+      "name": "Chris Rogers",
+      "party": "D",
+      "website": "a2.asmdc.org"
+    },
+    "3": {
+      "name": "James Gallagher",
+      "party": "R",
+      "website": "a3.asmdc.org"
+    },
+    "4": {
+      "name": "Cecilia Aguiar-Curry",
+      "party": "D",
+      "website": "a4.asmdc.org"
+    },
+    "5": {
+      "name": "Joe Patterson",
+      "party": "R",
+      "website": "a5.asmdc.org"
+    },
+    "6": {
+      "name": "Maggy Krell",
+      "party": "D",
+      "website": "a6.asmdc.org"
+    },
+    "7": {
+      "name": "Josh Hoover",
+      "party": "R",
+      "website": "a7.asmdc.org"
+    },
+    "8": {
+      "name": "David Tangipa",
+      "party": "R",
+      "website": "a8.asmdc.org"
+    },
+    "9": {
+      "name": "Heath Flora",
+      "party": "R",
+      "website": "a9.asmdc.org"
+    },
+    "10": {
+      "name": "Stephanie Nguyen",
+      "party": "D",
+      "website": "a10.asmdc.org"
+    },
+    "11": {
+      "name": "Lori Wilson",
+      "party": "D",
+      "website": "a11.asmdc.org"
+    },
+    "12": {
+      "name": "Damon Connolly",
+      "party": "D",
+      "website": "a12.asmdc.org"
+    },
+    "13": {
+      "name": "Rhodesia Ransom",
+      "party": "D",
+      "website": "a13.asmdc.org"
+    },
+    "14": {
+      "name": "Buffy Wicks",
+      "party": "D",
+      "website": "a14.asmdc.org"
+    },
+    "15": {
+      "name": "Anamarie Avila Farias",
+      "party": "D",
+      "website": "a15.asmdc.org"
+    },
+    "16": {
+      "name": "Rebecca Bauer-Kahan",
+      "party": "D",
+      "website": "a16.asmdc.org"
+    },
+    "17": {
+      "name": "Matt Haney",
+      "party": "D",
+      "website": "a17.asmdc.org"
+    },
+    "18": {
+      "name": "Mia Bonta",
+      "party": "D",
+      "website": "a18.asmdc.org"
+    },
+    "19": {
+      "name": "Catherine Stefani",
+      "party": "D",
+      "website": "a19.asmdc.org"
+    },
+    "20": {
+      "name": "Liz Ortega",
+      "party": "D",
+      "website": "a20.asmdc.org"
+    },
+    "21": {
+      "name": "Diane Papan",
+      "party": "D",
+      "website": "a21.asmdc.org"
+    },
+    "22": {
+      "name": "Juan Alanis",
+      "party": "R",
+      "website": "a22.asmdc.org"
+    },
+    "23": {
+      "name": "Marc Berman",
+      "party": "D",
+      "website": "a23.asmdc.org"
+    },
+    "24": {
+      "name": "Alex Lee",
+      "party": "D",
+      "website": "a24.asmdc.org"
+    },
+    "25": {
+      "name": "Ash Kalra",
+      "party": "D",
+      "website": "a25.asmdc.org"
+    },
+    "26": {
+      "name": "Patrick Ahrens",
+      "party": "D",
+      "website": "a26.asmdc.org"
+    },
+    "27": {
+      "name": "Esmeralda Soria",
+      "party": "D",
+      "website": "a27.asmdc.org"
+    },
+    "28": {
+      "name": "Gail Pellerin",
+      "party": "D",
+      "website": "a28.asmdc.org"
+    },
+    "29": {
+      "name": "Robert Rivas",
+      "party": "D",
+      "website": "a29.asmdc.org"
+    },
+    "30": {
+      "name": "Dawn Addis",
+      "party": "D",
+      "website": "a30.asmdc.org"
+    },
+    "31": {
+      "name": "Joaquin Arambula",
+      "party": "D",
+      "website": "a31.asmdc.org"
+    },
+    "32": {
+      "name": "Stan Ellis",
+      "party": "R",
+      "website": "a32.asmdc.org"
+    },
+    "33": {
+      "name": "Alexandra Macedo",
+      "party": "R",
+      "website": "a33.asmdc.org"
+    },
+    "34": {
+      "name": "Tom Lackey",
+      "party": "R",
+      "website": "a34.asmdc.org"
+    },
+    "35": {
+      "name": "Jasmeet Bains",
+      "party": "D",
+      "website": "a35.asmdc.org"
+    },
+    "36": {
+      "name": "Jeff Gonzalez",
+      "party": "R",
+      "website": "a36.asmdc.org"
+    },
+    "37": {
+      "name": "Gregg Hart",
+      "party": "D",
+      "website": "a37.asmdc.org"
+    },
+    "38": {
+      "name": "Steve Bennett",
+      "party": "D",
+      "website": "a38.asmdc.org"
+    },
+    "39": {
+      "name": "Juan Carrillo",
+      "party": "D",
+      "website": "a39.asmdc.org"
+    },
+    "40": {
+      "name": "Pilar Schiavo",
+      "party": "D",
+      "website": "a40.asmdc.org"
+    },
+    "41": {
+      "name": "John Harabedian",
+      "party": "D",
+      "website": "a41.asmdc.org"
+    },
+    "42": {
+      "name": "Jacqui Irwin",
+      "party": "D",
+      "website": "a42.asmdc.org"
+    },
+    "43": {
+      "name": "Celeste Rodriguez",
+      "party": "D",
+      "website": "a43.asmdc.org"
+    },
+    "44": {
+      "name": "Nick Schultz",
+      "party": "D",
+      "website": "a44.asmdc.org"
+    },
+    "45": {
+      "name": "James Ramos",
+      "party": "D",
+      "website": "a45.asmdc.org"
+    },
+    "46": {
+      "name": "Jesse Gabriel",
+      "party": "D",
+      "website": "a46.asmdc.org"
+    },
+    "47": {
+      "name": "Greg Wallis",
+      "party": "R",
+      "website": "a47.asmdc.org"
+    },
+    "48": {
+      "name": "Blanca Rubio",
+      "party": "D",
+      "website": "a48.asmdc.org"
+    },
+    "49": {
+      "name": "Mike Fong",
+      "party": "D",
+      "website": "a49.asmdc.org"
+    },
+    "50": {
+      "name": "Robert Garcia",
+      "party": "D",
+      "website": "a50.asmdc.org"
+    },
+    "51": {
+      "name": "Rick Chavez Zbur",
+      "party": "D",
+      "website": "a51.asmdc.org"
+    },
+    "52": {
+      "name": "Jessica Caloza",
+      "party": "D",
+      "website": "a52.asmdc.org"
+    },
+    "53": {
+      "name": "Michelle Rodriguez",
+      "party": "D",
+      "website": "a53.asmdc.org"
+    },
+    "54": {
+      "name": "Mark Gonzalez",
+      "party": "D",
+      "website": "a54.asmdc.org"
+    },
+    "55": {
+      "name": "Isaac Bryan",
+      "party": "D",
+      "website": "a55.asmdc.org"
+    },
+    "56": {
+      "name": "Lisa Calderon",
+      "party": "D",
+      "website": "a56.asmdc.org"
+    },
+    "57": {
+      "name": "Sade Elhawary",
+      "party": "D",
+      "website": "a57.asmdc.org"
+    },
+    "58": {
+      "name": "Leticia Castillo",
+      "party": "R",
+      "website": "a58.asmdc.org"
+    },
+    "59": {
+      "name": "Phillip Chen",
+      "party": "R",
+      "website": "a59.asmdc.org"
+    },
+    "60": {
+      "name": "Corey Jackson",
+      "party": "D",
+      "website": "a60.asmdc.org"
+    },
+    "61": {
+      "name": "Tina McKinnor",
+      "party": "D",
+      "website": "a61.asmdc.org"
+    },
+    "62": {
+      "name": "Jose Solache",
+      "party": "D",
+      "website": "a62.asmdc.org"
+    },
+    "63": {
+      "name": "Natasha Johnson",
+      "party": "R",
+      "website": "a63.asmdc.org"
+    },
+    "64": {
+      "name": "Blanca Pacheco",
+      "party": "D",
+      "website": "a64.asmdc.org"
+    },
+    "65": {
+      "name": "Mike Gipson",
+      "party": "D",
+      "website": "a65.asmdc.org"
+    },
+    "66": {
+      "name": "Al Muratsuchi",
+      "party": "D",
+      "website": "a66.asmdc.org"
+    },
+    "67": {
+      "name": "Sharon Quirk-Silva",
+      "party": "D",
+      "website": "a67.asmdc.org"
+    },
+    "68": {
+      "name": "Avelino Valencia",
+      "party": "D",
+      "website": "a68.asmdc.org"
+    },
+    "69": {
+      "name": "Josh Lowenthal",
+      "party": "D",
+      "website": "a69.asmdc.org"
+    },
+    "70": {
+      "name": "Tri Ta",
+      "party": "R",
+      "website": "a70.asmdc.org"
+    },
+    "71": {
+      "name": "Kate Sanchez",
+      "party": "R",
+      "website": "a71.asmdc.org"
+    },
+    "72": {
+      "name": "Diane Dixon",
+      "party": "R",
+      "website": "a72.asmdc.org"
+    },
+    "73": {
+      "name": "Cottie Petrie-Norris",
+      "party": "D",
+      "website": "a73.asmdc.org"
+    },
+    "74": {
+      "name": "Laurie Davies",
+      "party": "R",
+      "website": "a74.asmdc.org"
+    },
+    "75": {
+      "name": "Carl DeMaio",
+      "party": "R",
+      "website": "a75.asmdc.org"
+    },
+    "76": {
+      "name": "Darshana Patel",
+      "party": "D",
+      "website": "a76.asmdc.org"
+    },
+    "77": {
+      "name": "Tasha Boerner",
+      "party": "D",
+      "website": "a77.asmdc.org"
+    },
+    "78": {
+      "name": "Christopher Ward",
+      "party": "D",
+      "website": "a78.asmdc.org"
+    },
+    "79": {
+      "name": "LaShae Sharp-Collins",
+      "party": "D",
+      "website": "a79.asmdc.org"
+    },
+    "80": {
+      "name": "David Alvarez",
+      "party": "D",
+      "website": "a80.asmdc.org"
+    }
   }
 }
