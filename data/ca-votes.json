@@ -2,6 +2,7 @@
   "21": {
     "name": "Costa, Jim",
     "bioguideId": "C001059",
+    "since": 2005,
     "votes": {
       "abortion": [
         {
@@ -81,6 +82,7 @@
   "1": {
     "name": "LaMalfa, Doug",
     "bioguideId": "L000578",
+    "since": 2013,
     "votes": {
       "abortion": [
         {
@@ -160,6 +162,7 @@
   "43": {
     "name": "Waters, Maxine",
     "bioguideId": "W000187",
+    "since": 1991,
     "votes": {
       "abortion": [
         {
@@ -239,6 +242,7 @@
   "11": {
     "name": "Pelosi, Nancy",
     "bioguideId": "P000197",
+    "since": 1987,
     "votes": {
       "abortion": [
         {
@@ -318,6 +322,7 @@
   "27": {
     "name": "Whitesides, George",
     "bioguideId": "W000830",
+    "since": 2025,
     "votes": {
       "abortion": [
         {
@@ -397,6 +402,7 @@
   "30": {
     "name": "Friedman, Laura",
     "bioguideId": "F000483",
+    "since": 2025,
     "votes": {
       "abortion": [
         {
@@ -476,6 +482,7 @@
   "20": {
     "name": "Fong, Vince",
     "bioguideId": "F000480",
+    "since": 2024,
     "votes": {
       "abortion": [
         {
@@ -555,6 +562,7 @@
   "31": {
     "name": "Cisneros, Gilbert Ray",
     "bioguideId": "C001123",
+    "since": 2019,
     "votes": {
       "abortion": [
         {
@@ -634,6 +642,7 @@
   "15": {
     "name": "Mullin, Kevin",
     "bioguideId": "M001225",
+    "since": 2023,
     "votes": {
       "abortion": [
         {
@@ -713,6 +722,7 @@
   "3": {
     "name": "Kiley, Kevin",
     "bioguideId": "K000401",
+    "since": 2023,
     "votes": {
       "abortion": [
         {
@@ -792,6 +802,7 @@
   "37": {
     "name": "Kamlager-Dove, Sydney",
     "bioguideId": "K000400",
+    "since": 2023,
     "votes": {
       "abortion": [
         {
@@ -871,6 +882,7 @@
   "42": {
     "name": "Garcia, Robert",
     "bioguideId": "G000598",
+    "since": 2023,
     "votes": {
       "abortion": [
         {
@@ -950,6 +962,7 @@
   "23": {
     "name": "Obernolte, Jay",
     "bioguideId": "O000019",
+    "since": 2021,
     "votes": {
       "abortion": [
         {
@@ -1029,6 +1042,7 @@
   "40": {
     "name": "Kim, Young",
     "bioguideId": "K000397",
+    "since": 2021,
     "votes": {
       "abortion": [
         {
@@ -1108,6 +1122,7 @@
   "51": {
     "name": "Jacobs, Sara",
     "bioguideId": "J000305",
+    "since": 2021,
     "votes": {
       "abortion": [
         {
@@ -1187,6 +1202,7 @@
   "9": {
     "name": "Harder, Josh",
     "bioguideId": "H001090",
+    "since": 2019,
     "votes": {
       "abortion": [
         {
@@ -1266,6 +1282,7 @@
   "19": {
     "name": "Panetta, Jimmy",
     "bioguideId": "P000613",
+    "since": 2017,
     "votes": {
       "abortion": [
         {
@@ -1345,6 +1362,7 @@
   "36": {
     "name": "Lieu, Ted",
     "bioguideId": "L000582",
+    "since": 2015,
     "votes": {
       "abortion": [
         {
@@ -1424,6 +1442,7 @@
   "33": {
     "name": "Aguilar, Pete",
     "bioguideId": "A000371",
+    "since": 2015,
     "votes": {
       "abortion": [
         {
@@ -1503,6 +1522,7 @@
   "10": {
     "name": "DeSaulnier, Mark",
     "bioguideId": "D000623",
+    "since": 2015,
     "votes": {
       "abortion": [
         {
@@ -1582,6 +1602,7 @@
   "50": {
     "name": "Peters, Scott H.",
     "bioguideId": "P000608",
+    "since": 2013,
     "votes": {
       "abortion": [
         {
@@ -1661,6 +1682,7 @@
   "52": {
     "name": "Vargas, Juan",
     "bioguideId": "V000130",
+    "since": 2013,
     "votes": {
       "abortion": [
         {
@@ -1740,6 +1762,7 @@
   "39": {
     "name": "Takano, Mark",
     "bioguideId": "T000472",
+    "since": 2013,
     "votes": {
       "abortion": [
         {
@@ -1819,6 +1842,7 @@
   "25": {
     "name": "Ruiz, Raul",
     "bioguideId": "R000599",
+    "since": 2013,
     "votes": {
       "abortion": [
         {
@@ -1898,6 +1922,7 @@
   "22": {
     "name": "Valadao, David G.",
     "bioguideId": "V000129",
+    "since": 2013,
     "votes": {
       "abortion": [
         {
@@ -1977,6 +2002,7 @@
   "14": {
     "name": "Swalwell, Eric",
     "bioguideId": "S001193",
+    "since": 2013,
     "votes": {
       "abortion": [
         {
@@ -2056,6 +2082,7 @@
   "6": {
     "name": "Bera, Ami",
     "bioguideId": "B001287",
+    "since": 2013,
     "votes": {
       "abortion": [
         {
@@ -2135,6 +2162,7 @@
   "8": {
     "name": "Garamendi, John",
     "bioguideId": "G000559",
+    "since": 2009,
     "votes": {
       "abortion": [
         {
@@ -2214,6 +2242,7 @@
   "28": {
     "name": "Chu, Judy",
     "bioguideId": "C001080",
+    "since": 2009,
     "votes": {
       "abortion": [
         {
@@ -2293,6 +2322,7 @@
   "5": {
     "name": "McClintock, Tom",
     "bioguideId": "M001177",
+    "since": 2009,
     "votes": {
       "abortion": [
         {
@@ -2372,6 +2402,7 @@
   "7": {
     "name": "Matsui, Doris O.",
     "bioguideId": "M001163",
+    "since": 2005,
     "votes": {
       "abortion": [
         {
@@ -2451,6 +2482,7 @@
   "4": {
     "name": "Thompson, Mike",
     "bioguideId": "T000460",
+    "since": 1999,
     "votes": {
       "abortion": [
         {
@@ -2530,6 +2562,7 @@
   "32": {
     "name": "Sherman, Brad",
     "bioguideId": "S000344",
+    "since": 1997,
     "votes": {
       "abortion": [
         {
@@ -2609,6 +2642,7 @@
   "48": {
     "name": "Issa, Darrell",
     "bioguideId": "I000056",
+    "since": 2001,
     "votes": {
       "abortion": [
         {
@@ -2688,6 +2722,7 @@
   "41": {
     "name": "Calvert, Ken",
     "bioguideId": "C000059",
+    "since": 1993,
     "votes": {
       "abortion": [
         {
@@ -2767,6 +2802,7 @@
   "18": {
     "name": "Lofgren, Zoe",
     "bioguideId": "L000397",
+    "since": 1995,
     "votes": {
       "abortion": [
         {
@@ -2846,6 +2882,7 @@
   "49": {
     "name": "Levin, Mike",
     "bioguideId": "L000593",
+    "since": 2019,
     "votes": {
       "abortion": [
         {
@@ -2925,6 +2962,7 @@
   "34": {
     "name": "Gomez, Jimmy",
     "bioguideId": "G000585",
+    "since": 2017,
     "votes": {
       "abortion": [
         {
@@ -3004,6 +3042,7 @@
   "46": {
     "name": "Correa, J. Luis",
     "bioguideId": "C001110",
+    "since": 2017,
     "votes": {
       "abortion": [
         {
@@ -3083,6 +3122,7 @@
   "44": {
     "name": "Barrag\u00e1n, Nanette Diaz",
     "bioguideId": "B001300",
+    "since": 2017,
     "votes": {
       "abortion": [
         {
@@ -3162,6 +3202,7 @@
   "24": {
     "name": "Carbajal, Salud O.",
     "bioguideId": "C001112",
+    "since": 2017,
     "votes": {
       "abortion": [
         {
@@ -3241,6 +3282,7 @@
   "47": {
     "name": "Min, Dave",
     "bioguideId": "M001241",
+    "since": 2025,
     "votes": {
       "abortion": [
         {
@@ -3320,6 +3362,7 @@
   "17": {
     "name": "Khanna, Ro",
     "bioguideId": "K000389",
+    "since": 2017,
     "votes": {
       "abortion": [
         {
@@ -3399,6 +3442,7 @@
   "35": {
     "name": "Torres, Norma J.",
     "bioguideId": "T000474",
+    "since": 2015,
     "votes": {
       "abortion": [
         {
@@ -3478,6 +3522,7 @@
   "45": {
     "name": "Tran, Derek",
     "bioguideId": "T000491",
+    "since": 2025,
     "votes": {
       "abortion": [
         {
@@ -3557,6 +3602,7 @@
   "26": {
     "name": "Brownley, Julia",
     "bioguideId": "B001285",
+    "since": 2013,
     "votes": {
       "abortion": [
         {
@@ -3636,6 +3682,7 @@
   "2": {
     "name": "Huffman, Jared",
     "bioguideId": "H001068",
+    "since": 2013,
     "votes": {
       "abortion": [
         {
@@ -3715,6 +3762,7 @@
   "38": {
     "name": "S\u00e1nchez, Linda T.",
     "bioguideId": "S001156",
+    "since": 2003,
     "votes": {
       "abortion": [
         {
@@ -3794,6 +3842,7 @@
   "12": {
     "name": "Simon, Lateefah",
     "bioguideId": "S001231",
+    "since": 2025,
     "votes": {
       "abortion": [
         {
@@ -3873,6 +3922,7 @@
   "29": {
     "name": "Rivas, Luz M.",
     "bioguideId": "R000620",
+    "since": 2025,
     "votes": {
       "abortion": [
         {
@@ -3952,6 +4002,7 @@
   "16": {
     "name": "Liccardo, Sam T.",
     "bioguideId": "L000607",
+    "since": 2025,
     "votes": {
       "abortion": [
         {
@@ -4031,6 +4082,7 @@
   "13": {
     "name": "Gray, Adam",
     "bioguideId": "G000605",
+    "since": 2025,
     "votes": {
       "abortion": [
         {

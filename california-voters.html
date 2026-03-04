@@ -193,6 +193,8 @@
     .vote-nay   { color: #c05a5a; background: rgba(192,90,90,0.12); }
     .vote-other { color: #555; }
     .vote-no-record { color: #555; font-size: 0.78rem; font-style: italic; margin-top: 4px; }
+    .vote-context { display: block; color: #555; font-size: 0.72rem; line-height: 1.4; margin-top: 2px; font-style: italic; }
+    .info-since { font-size: 0.78rem; color: #555; margin-bottom: 12px; }
 
     /* --- Mobile handle (hidden on desktop) --- */
     .mobile-handle {
@@ -330,15 +332,39 @@
       return rep.party === 'D' ? 'D' : rep.party === 'R' ? 'R' : 'vacant';
     }
 
-    const VOTE_SHORT_LABELS = {
-      'HR 26 — Born-Alive Abortion Survivors Protection Act': 'Born-Alive Act',
-      'HR 7 — No Taxpayer Funding for Abortion Act': 'No Taxpayer Funding for Abortion',
-      'HR 485 — Access to Family Building Act (IVF protection)': 'IVF Protection Act',
-      'HR 5378 — Lower Costs, More Transparency Act': 'Healthcare Transparency Act',
-      'HR 3746 — Fiscal Responsibility Act (Debt Ceiling)': 'Debt Ceiling (Fiscal Responsibility)',
-      'HR 4366 — FY2024 Appropriations (House Republican spending bill)': 'FY2024 Appropriations',
-      'HR 2 — Secure the Border Act': 'Secure the Border Act',
-      'S.5 — Laken Riley Act': 'Laken Riley Act',
+    const BILL_INFO = {
+      'HR 26 — Born-Alive Abortion Survivors Protection Act': {
+        label: 'Born-Alive Act',
+        context: 'Requires medical care for infants born alive after an attempted abortion. Yea = support requirement, Nay = oppose.',
+      },
+      'HR 7 — No Taxpayer Funding for Abortion Act': {
+        label: 'No Taxpayer Funding for Abortion',
+        context: 'Permanently bans federal funding for abortion services. Yea = support ban, Nay = oppose ban.',
+      },
+      'HR 485 — Access to Family Building Act (IVF protection)': {
+        label: 'IVF Protection Act',
+        context: 'Prohibits states from restricting access to IVF and fertility treatments. Yea = protect IVF access, Nay = oppose.',
+      },
+      'HR 5378 — Lower Costs, More Transparency Act': {
+        label: 'Healthcare Transparency Act',
+        context: 'Requires hospitals and insurers to publicly disclose pricing; targets pharmacy benefit managers. Yea = support transparency.',
+      },
+      'HR 3746 — Fiscal Responsibility Act (Debt Ceiling)': {
+        label: 'Debt Ceiling / Fiscal Responsibility Act',
+        context: 'Raised the debt ceiling in exchange for spending caps and work requirements for some benefits. Bipartisan vote.',
+      },
+      'HR 4366 — FY2024 Appropriations (House Republican spending bill)': {
+        label: 'FY2024 Appropriations',
+        context: 'Republican-led government funding bill with significant cuts to domestic programs. Yea = support cuts, Nay = oppose cuts.',
+      },
+      'HR 2 — Secure the Border Act': {
+        label: 'Secure the Border Act',
+        context: 'Sweeping Republican border bill: resume wall construction, expand deportations, restrict asylum. Yea = support, Nay = oppose.',
+      },
+      'S.5 — Laken Riley Act': {
+        label: 'Laken Riley Act',
+        context: 'Requires detention of undocumented immigrants charged with theft or violent crimes. Yea = support, Nay = oppose.',
+      },
     };
 
     const VOTE_CATEGORIES = ['abortion', 'healthcare', 'spending', 'immigration'];
@@ -354,7 +380,7 @@
       if (!hasAny) {
         return `<div class="votes-section">
           <div class="votes-title">voting record</div>
-          <div class="vote-no-record">elected in 2024 — limited voting record available</div>
+          <div class="vote-no-record">Took office in January 2025 — the bills tracked here are from the previous Congress (2023–2024).</div>
         </div>`;
       }
 
@@ -364,11 +390,14 @@
         if (!bills.length) continue;
         html += `<div class="vote-category"><div class="vote-cat-label">${cat}</div>`;
         for (const bill of bills) {
-          const label = VOTE_SHORT_LABELS[bill.label] || bill.label;
+          const info  = BILL_INFO[bill.label] || { label: bill.label, context: '' };
           const cls   = bill.vote === 'Yea' ? 'vote-yea' : bill.vote === 'Nay' ? 'vote-nay' : 'vote-other';
           const text  = bill.vote === 'Not Voting' ? 'Abstain' : bill.vote;
           html += `<div class="vote-row">
-            <span class="vote-bill">${label}</span>
+            <span class="vote-bill">
+              ${info.label}
+              ${info.context ? `<span class="vote-context">${info.context}</span>` : ''}
+            </span>
             <span class="vote-cast ${cls}">${text}</span>
           </div>`;
         }
@@ -384,12 +413,24 @@
         return;
       }
       const partyFull = rep.party === 'D' ? 'Democrat' : rep.party === 'R' ? 'Republican' : '';
-      const votesHtml = layerKey === 'house' ? buildVotesHtml(distNum) : '';
+
+      let sinceHtml = '';
+      if (layerKey === 'house' && votesData?.[distNum]?.since) {
+        sinceHtml = `<div class="info-since">In office since ${votesData[distNum].since}</div>`;
+      }
+
+      let votesHtml = '';
+      if (layerKey === 'house') {
+        votesHtml = buildVotesHtml(distNum);
+      } else {
+        votesHtml = `<div class="votes-section"><div class="info-note">Voting record data shown here covers federal House votes only. State legislature voting records are not currently tracked.</div></div>`;
+      }
+
       infoContent.innerHTML = `
         <div class="info-district">${LAYERS[layerKey].label} · District ${distNum}</div>
         <div class="info-name">${rep.name}</div>
         ${partyFull ? `<div class="info-party ${rep.party}">${partyFull}</div>` : ''}
-        <div class="info-role">${LAYERS[layerKey].label}</div>
+        ${sinceHtml}
         ${rep.website ? `<a class="info-link" href="https://${rep.website}" target="_blank" rel="noopener">website ↗</a>` : ''}
         ${rep.note   ? `<div class="info-note">${rep.note}</div>` : ''}
         ${votesHtml}

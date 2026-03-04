@@ -117,9 +117,15 @@ def get_ca_house_members():
     members = {}
     for m in all_members:
         if m.get("state") == "California" and m.get("district") is not None:
+            house_terms = [
+                t for t in m.get("terms", {}).get("item", [])
+                if t.get("chamber") == "House of Representatives"
+            ]
+            since = min((t.get("startYear", 9999) for t in house_terms), default=None)
             members[m["bioguideId"]] = {
                 "name": m["name"],
                 "district": str(m["district"]),
+                "since": since,
             }
 
     print(f"  Found {len(members)} CA House members")
@@ -169,6 +175,7 @@ def main():
         output[dist] = {
             "name": info["name"],
             "bioguideId": bio_id,
+            "since": info.get("since"),
             "votes": {cat: [] for cat in BILLS},
         }
 
