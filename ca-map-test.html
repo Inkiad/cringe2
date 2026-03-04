@@ -21,7 +21,14 @@
       .attr('height', h)
       .attr('viewBox', `0 0 ${w} ${h}`);
 
+    const status = svg.append('text')
+      .attr('x', 20).attr('y', 40)
+      .attr('fill', '#888').attr('font-size', '14px')
+      .text('loading...');
+
     d3.json('data/ca-congressional.geojson').then(geo => {
+      status.remove();
+
       const projection = d3.geoMercator()
         .fitExtent([[10, 10], [w - 10, h - 10]], geo);
 
@@ -31,6 +38,8 @@
         .data(geo.features)
         .join('path')
         .attr('d', path);
+    }).catch(e => {
+      status.attr('fill', 'red').text('error: ' + e.message);
     });
   </script>
 </body>
