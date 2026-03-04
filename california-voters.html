@@ -297,80 +297,122 @@
     const g = svg.append('g');
     const tooltip = d3.select('body').append('div').attr('class', 'tooltip');
 
-    // Senators bar
-    d3.json('data/ca-reps.json').then(data => {
-      const bar = document.getElementById('senators-bar');
-      const parts = data.us_senators.map(s => `
-        <div class="senator">
-          <span class="senator-name">${s.name}</span>
-          <a class="senator-link" href="https://${s.website}" target="_blank" rel="noopener">↗</a>
-        </div>
-      `).join('<span class="sep">·</span>');
-      bar.innerHTML = `<span style="color:#444;font-size:.8rem;margin-right:4px">US Senators:</span>${parts}`;
-    }).catch(e => console.warn('senators:', e));
+    const LAYERS = {
+      house:        { file: 'data/ca-congressional.geojson', key: 'house' },
+      state_senate: { file: 'data/ca-state-senate.geojson',  key: 'state_senate' },
+      assembly:     { file: 'data/ca-assembly.geojson',       key: 'assembly' },
+    };
+    const LAYER_LABEL = { house: 'US House', state_senate: 'CA State Senate', assembly: 'CA Assembly' };
 
-    async function drawMap() {
+    let repsData = null;
+    let geoPath  = null;
+    let geoCache = {};
+    let activeLayer = 'house';
+
+    async function initMap() {
       const overlay = document.getElementById('map-overlay');
       overlay.style.display = 'flex';
       overlay.textContent = 'loading...';
 
-      let stateGeo, districtGeo;
+      let houseGeo;
       try {
-        [stateGeo, districtGeo] = await Promise.all([
-          d3.json('data/ca-state.geojson'),
+        [repsData, houseGeo] = await Promise.all([
+          d3.json('data/ca-reps.json'),
           d3.json('data/ca-congressional.geojson'),
         ]);
+        geoCache['house'] = houseGeo;
       } catch (e) {
         overlay.textContent = 'error loading map';
         console.error(e);
         return;
       }
 
+      // Senators bar
+      const bar = document.getElementById('senators-bar');
+      const parts = repsData.us_senators.map(s => `
+        <div class="senator">
+          <span class="senator-name">${s.name}</span>
+          <a class="senator-link" href="https://${s.website}" target="_blank" rel="noopener">↗</a>
+        </div>
+      `).join('<span class="sep">·</span>');
+      bar.innerHTML = `<span style="color:#444;font-size:.8rem;margin-right:4px">US Senators:</span>${parts}`;
+
       const wrapper = svg.node().parentElement;
       const w = wrapper.offsetWidth;
       const h = wrapper.offsetHeight;
-
       svg.attr('width', w).attr('height', h).attr('viewBox', `0 0 ${w} ${h}`);
 
-      const california = stateGeo.features[0];
-      const projection = d3.geoMercator().fitExtent([[20, 20], [w - 20, h - 20]], california);
-      const path = d3.geoPath().projection(projection);
+      // Fit projection to the congressional districts (all of CA)
+      const projection = d3.geoMercator().fitExtent([[20, 20], [w - 20, h - 20]], houseGeo);
+      geoPath = d3.geoPath().projection(projection);
 
-      // Base layer: California fill
-      g.append('path')
-        .datum(stateGeo.features[0])
-        .attr('d', path)
-        .attr('fill', '#2a3f5a')
-        .attr('stroke', '#4a6f8a')
-        .attr('stroke-width', 1);
+      overlay.style.display = 'none';
+      drawLayer('house');
+    }
 
-      // District overlay with hover
+    async function drawLayer(layerKey) {
+      const cfg = LAYERS[layerKey];
+      if (!geoCache[layerKey]) {
+        try { geoCache[layerKey] = await d3.json(cfg.file); }
+        catch (e) { console.error('Failed to load', cfg.file, e); return; }
+      }
+      const geo = geoCache[layerKey];
+      const repMap = repsData[cfg.key];
+
+      g.selectAll('.district').remove();
+
       g.selectAll('.district')
-        .data(districtGeo.features)
+        .data(geo.features)
         .join('path')
         .attr('class', 'district')
-        .attr('d', path)
-        .attr('fill', 'transparent')
+        .attr('d', geoPath)
+        .attr('fill', '#2a3f5a')
         .attr('stroke', 'rgba(255,255,255,0.15)')
         .attr('stroke-width', 0.5)
         .on('mouseenter', function(event, d) {
-          d3.select(this).attr('fill', 'rgba(255,255,255,0.08)');
-          tooltip.style('display', 'block').text(`District ${d.properties.district}`);
+          d3.select(this).attr('fill', '#3a5f8a');
+          const distNum = String(d.properties.district);
+          const rep = repMap[distNum];
+          tooltip.style('display', 'block')
+            .text(`District ${distNum}${rep ? ' — ' + rep.name : ''}`);
+          updatePanel(distNum, rep, layerKey);
         })
         .on('mousemove', function(event) {
-          tooltip
-            .style('left', (event.clientX + 14) + 'px')
-            .style('top', (event.clientY - 32) + 'px');
+          tooltip.style('left', (event.clientX + 14) + 'px')
+                 .style('top',  (event.clientY - 32) + 'px');
         })
         .on('mouseleave', function() {
-          d3.select(this).attr('fill', 'transparent');
+          d3.select(this).attr('fill', '#2a3f5a');
           tooltip.style('display', 'none');
         });
-
-      overlay.style.display = 'none';
     }
 
-    drawMap();
+    function updatePanel(distNum, rep, layerKey) {
+      const panel = document.getElementById('info-panel');
+      if (!rep) {
+        panel.innerHTML = `<div class="info-district">District ${distNum}</div><div class="info-vacant">No data</div>`;
+        return;
+      }
+      const partyFull = rep.party === 'D' ? 'Democrat' : rep.party === 'R' ? 'Republican' : '';
+      panel.innerHTML = `
+        <div class="info-district">${LAYER_LABEL[layerKey]} · District ${distNum}</div>
+        <div class="info-name">${rep.name}</div>
+        ${partyFull ? `<div class="info-party party-${rep.party}">${partyFull}</div>` : ''}
+        ${rep.website ? `<a class="info-link" href="https://${rep.website}" target="_blank" rel="noopener">website ↗</a>` : ''}
+        ${rep.note ? `<div class="info-note">${rep.note}</div>` : ''}
+      `;
+    }
+
+    document.querySelectorAll('.toggle-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        activeLayer = this.dataset.layer;
+        if (geoPath) drawLayer(activeLayer);
+      });
+    });
+
+    initMap();
   </script>
 </body>
 </html>
