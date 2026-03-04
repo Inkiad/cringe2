@@ -444,9 +444,9 @@
             d3.select(this).classed('highlighted', true);
             zoomToFeature(d);
             updatePanel(num, rep, layerKey);
-            // On mobile, expand sheet to half so content is visible
+            // On mobile, expand sheet fully so all content is visible without dragging
             if (window.innerWidth <= 700) {
-              infoPanel.style.height = snapPoints()[1] + 'px';
+              infoPanel.style.height = snapPoints()[2] + 'px';
             }
           }
         });
