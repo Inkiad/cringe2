@@ -1,0 +1,4110 @@
+{
+  "21": {
+    "name": "Costa, Jim",
+    "bioguideId": "C001059",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Voting",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "1": {
+    "name": "LaMalfa, Doug",
+    "bioguideId": "L000578",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Yea",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "43": {
+    "name": "Waters, Maxine",
+    "bioguideId": "W000187",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Not Voting",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "11": {
+    "name": "Pelosi, Nancy",
+    "bioguideId": "P000197",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Not Voting",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "27": {
+    "name": "Whitesides, George",
+    "bioguideId": "W000830",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Not Found",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Not Voting",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "30": {
+    "name": "Friedman, Laura",
+    "bioguideId": "F000483",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Not Found",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "20": {
+    "name": "Fong, Vince",
+    "bioguideId": "F000480",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Not Found",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "31": {
+    "name": "Cisneros, Gilbert Ray",
+    "bioguideId": "C001123",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Not Found",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "15": {
+    "name": "Mullin, Kevin",
+    "bioguideId": "M001225",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "3": {
+    "name": "Kiley, Kevin",
+    "bioguideId": "K000401",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Yea",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "37": {
+    "name": "Kamlager-Dove, Sydney",
+    "bioguideId": "K000400",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "42": {
+    "name": "Garcia, Robert",
+    "bioguideId": "G000598",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "23": {
+    "name": "Obernolte, Jay",
+    "bioguideId": "O000019",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Yea",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "40": {
+    "name": "Kim, Young",
+    "bioguideId": "K000397",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Voting",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Yea",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "51": {
+    "name": "Jacobs, Sara",
+    "bioguideId": "J000305",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "9": {
+    "name": "Harder, Josh",
+    "bioguideId": "H001090",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "19": {
+    "name": "Panetta, Jimmy",
+    "bioguideId": "P000613",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "36": {
+    "name": "Lieu, Ted",
+    "bioguideId": "L000582",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "33": {
+    "name": "Aguilar, Pete",
+    "bioguideId": "A000371",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "10": {
+    "name": "DeSaulnier, Mark",
+    "bioguideId": "D000623",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "50": {
+    "name": "Peters, Scott H.",
+    "bioguideId": "P000608",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "52": {
+    "name": "Vargas, Juan",
+    "bioguideId": "V000130",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "39": {
+    "name": "Takano, Mark",
+    "bioguideId": "T000472",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "25": {
+    "name": "Ruiz, Raul",
+    "bioguideId": "R000599",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "22": {
+    "name": "Valadao, David G.",
+    "bioguideId": "V000129",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Yea",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "14": {
+    "name": "Swalwell, Eric",
+    "bioguideId": "S001193",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "6": {
+    "name": "Bera, Ami",
+    "bioguideId": "B001287",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "8": {
+    "name": "Garamendi, John",
+    "bioguideId": "G000559",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Not Voting",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "28": {
+    "name": "Chu, Judy",
+    "bioguideId": "C001080",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "5": {
+    "name": "McClintock, Tom",
+    "bioguideId": "M001177",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Yea",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "7": {
+    "name": "Matsui, Doris O.",
+    "bioguideId": "M001163",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "4": {
+    "name": "Thompson, Mike",
+    "bioguideId": "T000460",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "32": {
+    "name": "Sherman, Brad",
+    "bioguideId": "S000344",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Voting",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "48": {
+    "name": "Issa, Darrell",
+    "bioguideId": "I000056",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Yea",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "41": {
+    "name": "Calvert, Ken",
+    "bioguideId": "C000059",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Yea",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "18": {
+    "name": "Lofgren, Zoe",
+    "bioguideId": "L000397",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "49": {
+    "name": "Levin, Mike",
+    "bioguideId": "L000593",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "34": {
+    "name": "Gomez, Jimmy",
+    "bioguideId": "G000585",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Voting",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "46": {
+    "name": "Correa, J. Luis",
+    "bioguideId": "C001110",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Not Voting",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "44": {
+    "name": "Barrag\u00e1n, Nanette Diaz",
+    "bioguideId": "B001300",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "24": {
+    "name": "Carbajal, Salud O.",
+    "bioguideId": "C001112",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "47": {
+    "name": "Min, Dave",
+    "bioguideId": "M001241",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Not Found",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "17": {
+    "name": "Khanna, Ro",
+    "bioguideId": "K000389",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "35": {
+    "name": "Torres, Norma J.",
+    "bioguideId": "T000474",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "45": {
+    "name": "Tran, Derek",
+    "bioguideId": "T000491",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Not Found",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "26": {
+    "name": "Brownley, Julia",
+    "bioguideId": "B001285",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Voting",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "2": {
+    "name": "Huffman, Jared",
+    "bioguideId": "H001068",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Yea",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Voting",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "38": {
+    "name": "S\u00e1nchez, Linda T.",
+    "bioguideId": "S001156",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Nay",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Nay",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "12": {
+    "name": "Simon, Lateefah",
+    "bioguideId": "S001231",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Not Found",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "29": {
+    "name": "Rivas, Luz M.",
+    "bioguideId": "R000620",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Not Found",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "16": {
+    "name": "Liccardo, Sam T.",
+    "bioguideId": "L000607",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Not Found",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Nay",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  },
+  "13": {
+    "name": "Gray, Adam",
+    "bioguideId": "G000605",
+    "votes": {
+      "abortion": [
+        {
+          "label": "HR 26 \u2014 Born-Alive Abortion Survivors Protection Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 29,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "HR 7 \u2014 No Taxpayer Funding for Abortion Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 30,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "healthcare": [
+        {
+          "label": "HR 485 \u2014 Access to Family Building Act (IVF protection)",
+          "congress": 118,
+          "session": 2,
+          "roll": 40,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        },
+        {
+          "label": "HR 5378 \u2014 Lower Costs, More Transparency Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 708,
+          "vote": "Not Found",
+          "progressive_vote": "Yea"
+        }
+      ],
+      "spending": [
+        {
+          "label": "HR 3746 \u2014 Fiscal Responsibility Act (Debt Ceiling)",
+          "congress": 118,
+          "session": 1,
+          "roll": 216,
+          "vote": "Not Found",
+          "progressive_vote": null
+        },
+        {
+          "label": "HR 4366 \u2014 FY2024 Appropriations (House Republican spending bill)",
+          "congress": 118,
+          "session": 1,
+          "roll": 380,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "immigration": [
+        {
+          "label": "HR 2 \u2014 Secure the Border Act",
+          "congress": 118,
+          "session": 1,
+          "roll": 209,
+          "vote": "Not Found",
+          "progressive_vote": "Nay"
+        },
+        {
+          "label": "S.5 \u2014 Laken Riley Act",
+          "congress": 119,
+          "session": 1,
+          "roll": 23,
+          "vote": "Yea",
+          "progressive_vote": "Nay"
+        }
+      ],
+      "housing": []
+    }
+  }
+}

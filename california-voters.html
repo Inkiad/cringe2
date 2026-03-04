@@ -155,6 +155,45 @@
     .info-note { color: #555; font-size: 0.75rem; margin-top: 12px; line-height: 1.5; }
     .info-vacant { color: #666; font-size: 0.9rem; font-style: italic; }
 
+    /* --- Votes table --- */
+    .votes-section {
+      margin-top: 20px;
+      border-top: 1px solid #2a2a2a;
+      padding-top: 16px;
+    }
+    .votes-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 14px;
+    }
+    .vote-category { margin-bottom: 14px; }
+    .vote-cat-label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #555;
+      margin-bottom: 5px;
+    }
+    .vote-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 3px 0;
+    }
+    .vote-bill { color: #888; font-size: 0.78rem; flex: 1; line-height: 1.3; }
+    .vote-cast {
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em;
+      flex-shrink: 0; padding: 1px 5px; border-radius: 2px;
+    }
+    .vote-yea   { color: #4a9e6a; background: rgba(74,158,106,0.12); }
+    .vote-nay   { color: #c05a5a; background: rgba(192,90,90,0.12); }
+    .vote-other { color: #555; }
+    .vote-no-record { color: #555; font-size: 0.78rem; font-style: italic; margin-top: 4px; }
+
     /* --- Responsive --- */
     @media (max-width: 700px) {
       .main { flex-direction: column; }
@@ -216,6 +255,7 @@
     const statusEl   = document.getElementById('search-status');
 
     let repsData     = null;
+    let votesData    = null;
     let geoCache     = {};
     let activeLayer  = 'house';
     let gPath        = null;
@@ -231,12 +271,61 @@
       return rep.party === 'D' ? 'D' : rep.party === 'R' ? 'R' : 'vacant';
     }
 
+    const VOTE_SHORT_LABELS = {
+      'HR 26 — Born-Alive Abortion Survivors Protection Act': 'Born-Alive Act',
+      'HR 7 — No Taxpayer Funding for Abortion Act': 'No Taxpayer Funding for Abortion',
+      'HR 485 — Access to Family Building Act (IVF protection)': 'IVF Protection Act',
+      'HR 5378 — Lower Costs, More Transparency Act': 'Healthcare Transparency Act',
+      'HR 3746 — Fiscal Responsibility Act (Debt Ceiling)': 'Debt Ceiling (Fiscal Responsibility)',
+      'HR 4366 — FY2024 Appropriations (House Republican spending bill)': 'FY2024 Appropriations',
+      'HR 2 — Secure the Border Act': 'Secure the Border Act',
+      'S.5 — Laken Riley Act': 'Laken Riley Act',
+    };
+
+    const VOTE_CATEGORIES = ['abortion', 'healthcare', 'spending', 'immigration'];
+
+    function buildVotesHtml(distNum) {
+      if (!votesData || !votesData[distNum]) return '';
+      const repVotes = votesData[distNum];
+
+      const hasAny = VOTE_CATEGORIES.some(cat =>
+        (repVotes.votes[cat] || []).some(v => v.vote !== 'Not Found')
+      );
+
+      if (!hasAny) {
+        return `<div class="votes-section">
+          <div class="votes-title">voting record</div>
+          <div class="vote-no-record">elected in 2024 — limited voting record available</div>
+        </div>`;
+      }
+
+      let html = `<div class="votes-section"><div class="votes-title">voting record</div>`;
+      for (const cat of VOTE_CATEGORIES) {
+        const bills = (repVotes.votes[cat] || []).filter(v => v.vote !== 'Not Found');
+        if (!bills.length) continue;
+        html += `<div class="vote-category"><div class="vote-cat-label">${cat}</div>`;
+        for (const bill of bills) {
+          const label = VOTE_SHORT_LABELS[bill.label] || bill.label;
+          const cls   = bill.vote === 'Yea' ? 'vote-yea' : bill.vote === 'Nay' ? 'vote-nay' : 'vote-other';
+          const text  = bill.vote === 'Not Voting' ? 'Abstain' : bill.vote;
+          html += `<div class="vote-row">
+            <span class="vote-bill">${label}</span>
+            <span class="vote-cast ${cls}">${text}</span>
+          </div>`;
+        }
+        html += `</div>`;
+      }
+      html += `</div>`;
+      return html;
+    }
+
     function updatePanel(distNum, rep, layerKey) {
       if (!rep) {
         infoPanel.innerHTML = `<div class="info-district">District ${distNum}</div><div class="info-vacant">No data</div>`;
         return;
       }
       const partyFull = rep.party === 'D' ? 'Democrat' : rep.party === 'R' ? 'Republican' : '';
+      const votesHtml = layerKey === 'house' ? buildVotesHtml(distNum) : '';
       infoPanel.innerHTML = `
         <div class="info-district">${LAYERS[layerKey].label} · District ${distNum}</div>
         <div class="info-name">${rep.name}</div>
@@ -244,6 +333,7 @@
         <div class="info-role">${LAYERS[layerKey].label}</div>
         ${rep.website ? `<a class="info-link" href="https://${rep.website}" target="_blank" rel="noopener">website ↗</a>` : ''}
         ${rep.note   ? `<div class="info-note">${rep.note}</div>` : ''}
+        ${votesHtml}
       `;
     }
 
@@ -349,9 +439,10 @@
 
       let houseGeo;
       try {
-        [repsData, houseGeo] = await Promise.all([
+        [repsData, houseGeo, votesData] = await Promise.all([
           d3.json('data/ca-reps.json'),
           d3.json('data/ca-congressional.geojson'),
+          d3.json('data/ca-votes.json'),
         ]);
         geoCache['house'] = houseGeo;
       } catch (e) {
