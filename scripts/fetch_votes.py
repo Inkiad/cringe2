@@ -75,7 +75,16 @@ BILLS = {
         },
     ],
     "housing": [
-        # TBD — standalone housing floor votes were sparse in 118th Congress
+        {
+            "congress": 119, "session": 2, "roll": 57,
+            "label": "HR 6644 — Housing for the 21st Century Act",
+            "progressive_vote": "Yea",
+        },
+        {
+            "congress": 119, "session": 2, "roll": 78,
+            "label": "HR 4758 — Homeowner Energy Freedom Act",
+            "progressive_vote": "Nay",
+        },
     ],
 }
 

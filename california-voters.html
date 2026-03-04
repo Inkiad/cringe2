@@ -367,9 +367,17 @@
         label: 'Laken Riley Act',
         context: 'Requires detention of undocumented immigrants charged with theft or violent crimes. Yea = support, Nay = oppose.',
       },
+      'HR 6644 — Housing for the 21st Century Act': {
+        label: 'Housing for the 21st Century Act',
+        context: 'Broad bipartisan housing supply bill: zoning reform (allows multifamily in retail/office zones, duplexes in single-family areas), streamlined permitting, expanded housing tax credits. Yea = support, Nay = oppose.',
+      },
+      'HR 4758 — Homeowner Energy Freedom Act': {
+        label: 'Homeowner Energy Freedom Act',
+        context: 'Repeals IRA home energy efficiency rebate programs and federal assistance for state building energy codes. Energy-related but affects housing construction costs. Yea = repeal programs, Nay = keep programs.',
+      },
     };
 
-    const VOTE_CATEGORIES = ['abortion', 'healthcare', 'spending', 'immigration'];
+    const VOTE_CATEGORIES = ['abortion', 'healthcare', 'spending', 'immigration', 'housing'];
 
     function buildVotesHtml(distNum) {
       if (!votesData || !votesData[distNum]) return '';
