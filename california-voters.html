@@ -199,7 +199,7 @@
       display: none;
       justify-content: center;
       align-items: center;
-      padding: 12px 0;
+      padding: 16px 0 8px;
       flex-shrink: 0;
       cursor: grab;
       touch-action: none;
@@ -581,7 +581,7 @@
 
     // ── Mobile bottom sheet ───────────────────────────────────────────────────
     const mobileHandle = document.getElementById('mobile-handle');
-    const PEEK = 120;
+    const PEEK = 36;
     const snapPoints = () => [PEEK, Math.round(window.innerHeight * 0.72)];
 
     function snapTo(h) {
@@ -633,16 +633,26 @@
 
     // ── Mobile tap-to-expand (iOS Safari: D3 zoom eats click events on SVG) ──
     // Detect taps on district paths via touchend at the SVG level instead.
-    let mapTouchMoved = false;
-    document.getElementById('map').addEventListener('touchstart', () => { mapTouchMoved = false; }, { passive: true });
-    document.getElementById('map').addEventListener('touchmove',  () => { mapTouchMoved = true;  }, { passive: true });
+    // Use a movement threshold so a slight finger wobble doesn't cancel a tap.
+    let mapTouchStartX = 0, mapTouchStartY = 0, mapTouchMoved = false;
+    document.getElementById('map').addEventListener('touchstart', e => {
+      mapTouchMoved = false;
+      mapTouchStartX = e.touches[0].clientX;
+      mapTouchStartY = e.touches[0].clientY;
+    }, { passive: true });
+    document.getElementById('map').addEventListener('touchmove', e => {
+      if (Math.abs(e.touches[0].clientX - mapTouchStartX) > 8 ||
+          Math.abs(e.touches[0].clientY - mapTouchStartY) > 8) {
+        mapTouchMoved = true;
+      }
+    }, { passive: true });
     document.getElementById('map').addEventListener('touchend', e => {
       if (mapTouchMoved || window.innerWidth > 700) return;
+      const OPEN = snapPoints()[1];
       if (e.target.classList.contains('district')) {
         infoPanel.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1)';
-        infoPanel.style.height = snapPoints()[2] + 'px';
+        infoPanel.style.height = OPEN + 'px';
       } else {
-        // Tapped map background — collapse
         infoPanel.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1)';
         infoPanel.style.height = PEEK + 'px';
       }
