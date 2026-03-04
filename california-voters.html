@@ -332,7 +332,8 @@
 
       svg.attr('width', w).attr('height', h).attr('viewBox', `0 0 ${w} ${h}`);
 
-      const projection = d3.geoMercator().fitExtent([[20, 20], [w - 20, h - 20]], stateGeo);
+      const california = stateGeo.features[0];
+      const projection = d3.geoMercator().fitExtent([[20, 20], [w - 20, h - 20]], california);
       const path = d3.geoPath().projection(projection);
 
       // Base layer: California fill
