@@ -199,7 +199,7 @@
       display: none;
       justify-content: center;
       align-items: center;
-      min-height: 52px;
+      padding: 12px 0;
       flex-shrink: 0;
       cursor: grab;
       touch-action: none;
@@ -582,7 +582,7 @@
     // ── Mobile bottom sheet ───────────────────────────────────────────────────
     const mobileHandle = document.getElementById('mobile-handle');
     const PEEK = 120;
-    const snapPoints = () => [PEEK, Math.round(window.innerHeight * 0.45), Math.round(window.innerHeight * 0.72)];
+    const snapPoints = () => [PEEK, Math.round(window.innerHeight * 0.72)];
 
     function snapTo(h) {
       const snaps = snapPoints();
