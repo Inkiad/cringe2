@@ -240,7 +240,16 @@
         overflow-y: auto;
         overscroll-behavior: contain;
         padding-top: 2px;
+        /* push last item above Safari's URL bar / home indicator */
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
+        /* hide scrollbar — still scrollable, won't overlap content */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
       }
+      .info-content::-webkit-scrollbar { display: none; }
+
+      /* Tooltip is useless on mobile, keep it hidden */
+      .tooltip { display: none !important; }
 
       .senators-bar { display: none; }
       .search-form { margin-left: 0; width: 100%; }
@@ -573,7 +582,7 @@
     // ── Mobile bottom sheet ───────────────────────────────────────────────────
     const mobileHandle = document.getElementById('mobile-handle');
     const PEEK = 120;
-    const snapPoints = () => [PEEK, Math.round(window.innerHeight * 0.45), Math.round(window.innerHeight * 0.80)];
+    const snapPoints = () => [PEEK, Math.round(window.innerHeight * 0.45), Math.round(window.innerHeight * 0.72)];
 
     function snapTo(h) {
       const snaps = snapPoints();
