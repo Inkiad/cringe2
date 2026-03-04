@@ -194,10 +194,52 @@
     .vote-other { color: #555; }
     .vote-no-record { color: #555; font-size: 0.78rem; font-style: italic; margin-top: 4px; }
 
+    /* --- Mobile handle (hidden on desktop) --- */
+    .mobile-handle {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0 6px;
+      flex-shrink: 0;
+      cursor: grab;
+      touch-action: none;
+      user-select: none;
+    }
+    .mobile-handle-pill {
+      width: 36px; height: 4px;
+      background: #444; border-radius: 2px;
+    }
+
     /* --- Responsive --- */
     @media (max-width: 700px) {
-      .main { flex-direction: column; }
-      .info-panel { width: 100%; height: 160px; border-left: none; border-top: 1px solid #2a2a2a; padding: 12px 16px; }
+      .main { position: relative; flex-direction: row; }
+      .map-wrapper { position: absolute; inset: 0; }
+      .resize-handle { display: none; }
+
+      .info-panel {
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        width: 100%;
+        height: 120px;
+        border-left: none;
+        border-top: 1px solid #2a2a2a;
+        padding: 0 16px 16px;
+        display: flex;
+        flex-direction: column;
+        transition: height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 20;
+      }
+      .info-panel.dragging { transition: none; }
+
+      .mobile-handle { display: flex; }
+
+      .info-content {
+        flex: 1;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        padding-top: 2px;
+      }
+
       .senators-bar { display: none; }
       .search-form { margin-left: 0; width: 100%; }
       .search-form input { flex: 1; width: auto; }
@@ -235,7 +277,12 @@
     </div>
     <div class="resize-handle" id="resize-handle"></div>
     <div class="info-panel" id="info-panel">
-      <div class="info-placeholder">hover over a district</div>
+      <div class="mobile-handle" id="mobile-handle">
+        <div class="mobile-handle-pill"></div>
+      </div>
+      <div class="info-content" id="info-content">
+        <div class="info-placeholder">hover over a district</div>
+      </div>
     </div>
   </div>
 
@@ -250,6 +297,7 @@
 
     const tooltip    = document.getElementById('tooltip');
     const infoPanel  = document.getElementById('info-panel');
+    const infoContent = document.getElementById('info-content');
     const overlay    = document.getElementById('map-overlay');
     const resetBtn   = document.getElementById('reset-btn');
     const statusEl   = document.getElementById('search-status');
@@ -321,12 +369,12 @@
 
     function updatePanel(distNum, rep, layerKey) {
       if (!rep) {
-        infoPanel.innerHTML = `<div class="info-district">District ${distNum}</div><div class="info-vacant">No data</div>`;
+        infoContent.innerHTML = `<div class="info-district">District ${distNum}</div><div class="info-vacant">No data</div>`;
         return;
       }
       const partyFull = rep.party === 'D' ? 'Democrat' : rep.party === 'R' ? 'Republican' : '';
       const votesHtml = layerKey === 'house' ? buildVotesHtml(distNum) : '';
-      infoPanel.innerHTML = `
+      infoContent.innerHTML = `
         <div class="info-district">${LAYERS[layerKey].label} · District ${distNum}</div>
         <div class="info-name">${rep.name}</div>
         ${partyFull ? `<div class="info-party ${rep.party}">${partyFull}</div>` : ''}
@@ -355,7 +403,7 @@
 
       highlighted = null;
       locked = null;
-      infoPanel.innerHTML = '<div class="info-placeholder">hover over a district</div>';
+      infoContent.innerHTML = '<div class="info-placeholder">hover over a district</div>';
       gSel.selectAll('.district').remove();
 
       districts = gSel.selectAll('.district')
@@ -377,7 +425,7 @@
           if (locked) {
             updatePanel(locked.num, locked.rep, locked.layerKey);
           } else {
-            infoPanel.innerHTML = '<div class="info-placeholder">hover over a district</div>';
+            infoContent.innerHTML = '<div class="info-placeholder">hover over a district</div>';
           }
         })
         .on('click', function(event, d) {
@@ -388,7 +436,7 @@
           if (highlighted === d) {
             highlighted = null;
             locked = null;
-            infoPanel.innerHTML = '<div class="info-placeholder">hover over a district</div>';
+            infoContent.innerHTML = '<div class="info-placeholder">hover over a district</div>';
             svgSel.transition().duration(600).call(zoomBehavior.transform, d3.zoomIdentity);
           } else {
             highlighted = d;
@@ -396,6 +444,10 @@
             d3.select(this).classed('highlighted', true);
             zoomToFeature(d);
             updatePanel(num, rep, layerKey);
+            // On mobile, expand sheet to half so content is visible
+            if (window.innerWidth <= 700) {
+              infoPanel.style.height = snapPoints()[1] + 'px';
+            }
           }
         });
     }
@@ -421,8 +473,9 @@
         highlighted = null;
         locked = null;
         if (districts) districts.classed('highlighted', false);
-        infoPanel.innerHTML = '<div class="info-placeholder">hover over a district</div>';
+        infoContent.innerHTML = '<div class="info-placeholder">hover over a district</div>';
         svgSel.transition().duration(600).call(zoomBehavior.transform, d3.zoomIdentity);
+        if (window.innerWidth <= 700) infoPanel.style.height = PEEK + 'px';
       });
 
       zoomBehavior = d3.zoom()
@@ -518,6 +571,45 @@
         updatePanel(num, rep, activeLayer);
       });
     }
+
+    // ── Mobile bottom sheet ───────────────────────────────────────────────────
+    const mobileHandle = document.getElementById('mobile-handle');
+    const PEEK = 120;
+    const snapPoints = () => [PEEK, Math.round(window.innerHeight * 0.45), Math.round(window.innerHeight * 0.80)];
+
+    function snapTo(h) {
+      const snaps = snapPoints();
+      return snaps.reduce((prev, cur) => Math.abs(cur - h) < Math.abs(prev - h) ? cur : prev);
+    }
+
+    function setSheetHeight(h, animate) {
+      infoPanel.classList.toggle('dragging', !animate);
+      infoPanel.style.height = Math.max(PEEK, Math.min(snapPoints()[2], h)) + 'px';
+    }
+
+    let sheetStartY = 0, sheetStartH = 0, sheetActive = false;
+
+    mobileHandle.addEventListener('touchstart', e => {
+      if (window.innerWidth > 700) return;
+      sheetActive = true;
+      sheetStartY = e.touches[0].clientY;
+      sheetStartH = infoPanel.offsetHeight;
+      infoPanel.classList.add('dragging');
+    }, { passive: true });
+
+    window.addEventListener('touchmove', e => {
+      if (!sheetActive) return;
+      const dy = sheetStartY - e.touches[0].clientY;
+      setSheetHeight(sheetStartH + dy, false);
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      if (!sheetActive) return;
+      sheetActive = false;
+      infoPanel.classList.remove('dragging');
+      infoPanel.style.transition = 'height 0.25s cubic-bezier(0.4, 0, 0.2, 1)';
+      infoPanel.style.height = snapTo(infoPanel.offsetHeight) + 'px';
+    });
 
     // Resizable sidebar
     const resizeHandle = document.getElementById('resize-handle');
