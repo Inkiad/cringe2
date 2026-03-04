@@ -6,9 +6,13 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: #1a1a1a; overflow: hidden; }
     svg { display: block; }
-    path.district { fill: #2a3f5a; stroke: rgba(255,255,255,0.2); stroke-width: 0.5; vector-effect: non-scaling-stroke; cursor: pointer; }
-    path.district:hover { fill: rgba(255,255,255,0.15); }
-    path.district.highlighted { fill: rgba(255,255,255,0.25); }
+    path.district { stroke: rgba(255,255,255,0.15); stroke-width: 0.5; vector-effect: non-scaling-stroke; cursor: pointer; }
+    path.district.D  { fill: #1a3d5c; }
+    path.district.R  { fill: #5c1a1a; }
+    path.district.vacant { fill: #2a2a2a; }
+    path.district.D:hover, path.district.D.highlighted  { fill: #2a6090; }
+    path.district.R:hover, path.district.R.highlighted  { fill: #902a2a; }
+    path.district.vacant:hover, path.district.vacant.highlighted { fill: #444; }
 
     #search-bar {
       position: fixed;
@@ -144,12 +148,16 @@
       const districts = g.selectAll('.district')
         .data(geo.features)
         .join('path')
-        .attr('class', 'district')
+        .attr('class', d => {
+          const rep = reps.house[String(d.properties.district)];
+          const party = rep?.party;
+          return `district ${party === 'D' ? 'D' : party === 'R' ? 'R' : 'vacant'}`;
+        })
         .attr('d', path)
         .on('mousemove', function(event, d) {
           const num = String(d.properties.district);
           const rep = reps.house[num];
-          const party = rep?.party ? ` (${rep.party})` : rep?.name === 'Vacant' ? ' (Vacant)' : '';
+          const party = rep?.party ? ` (${rep.party})` : '';
           tooltip.style.display = 'block';
           tooltip.style.left = (event.clientX + 14) + 'px';
           tooltip.style.top  = (event.clientY - 32) + 'px';
