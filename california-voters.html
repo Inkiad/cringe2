@@ -317,9 +317,10 @@
     const resetBtn   = document.getElementById('reset-btn');
     const statusEl   = document.getElementById('search-status');
 
-    let repsData     = null;
-    let votesData    = null;
-    let geoCache     = {};
+    let repsData       = null;
+    let votesData      = null;
+    let stateVotesData = null;
+    let geoCache       = {};
     let activeLayer  = 'house';
     let gPath        = null;
     let svgSel       = null;
@@ -379,6 +380,60 @@
 
     const VOTE_CATEGORIES = ['abortion', 'healthcare', 'spending', 'immigration', 'housing'];
 
+    // ── State legislature bill info ────────────────────────────────────────────
+    const STATE_BILL_INFO = {
+      'SB 423 — Streamlined Multi-Family Housing Approval': {
+        label: 'SB 423 — Streamlined Housing',
+        context: 'Allows by-right approval for affordable multi-family housing near transit statewide. Yea = support, Nay = oppose.',
+      },
+      'AB 1033 — ADU Ownership and Separate Sale': {
+        label: 'AB 1033 — ADU Sales',
+        context: 'Allows homeowners to sell accessory dwelling units separately from the main residence. Yea = expand housing options, Nay = oppose.',
+      },
+      'SB 525 — Healthcare Worker Minimum Wage': {
+        label: 'SB 525 — Healthcare Worker Min Wage',
+        context: 'Sets $25/hour minimum wage for healthcare workers statewide. Yea = support higher wages, Nay = oppose.',
+      },
+      'SB 582 — Health Data Privacy Protections': {
+        label: 'SB 582 — Health Data Privacy',
+        context: 'Prohibits sharing health information with out-of-state law enforcement seeking abortion records. Yea = protect privacy, Nay = oppose.',
+      },
+      'AB 352 — Abortion Provider Shield Law': {
+        label: 'AB 352 — Abortion Shield Law',
+        context: 'Protects CA abortion providers from out-of-state prosecution; limits cooperation with subpoenas. Yea = protect providers, Nay = oppose.',
+      },
+      'SB 541 — Reproductive Health Services Access': {
+        label: 'SB 541 — Reproductive Health Access',
+        context: 'Expands access to reproductive health services including abortion medication at student health centers. Yea = expand access, Nay = oppose.',
+      },
+      'AB 1955 — SAFETY Act: Student Gender Identity Protection': {
+        label: 'AB 1955 — SAFETY Act',
+        context: "Prohibits school districts from requiring staff to out a student's gender identity to parents without student consent. Yea = protect students, Nay = oppose.",
+      },
+      'SB 407 — LGBTQ+ Foster Care Family Protections': {
+        label: 'SB 407 — LGBTQ+ Foster Care',
+        context: 'Prohibits discrimination against LGBTQ+ families in foster care and adoption placements. Yea = protect families, Nay = oppose.',
+      },
+      'AB 1306 — Limit Local Immigration Enforcement Cooperation': {
+        label: 'AB 1306 — Limit ICE Cooperation',
+        context: 'Restricts local law enforcement from sharing personal information with federal immigration authorities. Yea = limit cooperation, Nay = oppose.',
+      },
+      'SB 245/AB 311 — Food Assistance Regardless of Immigration Status': {
+        label: 'SB 245/AB 311 — Food Assistance',
+        context: 'Extends CalFresh food assistance eligibility to all income-eligible adults regardless of immigration status. Yea = expand access, Nay = oppose.',
+      },
+      'AB 1228 — Fast Food Minimum Wage ($20/hour)': {
+        label: 'AB 1228 — Fast Food Min Wage',
+        context: 'Sets $20/hour minimum wage for fast food workers; creates a Fast Food Council. Yea = support higher wages, Nay = oppose.',
+      },
+      'SB 140 — Early Childcare and Education Funding': {
+        label: 'SB 140 — Early Childcare Funding',
+        context: 'Allocates funding for early childcare and education; expands subsidized childcare slots. Yea = fund childcare, Nay = oppose.',
+      },
+    };
+
+    const STATE_VOTE_CATEGORIES = ['housing', 'healthcare', 'abortion', 'lgbtq', 'immigration', 'spending'];
+
     function buildVotesHtml(distNum) {
       if (!votesData || !votesData[distNum]) return '';
       const repVotes = votesData[distNum];
@@ -417,6 +472,46 @@
       return html;
     }
 
+    function buildStateVotesHtml(distNum, layerKey) {
+      if (!stateVotesData) return '';
+      const chamber = stateVotesData[layerKey];
+      if (!chamber || !chamber[distNum]) return '';
+      const repVotes = chamber[distNum];
+
+      const hasAny = STATE_VOTE_CATEGORIES.some(cat =>
+        (repVotes.votes[cat] || []).length > 0
+      );
+      if (!hasAny) {
+        return `<div class="votes-section">
+          <div class="votes-title">voting record</div>
+          <div class="vote-no-record">Representative not in office during the 2023–24 legislative session.</div>
+        </div>`;
+      }
+
+      let html = `<div class="votes-section"><div class="votes-title">voting record <span style="font-weight:400;color:#444;font-size:0.65rem;letter-spacing:0">2023–24 CA session</span></div>`;
+      for (const cat of STATE_VOTE_CATEGORIES) {
+        const bills = (repVotes.votes[cat] || []);
+        if (!bills.length) continue;
+        const catLabel = cat === 'lgbtq' ? 'LGBTQ+' : cat;
+        html += `<div class="vote-category"><div class="vote-cat-label">${catLabel}</div>`;
+        for (const bill of bills) {
+          const info = STATE_BILL_INFO[bill.label] || { label: bill.label, context: '' };
+          const cls  = bill.vote === 'Yea' ? 'vote-yea' : bill.vote === 'Nay' ? 'vote-nay' : 'vote-other';
+          const text = bill.vote === 'Not Voting' ? 'Abstain' : (bill.vote || 'Not Voting');
+          html += `<div class="vote-row">
+            <span class="vote-bill">
+              ${info.label}
+              ${info.context ? `<span class="vote-context">${info.context}</span>` : ''}
+            </span>
+            <span class="vote-cast ${cls}">${text}</span>
+          </div>`;
+        }
+        html += `</div>`;
+      }
+      html += `</div>`;
+      return html;
+    }
+
     function updatePanel(distNum, rep, layerKey) {
       if (!rep) {
         infoContent.innerHTML = `<div class="info-district">District ${distNum}</div><div class="info-vacant">No data</div>`;
@@ -433,7 +528,7 @@
       if (layerKey === 'house') {
         votesHtml = buildVotesHtml(distNum);
       } else {
-        votesHtml = `<div class="votes-section"><div class="info-note">Voting record data shown here covers federal House votes only. State legislature voting records are not currently tracked.</div></div>`;
+        votesHtml = buildStateVotesHtml(distNum, layerKey);
       }
 
       infoContent.innerHTML = `
@@ -551,10 +646,11 @@
 
       let houseGeo;
       try {
-        [repsData, houseGeo, votesData] = await Promise.all([
+        [repsData, houseGeo, votesData, stateVotesData] = await Promise.all([
           d3.json('data/ca-reps.json'),
           d3.json('data/ca-congressional.geojson'),
           d3.json('data/ca-votes.json'),
+          d3.json('data/ca-state-votes.json'),
         ]);
         geoCache['house'] = houseGeo;
       } catch (e) {
