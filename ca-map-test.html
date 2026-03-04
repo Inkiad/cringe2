@@ -4,13 +4,84 @@
   <meta charset="UTF-8">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #1a1a1a; }
+    body { background: #1a1a1a; overflow: hidden; }
     svg { display: block; }
-    path { fill: #2a3f5a; stroke: rgba(255,255,255,0.2); stroke-width: 0.5; }
+    path.district { fill: #2a3f5a; stroke: rgba(255,255,255,0.2); stroke-width: 0.5; vector-effect: non-scaling-stroke; cursor: pointer; }
+    path.district:hover { fill: rgba(255,255,255,0.15); }
+    path.district.highlighted { fill: rgba(255,255,255,0.25); }
+
+    #search-bar {
+      position: fixed;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 10;
+    }
+    #search-bar input {
+      background: #111;
+      color: #e8e8e8;
+      border: 1px solid #444;
+      border-radius: 4px;
+      padding: 7px 12px;
+      font-size: 0.85rem;
+      width: 240px;
+      font-family: Arial, sans-serif;
+      outline: none;
+    }
+    #search-bar input:focus { border-color: #888; }
+    #search-bar button {
+      background: #2a2a2a;
+      color: #e8e8e8;
+      border: 1px solid #444;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+    }
+    #search-bar button:hover { border-color: #888; }
+
+    #reset-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #2a2a2a;
+      color: #888;
+      border: 1px solid #333;
+      border-radius: 4px;
+      padding: 7px 14px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      font-family: Arial, sans-serif;
+      display: none;
+      z-index: 10;
+    }
+    #reset-btn:hover { color: #e8e8e8; border-color: #666; }
+
+    #search-status {
+      position: fixed;
+      top: 56px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #888;
+      font-size: 0.78rem;
+      font-family: Arial, sans-serif;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body>
   <svg id="map"></svg>
+
+  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="city, address, or zip…" />
+    <button id="search-btn">find district</button>
+  </div>
+  <div id="search-status"></div>
+  <button id="reset-btn">reset zoom</button>
+
   <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
   <script>
     const w = window.innerWidth;
@@ -21,13 +92,43 @@
       .attr('height', h)
       .attr('viewBox', `0 0 ${w} ${h}`);
 
+    const g = svg.append('g');
+
+    // Tooltip
     const tooltip = document.createElement('div');
     Object.assign(tooltip.style, {
       position: 'fixed', background: '#111', color: '#e8e8e8',
       padding: '6px 12px', borderRadius: '3px', fontSize: '13px',
-      pointerEvents: 'none', display: 'none', border: '1px solid #333'
+      pointerEvents: 'none', display: 'none', border: '1px solid #333',
+      zIndex: 20
     });
     document.body.appendChild(tooltip);
+
+    // Zoom
+    const zoom = d3.zoom()
+      .scaleExtent([1, 20])
+      .on('zoom', event => {
+        g.attr('transform', event.transform);
+        document.getElementById('reset-btn').style.display =
+          event.transform.k > 1.01 ? 'block' : 'none';
+      });
+
+    svg.call(zoom);
+
+    document.getElementById('reset-btn').addEventListener('click', () => {
+      svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity);
+    });
+
+    function zoomToFeature(feature, pathGen) {
+      const [[x0, y0], [x1, y1]] = pathGen.bounds(feature);
+      const scale = Math.min(20, 0.85 / Math.max((x1 - x0) / w, (y1 - y0) / h));
+      const tx = w / 2 - scale * (x0 + x1) / 2;
+      const ty = h / 2 - scale * (y0 + y1) / 2;
+      svg.transition().duration(700).call(
+        zoom.transform,
+        d3.zoomIdentity.translate(tx, ty).scale(scale)
+      );
+    }
 
     Promise.all([
       d3.json('data/ca-congressional.geojson'),
@@ -38,7 +139,9 @@
 
       const path = d3.geoPath().projection(projection);
 
-      svg.selectAll('.district')
+      let highlighted = null;
+
+      const districts = g.selectAll('.district')
         .data(geo.features)
         .join('path')
         .attr('class', 'district')
@@ -46,17 +149,82 @@
         .on('mousemove', function(event, d) {
           const num = String(d.properties.district);
           const rep = reps.house[num];
-          const label = rep ? `District ${num} — ${rep.name} (${rep.party || 'Vacant'})` : `District ${num}`;
+          const party = rep?.party ? ` (${rep.party})` : rep?.name === 'Vacant' ? ' (Vacant)' : '';
           tooltip.style.display = 'block';
           tooltip.style.left = (event.clientX + 14) + 'px';
           tooltip.style.top  = (event.clientY - 32) + 'px';
-          tooltip.textContent = label;
-          d3.select(this).attr('fill', 'rgba(255,255,255,0.15)');
+          tooltip.textContent = rep ? `District ${num} — ${rep.name}${party}` : `District ${num}`;
         })
         .on('mouseleave', function() {
           tooltip.style.display = 'none';
-          d3.select(this).attr('fill', '#2a3f5a');
+        })
+        .on('click', function(event, d) {
+          event.stopPropagation();
+          districts.classed('highlighted', false);
+          if (highlighted === d) {
+            highlighted = null;
+            svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity);
+          } else {
+            highlighted = d;
+            d3.select(this).classed('highlighted', true);
+            zoomToFeature(d, path);
+          }
         });
+
+      // Click background to reset
+      svg.on('click', () => {
+        highlighted = null;
+        districts.classed('highlighted', false);
+        svg.transition().duration(600).call(zoom.transform, d3.zoomIdentity);
+      });
+
+      // Search
+      const status = document.getElementById('search-status');
+
+      async function searchDistrict() {
+        const query = document.getElementById('search-input').value.trim();
+        if (!query) return;
+        status.textContent = 'searching…';
+
+        const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query + ', California')}&format=json&limit=1&countrycodes=us`;
+        let results;
+        try {
+          const res = await fetch(url, { headers: { 'Accept-Language': 'en' } });
+          results = await res.json();
+        } catch (e) {
+          status.textContent = 'search failed';
+          return;
+        }
+
+        if (!results.length) {
+          status.textContent = 'location not found';
+          return;
+        }
+
+        const lon = parseFloat(results[0].lon);
+        const lat = parseFloat(results[0].lat);
+        const match = geo.features.find(f => d3.geoContains(f, [lon, lat]));
+
+        if (!match) {
+          status.textContent = 'no CA congressional district found for that location';
+          return;
+        }
+
+        const num = String(match.properties.district);
+        const rep = reps.house[num];
+        status.textContent = rep ? `District ${num} — ${rep.name}` : `District ${num}`;
+
+        districts.classed('highlighted', false);
+        highlighted = match;
+        districts.filter(d => d === match).classed('highlighted', true);
+        zoomToFeature(match, path);
+      }
+
+      document.getElementById('search-btn').addEventListener('click', searchDistrict);
+      document.getElementById('search-input').addEventListener('keydown', e => {
+        if (e.key === 'Enter') searchDistrict();
+      });
+
     }).catch(e => console.error(e));
   </script>
 </body>
