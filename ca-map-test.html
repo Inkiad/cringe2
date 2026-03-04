@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #1a1a1a; }
+    svg { display: block; }
+    path { fill: #2a3f5a; stroke: rgba(255,255,255,0.2); stroke-width: 0.5; }
+  </style>
+</head>
+<body>
+  <svg id="map"></svg>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script>
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+
+    const svg = d3.select('#map')
+      .attr('width', w)
+      .attr('height', h)
+      .attr('viewBox', `0 0 ${w} ${h}`);
+
+    d3.json('data/ca-congressional.geojson').then(geo => {
+      const projection = d3.geoMercator()
+        .fitExtent([[10, 10], [w - 10, h - 10]], geo);
+
+      const path = d3.geoPath().projection(projection);
+
+      svg.selectAll('path')
+        .data(geo.features)
+        .join('path')
+        .attr('d', path);
+    });
+  </script>
+</body>
+</html>
