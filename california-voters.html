@@ -213,6 +213,7 @@
     let zoomBehavior = null;
     let highlighted  = null;
     let districts    = null;
+    let locked       = null; // { num, rep, layerKey }
 
     function partyClass(rep) {
       if (!rep || rep.name === 'Vacant' || !rep.party) return 'vacant';
@@ -252,6 +253,8 @@
       const geo    = geoCache[layerKey];
 
       highlighted = null;
+      locked = null;
+      infoPanel.innerHTML = '<div class="info-placeholder">hover over a district</div>';
       gSel.selectAll('.district').remove();
 
       districts = gSel.selectAll('.district')
@@ -270,17 +273,28 @@
         })
         .on('mouseleave', function() {
           tooltip.style.display = 'none';
+          if (locked) {
+            updatePanel(locked.num, locked.rep, locked.layerKey);
+          } else {
+            infoPanel.innerHTML = '<div class="info-placeholder">hover over a district</div>';
+          }
         })
         .on('click', function(event, d) {
           event.stopPropagation();
+          const num = String(d.properties.district);
+          const rep = repMap[num];
           districts.classed('highlighted', false);
           if (highlighted === d) {
             highlighted = null;
+            locked = null;
+            infoPanel.innerHTML = '<div class="info-placeholder">hover over a district</div>';
             svgSel.transition().duration(600).call(zoomBehavior.transform, d3.zoomIdentity);
           } else {
             highlighted = d;
+            locked = { num, rep, layerKey };
             d3.select(this).classed('highlighted', true);
             zoomToFeature(d);
+            updatePanel(num, rep, layerKey);
           }
         });
     }
@@ -304,7 +318,9 @@
       // Click background to reset
       svgSel.on('click', () => {
         highlighted = null;
+        locked = null;
         if (districts) districts.classed('highlighted', false);
+        infoPanel.innerHTML = '<div class="info-placeholder">hover over a district</div>';
         svgSel.transition().duration(600).call(zoomBehavior.transform, d3.zoomIdentity);
       });
 
