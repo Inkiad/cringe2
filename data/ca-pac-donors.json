@@ -1012,12 +1012,33 @@
     "donors": []
   },
   "40": {
-    "fec_id": "H2CA37023",
-    "committee_id": "C00150276",
+    "fec_id": "H8CA39240",
+    "committee_id": "C00665638",
     "cycle": 2024,
-    "total_raised": null,
-    "pac_count": 0,
-    "donors": []
+    "total_raised": 9244755,
+    "pac_count": 9,
+    "donors": [
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
+        "total": 3412750
+      },
+      {
+        "name": "SCALISE LEADERSHIP FUND 2024",
+        "total": 79896
+      },
+      {
+        "name": "GOP WINNING WOMEN 2024",
+        "total": 78055
+      },
+      {
+        "name": "KIM VICTORY FUND",
+        "total": 66921
+      },
+      {
+        "name": "PROTECT THE HOUSE CALIFORNIA 2024",
+        "total": 65028
+      }
+    ]
   },
   "41": {
     "fec_id": "H2CA39078",
