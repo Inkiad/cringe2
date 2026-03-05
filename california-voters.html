@@ -146,6 +146,8 @@
     .info-party.D { color: #4a90d9; }
     .info-party.R { color: #d9504a; }
     .info-role { font-size: 0.8rem; color: #888; margin-bottom: 16px; }
+    .info-finance { font-size: 0.75rem; color: #666; margin-bottom: 6px; }
+    .info-finance span { color: #999; font-weight: 600; }
     .info-link {
       display: inline-block; color: #aaa; text-decoration: none;
       font-size: 0.8rem; padding: 5px 10px; border: 1px solid #333;
@@ -717,6 +719,16 @@
         sinceHtml = `<div class="info-since">In office since ${votesData[distNum].since}</div>`;
       }
 
+      let financeHtml = '';
+      if (layerKey === 'house' && pacDonorsData?.[distNum]) {
+        const pd = pacDonorsData[distNum];
+        const fmtLg = n => n >= 1e6 ? `$${(n/1e6).toFixed(1)}M` : n >= 1000 ? `$${(n/1000).toFixed(0)}k` : `$${n}`;
+        const parts = [];
+        if (pd.total_raised != null) parts.push(`<span>${fmtLg(pd.total_raised)}</span> raised`);
+        if (pd.pac_count    != null) parts.push(`<span>${pd.pac_count}</span> PAC contributors`);
+        if (parts.length) financeHtml = `<div class="info-finance">${parts.join(' · ')}</div>`;
+      }
+
       let donorsHtml = '';
       let votesHtml  = '';
       if (layerKey === 'house') {
@@ -731,6 +743,7 @@
         <div class="info-name">${rep.name}</div>
         ${partyFull ? `<div class="info-party ${rep.party}">${partyFull}</div>` : ''}
         ${sinceHtml}
+        ${financeHtml}
         ${rep.website ? `<a class="info-link" href="https://${rep.website}" target="_blank" rel="noopener">website ↗</a>` : ''}
         ${rep.note   ? `<div class="info-note">${rep.note}</div>` : ''}
         ${donorsHtml}
