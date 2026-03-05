@@ -80,13 +80,30 @@ def looks_like_individual(name):
     return bool(re.match(r'^[A-Z][A-Z\s\-\']+,\s+[A-Z]', name)) and "PAC" not in name and "COMMITTEE" not in name and "FUND" not in name and "ASSOCIATION" not in name and "UNION" not in name
 
 
-def get_top_pac_donors(committee_id, n=5):
+ACCEPTED_TYPES = {"PAC", "COM", "ORG"}
+PAC_SKIP       = {"ACTBLUE", "WINRED", "ACTBLUE VENDOR SERVICES", "WINRED PAC"}
+
+
+def get_committee_total_raised(committee_id):
+    """Return total receipts for the committee in the current cycle."""
+    try:
+        data = fec_get(f"/committee/{committee_id}/totals/", {"cycle": CYCLE})
+    except requests.exceptions.HTTPError as e:
+        if e.response.status_code == 404:
+            return None
+        raise
+    results = data.get("results", [])
+    if not results:
+        return None
+    return int(results[0].get("receipts", 0) or 0)
+
+
+def get_pac_data(committee_id, n=5):
     """
-    Return top N PAC donors to a committee in the current cycle.
-    Fetches first 100 PAC receipts sorted by amount descending, aggregates
-    by contributor name, and returns the top N. This is accurate because
-    PAC hard-money contributions are capped at $10k/cycle, so the largest
-    donors will always appear in the first page.
+    Returns (top_donors, pac_count) where:
+      top_donors — list of {name, total} for top N non-platform PAC donors
+      pac_count  — total unique PAC/org contributors in the first 100 results
+                   (accurate for most members; may undercount very high-PAC members)
     """
     data = fec_get("/schedules/schedule_a/", {
         "committee_id": committee_id,
@@ -95,24 +112,23 @@ def get_top_pac_donors(committee_id, n=5):
         "sort": "-contribution_receipt_amount",
     })
 
-    # Entity types to accept: PAC, COM (committee — most PACs/unions), ORG (tribal nations etc)
-    # Exclude: IND (individual), PTY (party transfers), CCM (candidate-to-candidate transfers)
-    ACCEPTED_TYPES = {"PAC", "COM", "ORG"}
-
     totals = {}
     for item in data.get("results", []):
-        etype = item.get("entity_type", "")
-        if etype not in ACCEPTED_TYPES:
+        if item.get("entity_type", "") not in ACCEPTED_TYPES:
             continue
         name = item.get("contributor_name", "").strip()
         amt  = item.get("contribution_receipt_amount", 0) or 0
         if name and amt > 0 and not looks_like_individual(name):
             totals[name] = totals.get(name, 0) + amt
 
-    return [
+    pac_count   = len(totals)
+    top_donors  = [
         {"name": name, "total": int(total)}
-        for name, total in sorted(totals.items(), key=lambda x: -x[1])[:n]
-    ]
+        for name, total in sorted(totals.items(), key=lambda x: -x[1])
+        if name.upper() not in PAC_SKIP
+    ][:n]
+
+    return top_donors, pac_count
 
 
 def main():
@@ -161,15 +177,19 @@ def main():
             output[dist] = {"error": "no committee", "fec_id": candidate_id, "donors": []}
             continue
 
-        # Step 3: Top PAC donors
-        donors = get_top_pac_donors(committee_id)
+        # Step 3: Top PAC donors + totals
+        donors, pac_count = get_pac_data(committee_id)
+        total_raised = get_committee_total_raised(committee_id)
 
-        print(f"{len(donors)} donors (top: {donors[0]['name'][:40] if donors else 'none'})")
+        raised_str = f"${total_raised:,}" if total_raised is not None else "n/a"
+        print(f"{len(donors)} donors, {pac_count} PACs, {raised_str} raised (top: {donors[0]['name'][:40] if donors else 'none'})")
         output[dist] = {
-            "fec_id":       candidate_id,
-            "committee_id": committee_id,
-            "cycle":        CYCLE,
-            "donors":       donors,
+            "fec_id":        candidate_id,
+            "committee_id":  committee_id,
+            "cycle":         CYCLE,
+            "total_raised":  total_raised,
+            "pac_count":     pac_count,
+            "donors":        donors,
         }
 
         # Save after each district so crashes don't lose progress
