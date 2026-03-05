@@ -80,8 +80,8 @@ body {
 #cat {
     position: fixed;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 0.85rem;
-    color: #888;
+    font-size: 1.1rem;
+    color: #aaa;
     margin-left: -100px;
     bottom: 0;
     z-index: 50;
