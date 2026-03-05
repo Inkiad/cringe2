@@ -1,6 +1,6 @@
 # inkysite
 
-Personal website for Inkiad Ahmed. Built with plain HTML/CSS/JS, deployed on Cloudflare Pages.
+Personal website for Inky. Built with plain HTML/CSS/JS, deployed on Cloudflare Pages.
 
 ## pages
 - **hi** — landing page
