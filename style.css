@@ -80,14 +80,15 @@ body {
 #cat {
     position: fixed;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
     color: #888;
     margin-left: -100px;
     bottom: 0;
     z-index: 50;
-}
-
-#cat span {
-    line-height: 0 !important;
+    white-space: pre;
+    line-height: 1.15;
+    cursor: grab;
+    user-select: none;
 }
 
 /* --- Experiences page --- */
