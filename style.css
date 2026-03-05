@@ -91,6 +91,22 @@ body {
     user-select: none;
 }
 
+#cat-bubble {
+    position: fixed;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    color: #ccc;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    z-index: 55;
+    white-space: nowrap;
+}
+
+#cat-bubble.show {
+    opacity: 1;
+}
+
 /* --- Experiences page --- */
 .experiences-container {
     max-width: 700px;
