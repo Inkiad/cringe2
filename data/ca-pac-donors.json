@@ -148,7 +148,7 @@
     "fec_id": "H4CA06180",
     "committee_id": "C00866392",
     "cycle": 2024,
-    "total_raised": 450,
+    "total_raised": null,
     "pac_count": 0,
     "donors": []
   },
@@ -1015,6 +1015,35 @@
     "pac_count": 0,
     "donors": []
   },
+  "40": {
+    "fec_id": "H8CA39240",
+    "committee_id": "C00665638",
+    "cycle": 2024,
+    "total_raised": 9244755,
+    "pac_count": 7,
+    "donors": [
+      {
+        "name": "SCALISE LEADERSHIP FUND 2024",
+        "total": 79896
+      },
+      {
+        "name": "GOP WINNING WOMEN 2024",
+        "total": 78055
+      },
+      {
+        "name": "KIM VICTORY FUND",
+        "total": 66921
+      },
+      {
+        "name": "PROTECT THE HOUSE CALIFORNIA 2024",
+        "total": 65028
+      },
+      {
+        "name": "GROW THE MAJORITY",
+        "total": 49580
+      }
+    ]
+  },
   "41": {
     "fec_id": "H2CA39078",
     "committee_id": "C00384057",
@@ -1320,34 +1349,5 @@
     "total_raised": null,
     "pac_count": 0,
     "donors": []
-  },
-  "40": {
-    "fec_id": "H8CA39240",
-    "committee_id": "C00665638",
-    "cycle": 2024,
-    "total_raised": 9244755,
-    "pac_count": 7,
-    "donors": [
-      {
-        "name": "SCALISE LEADERSHIP FUND 2024",
-        "total": 79896
-      },
-      {
-        "name": "GOP WINNING WOMEN 2024",
-        "total": 78055
-      },
-      {
-        "name": "KIM VICTORY FUND",
-        "total": 66921
-      },
-      {
-        "name": "PROTECT THE HOUSE CALIFORNIA 2024",
-        "total": 65028
-      },
-      {
-        "name": "GROW THE MAJORITY",
-        "total": 49580
-      }
-    ]
   }
 }
