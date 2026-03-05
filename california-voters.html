@@ -170,24 +170,30 @@
       margin-bottom: 10px;
     }
     .donors-cycle { font-weight: 400; letter-spacing: 0; text-transform: none; color: #444; }
-    .donor-row { margin-bottom: 7px; }
+    .donor-row { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
     .donor-name {
       font-size: 0.75rem;
       color: #aaa;
-      margin-bottom: 3px;
+      flex: 1;
+      min-width: 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .donor-bar-wrap { display: flex; align-items: center; gap: 7px; }
-    .donor-bar {
-      height: 5px;
-      background: #3a5a7a;
+    .donor-bar-track {
+      width: 60px;
+      height: 4px;
+      background: #222;
       border-radius: 2px;
       flex-shrink: 0;
-      min-width: 3px;
+      overflow: hidden;
     }
-    .donor-amt { font-size: 0.72rem; color: #555; flex-shrink: 0; }
+    .donor-bar {
+      height: 100%;
+      background: #3a5a7a;
+      border-radius: 2px;
+    }
+    .donor-amt { font-size: 0.72rem; color: #555; flex-shrink: 0; width: 32px; text-align: right; }
 
     .votes-section {
       margin-top: 20px;
@@ -603,10 +609,8 @@
         const pct = Math.round((d.total / maxTotal) * 100);
         html += `<div class="donor-row">
           <div class="donor-name">${d.name}</div>
-          <div class="donor-bar-wrap">
-            <div class="donor-bar" style="width:${pct}%"></div>
-            <span class="donor-amt">${fmt(d.total)}</span>
-          </div>
+          <div class="donor-bar-track"><div class="donor-bar" style="width:${pct}%"></div></div>
+          <span class="donor-amt">${fmt(d.total)}</span>
         </div>`;
       }
       html += `</div>`;
