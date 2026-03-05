@@ -98,7 +98,8 @@
     "17": {
       "name": "Ro Khanna",
       "party": "D",
-      "website": "khanna.house.gov"
+      "website": "khanna.house.gov",
+      "note": "Refuses all PAC and lobbyist money"
     },
     "18": {
       "name": "Zoe Lofgren",
@@ -268,7 +269,8 @@
     "51": {
       "name": "Sara Jacobs",
       "party": "D",
-      "website": "sarajacobs.house.gov"
+      "website": "sarajacobs.house.gov",
+      "note": "Refuses corporate PAC and lobbyist money"
     },
     "52": {
       "name": "Juan Vargas",
