@@ -1,0 +1,1230 @@
+{
+  "1": {
+    "fec_id": "H2CA02142",
+    "committee_id": "C00509422",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE PAC",
+        "total": 10000
+      },
+      {
+        "name": "NAT'L AUTOMOBILE DEALERS ASSOC. PAC (NADA)",
+        "total": 10000
+      },
+      {
+        "name": "HUCK PAC",
+        "total": 10000
+      },
+      {
+        "name": "WINE INSTITUTE PAC",
+        "total": 10000
+      },
+      {
+        "name": "THE FARM CREDIT COUNCIL PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "2": {
+    "fec_id": "H2CA06259",
+    "committee_id": "C00536680",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "REDWOOD CREDIT UNION",
+        "total": 19279
+      },
+      {
+        "name": "INTERNATIONAL UNION OF PAINTERS AND ALLIED TRADES -POLITICAL ACTION TOGETHER",
+        "total": 10000
+      },
+      {
+        "name": "CARPENTERS' LEGISLATIVE IMPROVEMENT COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "MACHINISTS NON PARTISAN POLITICAL LEAGUE",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN SPORTFISHING ASSOCIATION PAC (SPORTFISHINGPAC)",
+        "total": 10000
+      }
+    ]
+  },
+  "3": {
+    "fec_id": "H0CA03078",
+    "committee_id": "C00461061",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 59100
+      },
+      {
+        "name": "NEW DEMOCRAT COALITION ACTION FUND",
+        "total": 11600
+      },
+      {
+        "name": "AMERICAN COLLEGE OF PHYSICIAN SERVICES INC PAC; AKA ACP SERVICES PAC",
+        "total": 10000
+      },
+      {
+        "name": "ABBOTT LABORATORIES EMPLOYEE POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "NATIONAL ASSOCIATION OF REALTORS POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      }
+    ]
+  },
+  "4": {
+    "fec_id": "H8CA01109",
+    "committee_id": "C00326363",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "NATIONAL AUTOMOBILE DEALERS ASSOCIATION PAC",
+        "total": 10000
+      },
+      {
+        "name": "BUILD PAC OF THE NATIONAL ASSOC. OF HOME BUILDERS",
+        "total": 10000
+      },
+      {
+        "name": "CARPENTERS' LEGISLATIVE IMPROVEMENT COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "TITLE INDUSTRY PAC (TIPAC)",
+        "total": 10000
+      },
+      {
+        "name": "SHEET METAL AIR RAIL TRANSPORTATION POLITICAL ACTION LEAGUE",
+        "total": 10000
+      }
+    ]
+  },
+  "5": {
+    "fec_id": "H8CA04152",
+    "committee_id": "C00446815",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "WINRED",
+        "total": 41825
+      },
+      {
+        "name": "KOCHPAC",
+        "total": 10000
+      },
+      {
+        "name": "SHINGLE SPRINGS BAND MIWOK INDIANS",
+        "total": 6600
+      },
+      {
+        "name": "HUCKPAC",
+        "total": 5000
+      },
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE (AIPAC) PAC",
+        "total": 5000
+      }
+    ]
+  },
+  "6": {
+    "fec_id": "H4CA06180",
+    "committee_id": "C00866392",
+    "cycle": 2024,
+    "donors": []
+  },
+  "7": {
+    "fec_id": "H6CA05195",
+    "committee_id": "C00409219",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 56100
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+        "total": 10000
+      },
+      {
+        "name": "NEXSTAR MEDIA GROUP, INC. POLITICAL ACTION COMMITTEE (NEXSTAR PAC)",
+        "total": 10000
+      },
+      {
+        "name": "MACHINISTS NON PARTISAN POLITICAL LEAGUE OF THE INTERNATIONAL ASSOCIATION OF MACHINISTS &",
+        "total": 10000
+      },
+      {
+        "name": "AT&T INC. EMPLOYEE FEDERAL POLITICAL ACTION COMMITTEE (AT&T EMPLOYEE FEDERAL PAC)",
+        "total": 10000
+      }
+    ]
+  },
+  "8": {
+    "fec_id": "H0CA10149",
+    "committee_id": "C00462697",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 49500
+      },
+      {
+        "name": "INTERNATIONAL UNION OF PAINTERS AND ALLIED TRADES POLITICAL ACTION TOGETHER POLITICAL COMM",
+        "total": 10000
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+        "total": 10000
+      },
+      {
+        "name": "MACHINISTS NON PARTISAN POLITICAL LEAGUE OF THE INTERNATIONAL ASSOCIATION OF MACHINISTS &",
+        "total": 10000
+      },
+      {
+        "name": "TRANSPORT WORKERS UNION POLITICAL CONTRIBUTIONS COMMITTEE",
+        "total": 10000
+      }
+    ]
+  },
+  "9": {
+    "fec_id": "H8CA10126",
+    "committee_id": "C00639146",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "JANNEY MONTGOMERY SCOTT LLC",
+        "total": 178177
+      },
+      {
+        "name": "ACTBLUE",
+        "total": 172200
+      },
+      {
+        "name": "JOSH HARDER VICTORY FUND",
+        "total": 66000
+      },
+      {
+        "name": "GMMB INC",
+        "total": 32724
+      },
+      {
+        "name": "RANSOM FOR ASSEMBLY",
+        "total": 23411
+      }
+    ]
+  },
+  "10": {
+    "fec_id": "H0CA10073",
+    "committee_id": "C00554709",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 47600
+      },
+      {
+        "name": "AIR LINE PILOTS ASSOCIATION PAC",
+        "total": 10000
+      },
+      {
+        "name": "MACHINISTS NON-PARTISAN POLITICAL LEAGUE",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN FEDERATION OF TEACHERS COPE",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN COUNCIL OF ENGINEERING COMPANIES (ACEC/PAC)",
+        "total": 10000
+      }
+    ]
+  },
+  "11": {
+    "fec_id": "H8CA05035",
+    "committee_id": "C00213512",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "PELOSI VICTORY COMMITTEE",
+        "total": 222487
+      },
+      {
+        "name": "NANCY PELOSI VICTORY FUND",
+        "total": 181400
+      },
+      {
+        "name": "ACTBLUE",
+        "total": 21500
+      },
+      {
+        "name": "NATIONAL ASSOCIATION OF LETTER CARRIERS OF U.S.A. POLITICAL FUND",
+        "total": 10000
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNT. BROTHERHOOD OF CARPENTERS & JOINERS",
+        "total": 10000
+      }
+    ]
+  },
+  "12": {
+    "fec_id": "H8CA09060",
+    "committee_id": "C00331769",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 143000
+      },
+      {
+        "name": "JSTREETPAC",
+        "total": 6600
+      }
+    ]
+  },
+  "13": {
+    "fec_id": "H2CA13131",
+    "committee_id": "C00808279",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "PROTECT THE HOUSE 2024",
+        "total": 442349
+      },
+      {
+        "name": "DUARTE VICTORY FUND",
+        "total": 432437
+      },
+      {
+        "name": "WINRED",
+        "total": 181463
+      },
+      {
+        "name": "SCALISE LEADERSHIP FUND 2024",
+        "total": 111900
+      },
+      {
+        "name": "FARMERS FOR THE VALLEY PAC",
+        "total": 101052
+      }
+    ]
+  },
+  "14": {
+    "fec_id": "H2CA15094",
+    "committee_id": "C00502294",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 87500
+      },
+      {
+        "name": "SWALLEGO VICTORY FUND",
+        "total": 14643
+      },
+      {
+        "name": "MACHINISTS NON PARTISAN POLITICAL LEAGUE OF THE INTERNATIONAL ASSOCIATION OF MACHINISTS &",
+        "total": 10000
+      },
+      {
+        "name": "TRINET GROUP INC POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      }
+    ]
+  },
+  "15": {
+    "fec_id": "H2CA14162",
+    "committee_id": "C00795005",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 53800
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "INTERNATIONAL ASSOCIATION OF SHEET METAL, AIR, RAIL, AND TRANSPORTATION WORKERS POLITICAL",
+        "total": 10000
+      },
+      {
+        "name": "MACHINISTS NON-PARTISAN POLITICAL LEAGUE",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN CRYSTAL SUGAR COMPANY PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "16": {
+    "fec_id": "H8CA12098",
+    "committee_id": "C00258475",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 82200
+      },
+      {
+        "name": "AMERICAN CRYSTAL SUGAR COMPANY POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "MACHINISTS NON PARTISAN POLITICAL LEAGUE OF THE INTL. ASSN. OF MACHINISTS & AEROSPACE WORK",
+        "total": 5000
+      },
+      {
+        "name": "THERMO FISHER SCIENTIFIC, INC. PAC",
+        "total": 5000
+      },
+      {
+        "name": "AMERICAN NURSES ASSOCIATION PAC",
+        "total": 5000
+      }
+    ]
+  },
+  "17": {
+    "fec_id": "H4CA12055",
+    "committee_id": "C00392100",
+    "cycle": 2024,
+    "donors": []
+  },
+  "18": {
+    "fec_id": "H4CA16049",
+    "committee_id": "C00289603",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ZOE 2024",
+        "total": 91105
+      },
+      {
+        "name": "LOFGREN VICTORY FUND",
+        "total": 70656
+      },
+      {
+        "name": "ACTBLUE",
+        "total": 49400
+      },
+      {
+        "name": "BERRY APPLEMAN & LEIDEN LLP",
+        "total": 18241
+      },
+      {
+        "name": "MACHINISTS NON-PARTISAN POLITICAL LEAGUE",
+        "total": 10000
+      }
+    ]
+  },
+  "19": {
+    "fec_id": "H6CA20152",
+    "committee_id": "C00592154",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "NATIONAL TELECOMMUNICATIONS COOPERATIVE ASSOCIATION RURAL BROADBAND PAC",
+        "total": 10000
+      },
+      {
+        "name": "NATIONAL MULTIFAMILY HOUSING COUNCIL POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "NATIONAL ASSOCIATION OF LETTER CARRIERS OF U.S.A. POLITICAL FUND (LETTER CARRIER POLITICAL",
+        "total": 10000
+      },
+      {
+        "name": "MACHINISTS NON PARTISAN POLITICAL LEAGUE OF THE INTERNATIONAL ASSOCIATION OF MACHINISTS &",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN RENTAL ASSOCIATION POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      }
+    ]
+  },
+  "20": {
+    "error": "no committee",
+    "fec_id": "H4CA20215",
+    "donors": []
+  },
+  "21": {
+    "fec_id": "H4CA20082",
+    "committee_id": "C00391029",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "AIPAC",
+        "total": 23200
+      },
+      {
+        "name": "CALIFORNIA DAIRIES FEDERAL PAC",
+        "total": 14000
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "NATIONAL AUTOMOBILE DEALERS ASSOCIATION",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN CRYSTAL SUGAR COMPANY PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "22": {
+    "fec_id": "H2CA20094",
+    "committee_id": "C00499392",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "WINRED",
+        "total": 1060965
+      },
+      {
+        "name": "PROTECT THE HOUSE 2024",
+        "total": 455507
+      },
+      {
+        "name": "SCALISE LEADERSHIP FUND 2024",
+        "total": 129147
+      },
+      {
+        "name": "GROW THE MAJORITY",
+        "total": 105839
+      },
+      {
+        "name": "EMMER MAJORITY BUILDERS",
+        "total": 89061
+      }
+    ]
+  },
+  "23": {
+    "fec_id": "H0CA08135",
+    "committee_id": "C00720078",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "WINRED PAC",
+        "total": 52900
+      },
+      {
+        "name": "OBERNOLTE VICTORY FUND",
+        "total": 22450
+      },
+      {
+        "name": "CALPORTLAND COMPANY PAC",
+        "total": 10000
+      },
+      {
+        "name": "MAJORITY COMMITTEE PAC",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "24": {
+    "fec_id": "H6CA24303",
+    "committee_id": "C00576041",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE VENDOR SERVICES",
+        "total": 18200
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE - UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+        "total": 10000
+      },
+      {
+        "name": "AIR LINE PILOTS ASSOCIATION PAC",
+        "total": 10000
+      },
+      {
+        "name": "WINE INSTITUTE PAC",
+        "total": 10000
+      },
+      {
+        "name": "NATIONAL ASSOCIATION OF REALTORS PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "25": {
+    "fec_id": "H2CA36439",
+    "committee_id": "C00502575",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 18200
+      },
+      {
+        "name": "RUIZ VICTORY FUND",
+        "total": 15000
+      },
+      {
+        "name": "USACS PAC",
+        "total": 15000
+      },
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE PAC",
+        "total": 13300
+      },
+      {
+        "name": "AMERICAN COLLEGE OF RHEUMATOLOGY PAC (RHEUMPAC)",
+        "total": 10000
+      }
+    ]
+  },
+  "26": {
+    "fec_id": "H2CA00120",
+    "committee_id": "C00513077",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 87600
+      },
+      {
+        "name": "JANNEY MONTGOMERY SCOTT LLC",
+        "total": 20664
+      },
+      {
+        "name": "CARPENTERS' LEGISLATIVE IMPROVEMENT COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "MACHINISTS NON PARTISAN POLITICAL LEAGUE OF THE INTERNATIONAL ASSOCIATION OF MACHINISTS",
+        "total": 10000
+      },
+      {
+        "name": "SERVICE EMPLOYEES INTERNATIONAL UNION COMMITTEE ON POLITICAL EDUCATION (SEIU COPE)",
+        "total": 10000
+      }
+    ]
+  },
+  "27": {
+    "fec_id": "H0CA25105",
+    "committee_id": "C00701102",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "PROTECT THE HOUSE 2024",
+        "total": 392199
+      },
+      {
+        "name": "SCALISE LEADERSHIP FUND 2024",
+        "total": 108423
+      },
+      {
+        "name": "GROW THE MAJORITY PAC",
+        "total": 101623
+      },
+      {
+        "name": "EMMER MAJORITY BUILDERS",
+        "total": 89415
+      },
+      {
+        "name": "PROTECT THE HOUSE CALIFORNIA",
+        "total": 75074
+      }
+    ]
+  },
+  "28": {
+    "fec_id": "H0CA32101",
+    "committee_id": "C00458125",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 51200
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "SHEET METAL AIR RAIL TRANSPORTATION PAC",
+        "total": 10000
+      },
+      {
+        "name": "ASIAN AMERICAN HOTEL OWNERS ASSOCIATION (AAHOA) PAC",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN CRYSTAL SUGAR PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "29": {
+    "fec_id": "H2CA28113",
+    "committee_id": "C00498873",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 51200
+      },
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
+        "total": 24800
+      },
+      {
+        "name": "STRATHDEE GROUP",
+        "total": 12300
+      },
+      {
+        "name": "AMERICAN CRYSTAL SUGAR CO PAC",
+        "total": 10000
+      },
+      {
+        "name": "SEMPRA ENERGY EMPLOYEES POLITICAL ACTION COMMITTEE- FEDERAL",
+        "total": 5000
+      }
+    ]
+  },
+  "30": {
+    "fec_id": "H4CA30149",
+    "committee_id": "C00831321",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 104000
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+        "total": 10000
+      },
+      {
+        "name": "WOMEN'S POLITICAL COMMITTEE FEDERAL",
+        "total": 10000
+      },
+      {
+        "name": "ELECT DEMOCRATIC WOMEN",
+        "total": 10000
+      },
+      {
+        "name": "SANTA ROSA RANCHERIA",
+        "total": 6600
+      }
+    ]
+  },
+  "31": {
+    "fec_id": "H4CA31170",
+    "committee_id": "C00850420",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 72600
+      },
+      {
+        "name": "VOTEVETS",
+        "total": 10000
+      },
+      {
+        "name": "PAC TO THE FUTURE",
+        "total": 10000
+      },
+      {
+        "name": "CHC BOLD PAC",
+        "total": 10000
+      },
+      {
+        "name": "NATIONAL AIR TRAFFIC CONTROLLERS ASSOCIATION PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "32": {
+    "fec_id": "H6CA24113",
+    "committee_id": "C00308742",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "UNITED STATES TREASURY",
+        "total": 24647
+      },
+      {
+        "name": "VANGUARD INVESTMENTS",
+        "total": 15291
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+        "total": 10000
+      },
+      {
+        "name": "STRUCTURED FINANCE COALITION POLITICAL ACTION COMMITTEE (STRUCTURED FINANCE PAC)",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN INSTITUTE OF CERTIFIED PUBLIC ACCOUNTANTS POLITICAL ACTION COMMITEE",
+        "total": 10000
+      }
+    ]
+  },
+  "33": {
+    "fec_id": "H2CA31125",
+    "committee_id": "C00510461",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "AGUILAR LEADERSHIP FUND",
+        "total": 500209
+      },
+      {
+        "name": "DEFEND THE VOTE LEADERSHIP FUND - UNITEMIZED",
+        "total": 139370
+      },
+      {
+        "name": "DEFEND THE VOTE LEADERSHIP FUND",
+        "total": 109200
+      },
+      {
+        "name": "AGUILAR HOUSE MAJORITY FUND",
+        "total": 49910
+      },
+      {
+        "name": "DEFEND THE VOTE - UNITEMIZED",
+        "total": 26197
+      }
+    ]
+  },
+  "34": {
+    "fec_id": "H8CA34266",
+    "committee_id": "C00629659",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 66300
+      },
+      {
+        "name": "JOBS EDUCATION AND FAMILIES FIRST PAC",
+        "total": 10000
+      },
+      {
+        "name": "AMERIPAC: THE FUND FOR A GREATER AMERICA",
+        "total": 10000
+      },
+      {
+        "name": "UNITED FOOD AND COMMERCIAL WORKERS INTERNATIONAL UNION ACTIVE BALLOT CLUB",
+        "total": 10000
+      },
+      {
+        "name": "SEIU COPE (SERVICE EMPLOYEES INTERNATIONAL UNION COMMITTEE ON POLITICAL EDUCATION)",
+        "total": 10000
+      }
+    ]
+  },
+  "35": {
+    "fec_id": "H4CA35031",
+    "committee_id": "C00557652",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "AIPAC PAC(AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE PAC)",
+        "total": 201612
+      },
+      {
+        "name": "UPSPAC",
+        "total": 10000
+      },
+      {
+        "name": "MACHINIST NON-PARTISAN POLITICAL LEAGUE",
+        "total": 10000
+      },
+      {
+        "name": "LIUNA PAC",
+        "total": 10000
+      },
+      {
+        "name": "IBEW PAC VOLUNTARY FUND",
+        "total": 10000
+      }
+    ]
+  },
+  "36": {
+    "fec_id": "H4CA33119",
+    "committee_id": "C00556506",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "TED LIEU VICTORY FUND",
+        "total": 181203
+      },
+      {
+        "name": "ACTBLUE",
+        "total": 33000
+      },
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
+        "total": 23200
+      },
+      {
+        "name": "LIEU BUDZINSKI VICTORY FUND",
+        "total": 11932
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+        "total": 10000
+      }
+    ]
+  },
+  "37": {
+    "fec_id": "H2CA37304",
+    "committee_id": "C00795823",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 104000
+      },
+      {
+        "name": "AMERICAN CRYSTAL SUGAR COMPANY",
+        "total": 15000
+      },
+      {
+        "name": "KAMLAGER FOR SENATE 2022",
+        "total": 11163
+      },
+      {
+        "name": "INTERNATIONAL UNION OF OPERATING ENGINEERS LOCAL NO. 12 VOLUNTARY LEGISLATIVE FUND",
+        "total": 10000
+      },
+      {
+        "name": "DEMAND JUSTICE PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "38": {
+    "fec_id": "H2CA38245",
+    "committee_id": "C00768614",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "YOLANDA MIRANDA & ASSOC.",
+        "total": 581
+      }
+    ]
+  },
+  "39": {
+    "fec_id": "H2CA43245",
+    "committee_id": "C00286666",
+    "cycle": 2024,
+    "donors": []
+  },
+  "40": {
+    "fec_id": "H2CA37023",
+    "committee_id": "C00150276",
+    "cycle": 2024,
+    "donors": []
+  },
+  "41": {
+    "fec_id": "H2CA39078",
+    "committee_id": "C00384057",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 18200
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+        "total": 10000
+      },
+      {
+        "name": "ENGINEERS POLITICAL EDUCATION COMMITTEE (EPEC)/INTERNATIONAL UNION OF OPERATING ENGINEERS",
+        "total": 10000
+      },
+      {
+        "name": "KPMG PARTNERS/PRINCIPALS AND EMPLOYEES PAC",
+        "total": 10000
+      },
+      {
+        "name": "CHC BOLD PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "42": {
+    "fec_id": "H2CA47188",
+    "committee_id": "C00797795",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 121100
+      },
+      {
+        "name": "AISLE 518",
+        "total": 15000
+      },
+      {
+        "name": "MACHINISTS NON PARTISAN POLITICAL LEAGUE OF THE INTERNATIONAL ASSOCIATION OF MACHINISTS & AEROSPACE WORKERS",
+        "total": 10000
+      },
+      {
+        "name": "INTERNATIONAL UNION OF OPERATING ENGINEERS LOCAL NO. 12 VOLUNTARY LEGISLATIVE FUND",
+        "total": 10000
+      },
+      {
+        "name": "INTERNATIONAL BROTHERHOOD OF ELECTRICAL WORKERS POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      }
+    ]
+  },
+  "43": {
+    "fec_id": "H4CA23011",
+    "committee_id": "C00167585",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 80900
+      },
+      {
+        "name": "VOTE NO ON LANDLORD GREED",
+        "total": 15000
+      },
+      {
+        "name": "JUSTICE FOR RENTERS SPONSORED BY AIDS",
+        "total": 15000
+      },
+      {
+        "name": "GENERAL MOTORS COMPANY PAC (GM PAC)",
+        "total": 14000
+      },
+      {
+        "name": "NATIONAL ASSOCIATION OF CONVENIENCE STORES",
+        "total": 10000
+      }
+    ]
+  },
+  "44": {
+    "fec_id": "H6CA44103",
+    "committee_id": "C00577353",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 33100
+      },
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
+        "total": 28100
+      },
+      {
+        "name": "MATSON, INC. FEDERAL ELECTION COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "MACHINISTS NON PARTISAN POLITICAL LEAGUE OF THE INTERNATIONAL ASSOCIATION OF MACHINISTS",
+        "total": 10000
+      },
+      {
+        "name": "NOVO NORDISK INC. PAC (NOVO NORDISK PAC)",
+        "total": 10000
+      }
+    ]
+  },
+  "45": {
+    "fec_id": "H4CA45170",
+    "committee_id": "C00851790",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "HOUSE VICTORY PROJECT 2024",
+        "total": 307158
+      },
+      {
+        "name": "CALIFORNIA HOUSE MAJORITY FUND",
+        "total": 142964
+      },
+      {
+        "name": "TRAN VICTORY FUND",
+        "total": 45500
+      },
+      {
+        "name": "SOUTHERN CALIF4NIA VICTORY FUND",
+        "total": 30000
+      },
+      {
+        "name": "DEMOCRACY SUMMER MAJORITY FUND",
+        "total": 23600
+      }
+    ]
+  },
+  "46": {
+    "fec_id": "H6CA46116",
+    "committee_id": "C00578302",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ACTBLUE",
+        "total": 239080
+      },
+      {
+        "name": "US BANK",
+        "total": 57739
+      },
+      {
+        "name": "AMERICAN FOREST & PAPER ASSOCIATION",
+        "total": 15000
+      },
+      {
+        "name": "UNITE HERE TIP CAMPAIGN COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "NATIONAL AUTOMOBILE DEALERS ASSOCIATION PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "47": {
+    "fec_id": "H4CA47085",
+    "committee_id": "C00831537",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "DAVE MIN VICTORY FUND",
+        "total": 152000
+      },
+      {
+        "name": "SOUTHERN CALIF4NIA VICTORY FUND",
+        "total": 30900
+      },
+      {
+        "name": "ACTBLUE",
+        "total": 28100
+      },
+      {
+        "name": "DEMOCRACY SUMMER 2024",
+        "total": 23600
+      },
+      {
+        "name": "AMERICAN FEDERATION OF TEACHERS, AFL-CIO COMMITTEE ON POLITICAL EDUCATION",
+        "total": 15000
+      }
+    ]
+  },
+  "48": {
+    "fec_id": "H0CA48024",
+    "committee_id": "C00721332",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "ISSA VICTORY FUND",
+        "total": 362553
+      },
+      {
+        "name": "AIPAC-AMERICAN ISRAEL PUBLIC AFFAIRS PAC",
+        "total": 10000
+      },
+      {
+        "name": "UBS AMERICAS PAC",
+        "total": 10000
+      },
+      {
+        "name": "KOCH PAC",
+        "total": 10000
+      },
+      {
+        "name": "AM GENERAL LLC PAC",
+        "total": 10000
+      }
+    ]
+  },
+  "49": {
+    "fec_id": "H8CA49058",
+    "committee_id": "C00634253",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "LEVIN VICTORY FUND 2024",
+        "total": 96850
+      },
+      {
+        "name": "SOUTHERN CALIF4NIA VICTORY FUND",
+        "total": 24150
+      },
+      {
+        "name": "DEMOCRACY SUMMER 2024",
+        "total": 20000
+      },
+      {
+        "name": "END CITIZENS UNITED - URGENT 2024 - UNITEMIZED",
+        "total": 16985
+      },
+      {
+        "name": "ACTBLUE",
+        "total": 16600
+      }
+    ]
+  },
+  "50": {
+    "fec_id": "H2CA52089",
+    "committee_id": "C00503110",
+    "cycle": 2024,
+    "donors": [
+      {
+        "name": "SHP VICTORY FUND",
+        "total": 450651
+      },
+      {
+        "name": "INFINEX INVESTMENTS INC.",
+        "total": 69121
+      },
+      {
+        "name": "UC MARKETPLACE OWNER LLC",
+        "total": 18150
+      },
+      {
+        "name": "TAKEDA PHARMACEUTICALS AMERICA, INC. POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "NEW DEMOCRAT COALITION POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      }
+    ]
+  },
+  "51": {
+    "fec_id": "H8CA49074",
+    "committee_id": "C00660837",
+    "cycle": 2024,
+    "donors": []
+  },
+  "52": {
+    "fec_id": "H2CA50026",
+    "committee_id": "C00259705",
+    "cycle": 2024,
+    "donors": []
+  }
+}
