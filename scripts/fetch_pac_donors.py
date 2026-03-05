@@ -44,7 +44,7 @@ def fec_get(path, params=None, retries=3):
     raise RuntimeError(f"FEC API failed after {retries} retries: {path}")
 
 
-def get_fec_candidate_id(district):
+def get_fec_candidate_id(district, expected_name=None):
     """Find the incumbent's FEC candidate ID for a CA House district."""
     data = fec_get("/candidates/", {
         "state": "CA", "office": "H", "district": str(district).zfill(2),
@@ -55,11 +55,16 @@ def get_fec_candidate_id(district):
         if r.get("incumbent_challenge_full") == "Incumbent"
     ]
     if not incumbents:
-        # Fall back to highest-ID candidate if no incumbent flagged
         results = data.get("results", [])
         if not results:
             return None, None
         incumbents = results[:1]
+    # When multiple incumbents (redistricting artifact), prefer the name match
+    if len(incumbents) > 1 and expected_name:
+        key = expected_name.split(",")[0].upper()
+        match = next((c for c in incumbents if key in c.get("name", "").upper()), None)
+        if match:
+            return match.get("candidate_id"), match.get("name")
     c = incumbents[0]
     return c.get("candidate_id"), c.get("name")
 
@@ -98,28 +103,52 @@ def get_committee_total_raised(committee_id):
     return int(results[0].get("receipts", 0) or 0)
 
 
-def get_pac_data(committee_id, n=5):
+def get_pac_data(committee_id, n=5, max_pages=5):
     """
     Returns (top_donors, pac_count) where:
       top_donors — list of {name, total} for top N non-platform PAC donors
-      pac_count  — total unique PAC/org contributors in the first 100 results
-                   (accurate for most members; may undercount very high-PAC members)
+      pac_count  — total unique PAC/org contributors found
+    Paginates up to max_pages to get past earmarked conduit record spam.
     """
-    data = fec_get("/schedules/schedule_a/", {
-        "committee_id": committee_id,
-        "two_year_transaction_period": CYCLE,
-        "per_page": 100,
-        "sort": "-contribution_receipt_amount",
-    })
-
     totals = {}
-    for item in data.get("results", []):
-        if item.get("entity_type", "") not in ACCEPTED_TYPES:
-            continue
-        name = item.get("contributor_name", "").strip()
-        amt  = item.get("contribution_receipt_amount", 0) or 0
-        if name and amt > 0 and not looks_like_individual(name):
-            totals[name] = totals.get(name, 0) + amt
+    cursor = {}  # holds last_index + last_contribution_receipt_amount for pagination
+
+    for page in range(max_pages):
+        params = {
+            "committee_id": committee_id,
+            "two_year_transaction_period": CYCLE,
+            "entity_type": ["PAC", "COM", "ORG"],  # filter server-side; skip individual contributions
+            "per_page": 100,
+            "sort": "-contribution_receipt_amount",
+            **cursor,
+        }
+
+        data = fec_get("/schedules/schedule_a/", params)
+        results = data.get("results", [])
+        if not results:
+            break
+
+        for item in results:
+            if item.get("entity_type", "") not in ACCEPTED_TYPES:
+                continue
+            if item.get("memo_code") == "X":  # earmarked conduit — not a direct PAC contribution
+                continue
+            name = item.get("contributor_name", "").strip()
+            amt  = item.get("contribution_receipt_amount", 0) or 0
+            if name and amt > 0 and not looks_like_individual(name):
+                totals[name] = totals.get(name, 0) + amt
+
+        # Stop early if we have enough unique donors
+        if len([k for k in totals if k.upper() not in PAC_SKIP]) >= n:
+            break
+
+        last_indexes = data.get("pagination", {}).get("last_indexes", {})
+        if not last_indexes.get("last_index") or len(results) < 100:
+            break
+        cursor = {
+            "last_index": last_indexes["last_index"],
+            "last_contribution_receipt_amount": last_indexes.get("last_contribution_receipt_amount"),
+        }
 
     pac_count   = len(totals)
     top_donors  = [
@@ -164,7 +193,7 @@ def main():
         print(f"  District {dist:>2} — {rep_name} ...", end=" ", flush=True)
 
         # Step 1: FEC candidate ID
-        candidate_id, fec_name = get_fec_candidate_id(dist)
+        candidate_id, fec_name = get_fec_candidate_id(dist, expected_name=rep_name)
         if not candidate_id:
             print("no FEC candidate found")
             output[dist] = {"error": "no FEC candidate", "donors": []}

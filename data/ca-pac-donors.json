@@ -33,7 +33,7 @@
     "committee_id": "C00536680",
     "cycle": 2024,
     "total_raised": 1014658,
-    "pac_count": 42,
+    "pac_count": 41,
     "donors": [
       {
         "name": "REDWOOD CREDIT UNION",
@@ -62,12 +62,8 @@
     "committee_id": "C00461061",
     "cycle": 2024,
     "total_raised": 1250010,
-    "pac_count": 43,
+    "pac_count": 40,
     "donors": [
-      {
-        "name": "NEW DEMOCRAT COALITION ACTION FUND",
-        "total": 11600
-      },
       {
         "name": "AMERICAN COLLEGE OF PHYSICIAN SERVICES INC PAC; AKA ACP SERVICES PAC",
         "total": 10000
@@ -82,6 +78,10 @@
       },
       {
         "name": "THE HOME DEPOT INC. POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "SOCIETY OF THORACIC SURGEONS POLITICAL ACTION COMMITTEE",
         "total": 10000
       }
     ]
@@ -157,7 +157,7 @@
     "committee_id": "C00409219",
     "cycle": 2024,
     "total_raised": 1239231,
-    "pac_count": 52,
+    "pac_count": 51,
     "donors": [
       {
         "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
@@ -186,7 +186,7 @@
     "committee_id": "C00462697",
     "cycle": 2024,
     "total_raised": 1113065,
-    "pac_count": 28,
+    "pac_count": 27,
     "donors": [
       {
         "name": "INTERNATIONAL UNION OF PAINTERS AND ALLIED TRADES POLITICAL ACTION TOGETHER POLITICAL COMM",
@@ -215,7 +215,7 @@
     "committee_id": "C00639146",
     "cycle": 2024,
     "total_raised": 5415539,
-    "pac_count": 22,
+    "pac_count": 21,
     "donors": [
       {
         "name": "JANNEY MONTGOMERY SCOTT LLC",
@@ -244,7 +244,7 @@
     "committee_id": "C00554709",
     "cycle": 2024,
     "total_raised": 664974,
-    "pac_count": 46,
+    "pac_count": 45,
     "donors": [
       {
         "name": "AIR LINE PILOTS ASSOCIATION PAC",
@@ -273,7 +273,7 @@
     "committee_id": "C00213512",
     "cycle": 2024,
     "total_raised": 10223363,
-    "pac_count": 32,
+    "pac_count": 30,
     "donors": [
       {
         "name": "PELOSI VICTORY COMMITTEE",
@@ -288,11 +288,11 @@
         "total": 10000
       },
       {
-        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNT. BROTHERHOOD OF CARPENTERS & JOINERS",
+        "name": "AMERICAN FEDERATION OF TEACHERS COPE",
         "total": 10000
       },
       {
-        "name": "AMERICAN FEDERATION OF TEACHERS COPE",
+        "name": "AMERICAN DENTAL ASSOCIATION PAC",
         "total": 10000
       }
     ]
@@ -305,8 +305,12 @@
     "pac_count": 2,
     "donors": [
       {
-        "name": "JSTREETPAC",
-        "total": 6600
+        "name": "COMCAST CORPORATION & NBCUNIVERSAL POLITICAL ACTION COMMITTEE - FEDERAL",
+        "total": 2500
+      },
+      {
+        "name": "COMMUNITY PAC",
+        "total": 1000
       }
     ]
   },
@@ -315,15 +319,15 @@
     "committee_id": "C00808279",
     "cycle": 2024,
     "total_raised": 4575222,
-    "pac_count": 14,
+    "pac_count": 12,
     "donors": [
       {
-        "name": "PROTECT THE HOUSE 2024",
-        "total": 442349
+        "name": "DUARTE VICTORY FUND",
+        "total": 412173
       },
       {
-        "name": "DUARTE VICTORY FUND",
-        "total": 432437
+        "name": "PROTECT THE HOUSE 2024",
+        "total": 400767
       },
       {
         "name": "SCALISE LEADERSHIP FUND 2024",
@@ -344,7 +348,7 @@
     "committee_id": "C00502294",
     "cycle": 2024,
     "total_raised": 4143083,
-    "pac_count": 41,
+    "pac_count": 39,
     "donors": [
       {
         "name": "SWALLEGO VICTORY FUND",
@@ -373,7 +377,7 @@
     "committee_id": "C00795005",
     "cycle": 2024,
     "total_raised": 808090,
-    "pac_count": 45,
+    "pac_count": 44,
     "donors": [
       {
         "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE",
@@ -402,7 +406,7 @@
     "committee_id": "C00258475",
     "cycle": 2024,
     "total_raised": 622171,
-    "pac_count": 27,
+    "pac_count": 26,
     "donors": [
       {
         "name": "AMERICAN CRYSTAL SUGAR COMPANY POLITICAL ACTION COMMITTEE",
@@ -439,7 +443,7 @@
     "committee_id": "C00289603",
     "cycle": 2024,
     "total_raised": 2327179,
-    "pac_count": 46,
+    "pac_count": 44,
     "donors": [
       {
         "name": "ZOE 2024",
@@ -468,7 +472,7 @@
     "committee_id": "C00592154",
     "cycle": 2024,
     "total_raised": 3357555,
-    "pac_count": 74,
+    "pac_count": 72,
     "donors": [
       {
         "name": "NATIONAL TELECOMMUNICATIONS COOPERATIVE ASSOCIATION RURAL BROADBAND PAC",
@@ -502,12 +506,8 @@
     "committee_id": "C00391029",
     "cycle": 2024,
     "total_raised": 1705407,
-    "pac_count": 55,
+    "pac_count": 54,
     "donors": [
-      {
-        "name": "AIPAC",
-        "total": 23200
-      },
       {
         "name": "CALIFORNIA DAIRIES FEDERAL PAC",
         "total": 14000
@@ -523,6 +523,10 @@
       {
         "name": "AMERICAN CRYSTAL SUGAR COMPANY PAC",
         "total": 10000
+      },
+      {
+        "name": "NATIONAL CATTLEMEN'S BEEF ASSOCIATION",
+        "total": 10000
       }
     ]
   },
@@ -531,11 +535,11 @@
     "committee_id": "C00499392",
     "cycle": 2024,
     "total_raised": 4912595,
-    "pac_count": 10,
+    "pac_count": 9,
     "donors": [
       {
         "name": "PROTECT THE HOUSE 2024",
-        "total": 455507
+        "total": 412689
       },
       {
         "name": "SCALISE LEADERSHIP FUND 2024",
@@ -560,7 +564,7 @@
     "committee_id": "C00720078",
     "cycle": 2024,
     "total_raised": 1532906,
-    "pac_count": 47,
+    "pac_count": 46,
     "donors": [
       {
         "name": "OBERNOLTE VICTORY FUND",
@@ -589,7 +593,7 @@
     "committee_id": "C00576041",
     "cycle": 2024,
     "total_raised": 2037379,
-    "pac_count": 39,
+    "pac_count": 36,
     "donors": [
       {
         "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE - UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
@@ -618,19 +622,11 @@
     "committee_id": "C00502575",
     "cycle": 2024,
     "total_raised": 2504794,
-    "pac_count": 66,
+    "pac_count": 65,
     "donors": [
       {
         "name": "RUIZ VICTORY FUND",
         "total": 15000
-      },
-      {
-        "name": "USACS PAC",
-        "total": 15000
-      },
-      {
-        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE PAC",
-        "total": 13300
       },
       {
         "name": "AMERICAN COLLEGE OF RHEUMATOLOGY PAC (RHEUMPAC)",
@@ -638,6 +634,14 @@
       },
       {
         "name": "NATIONAL ASSOCIATION OF REALTORS POLITICAL ACTION COMMITTEE",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE PAC",
+        "total": 10000
+      },
+      {
+        "name": "UNITED FOOD & COMMERCIAL WORKERS INTERNATIONAL UNION ACTIVE BALLOT CLUB",
         "total": 10000
       }
     ]
@@ -647,7 +651,7 @@
     "committee_id": "C00513077",
     "cycle": 2024,
     "total_raised": 1599723,
-    "pac_count": 39,
+    "pac_count": 38,
     "donors": [
       {
         "name": "JANNEY MONTGOMERY SCOTT LLC",
@@ -676,7 +680,7 @@
     "committee_id": "C00701102",
     "cycle": 2024,
     "total_raised": 6539107,
-    "pac_count": 62,
+    "pac_count": 61,
     "donors": [
       {
         "name": "PROTECT THE HOUSE 2024",
@@ -705,7 +709,7 @@
     "committee_id": "C00458125",
     "cycle": 2024,
     "total_raised": 1915612,
-    "pac_count": 49,
+    "pac_count": 48,
     "donors": [
       {
         "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE",
@@ -734,12 +738,8 @@
     "committee_id": "C00498873",
     "cycle": 2024,
     "total_raised": 661700,
-    "pac_count": 53,
+    "pac_count": 52,
     "donors": [
-      {
-        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
-        "total": 24800
-      },
       {
         "name": "STRATHDEE GROUP",
         "total": 12300
@@ -755,6 +755,10 @@
       {
         "name": "KPMG PARTNERS/PRINCIPALS AND EMPLOYEES PAC",
         "total": 5000
+      },
+      {
+        "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+        "total": 5000
       }
     ]
   },
@@ -763,7 +767,7 @@
     "committee_id": "C00831321",
     "cycle": 2024,
     "total_raised": 1835665,
-    "pac_count": 32,
+    "pac_count": 30,
     "donors": [
       {
         "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
@@ -792,7 +796,7 @@
     "committee_id": "C00850420",
     "cycle": 2024,
     "total_raised": 6477170,
-    "pac_count": 40,
+    "pac_count": 38,
     "donors": [
       {
         "name": "VOTEVETS",
@@ -821,7 +825,7 @@
     "committee_id": "C00308742",
     "cycle": 2024,
     "total_raised": 2059587,
-    "pac_count": 50,
+    "pac_count": 49,
     "donors": [
       {
         "name": "UNITED STATES TREASURY",
@@ -850,15 +854,11 @@
     "committee_id": "C00510461",
     "cycle": 2024,
     "total_raised": 5866371,
-    "pac_count": 72,
+    "pac_count": 69,
     "donors": [
       {
         "name": "AGUILAR LEADERSHIP FUND",
         "total": 500209
-      },
-      {
-        "name": "DEFEND THE VOTE LEADERSHIP FUND - UNITEMIZED",
-        "total": 139370
       },
       {
         "name": "DEFEND THE VOTE LEADERSHIP FUND",
@@ -869,8 +869,12 @@
         "total": 49910
       },
       {
-        "name": "DEFEND THE VOTE - UNITEMIZED",
-        "total": 26197
+        "name": "DEFEND THE VOTE",
+        "total": 25000
+      },
+      {
+        "name": "JEFFRIES CLARK AGUILAR VICTORY FUND",
+        "total": 15200
       }
     ]
   },
@@ -879,7 +883,7 @@
     "committee_id": "C00629659",
     "cycle": 2024,
     "total_raised": 2245652,
-    "pac_count": 54,
+    "pac_count": 53,
     "donors": [
       {
         "name": "JOBS EDUCATION AND FAMILIES FIRST PAC",
@@ -908,7 +912,7 @@
     "committee_id": "C00557652",
     "cycle": 2024,
     "total_raised": 943001,
-    "pac_count": 35,
+    "pac_count": 34,
     "donors": [
       {
         "name": "AIPAC PAC(AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE PAC)",
@@ -937,15 +941,11 @@
     "committee_id": "C00556506",
     "cycle": 2024,
     "total_raised": 2587897,
-    "pac_count": 47,
+    "pac_count": 44,
     "donors": [
       {
         "name": "TED LIEU VICTORY FUND",
         "total": 181203
-      },
-      {
-        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
-        "total": 23200
       },
       {
         "name": "LIEU BUDZINSKI VICTORY FUND",
@@ -953,6 +953,10 @@
       },
       {
         "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
+        "total": 10000
+      },
+      {
+        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
         "total": 10000
       },
       {
@@ -966,7 +970,7 @@
     "committee_id": "C00795823",
     "cycle": 2024,
     "total_raised": 1061435,
-    "pac_count": 26,
+    "pac_count": 25,
     "donors": [
       {
         "name": "AMERICAN CRYSTAL SUGAR COMPANY",
@@ -1011,41 +1015,12 @@
     "pac_count": 0,
     "donors": []
   },
-  "40": {
-    "fec_id": "H8CA39240",
-    "committee_id": "C00665638",
-    "cycle": 2024,
-    "total_raised": 9244755,
-    "pac_count": 9,
-    "donors": [
-      {
-        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
-        "total": 3412750
-      },
-      {
-        "name": "SCALISE LEADERSHIP FUND 2024",
-        "total": 79896
-      },
-      {
-        "name": "GOP WINNING WOMEN 2024",
-        "total": 78055
-      },
-      {
-        "name": "KIM VICTORY FUND",
-        "total": 66921
-      },
-      {
-        "name": "PROTECT THE HOUSE CALIFORNIA 2024",
-        "total": 65028
-      }
-    ]
-  },
   "41": {
     "fec_id": "H2CA39078",
     "committee_id": "C00384057",
     "cycle": 2024,
     "total_raised": 1548292,
-    "pac_count": 66,
+    "pac_count": 65,
     "donors": [
       {
         "name": "CARPENTERS LEGISLATIVE IMPROVEMENT COMMITTEE UNITED BROTHERHOOD OF CARPENTERS AND JOINERS",
@@ -1074,7 +1049,7 @@
     "committee_id": "C00797795",
     "cycle": 2024,
     "total_raised": 1352167,
-    "pac_count": 32,
+    "pac_count": 31,
     "donors": [
       {
         "name": "AISLE 518",
@@ -1103,7 +1078,7 @@
     "committee_id": "C00167585",
     "cycle": 2024,
     "total_raised": 1119385,
-    "pac_count": 33,
+    "pac_count": 31,
     "donors": [
       {
         "name": "VOTE NO ON LANDLORD GREED",
@@ -1132,12 +1107,8 @@
     "committee_id": "C00577353",
     "cycle": 2024,
     "total_raised": 1269280,
-    "pac_count": 39,
+    "pac_count": 38,
     "donors": [
-      {
-        "name": "AMERICAN ISRAEL PUBLIC AFFAIRS COMMITTEE POLITICAL ACTION COMMITTEE",
-        "total": 28100
-      },
       {
         "name": "MATSON, INC. FEDERAL ELECTION COMMITTEE",
         "total": 10000
@@ -1153,6 +1124,10 @@
       {
         "name": "AMERICAN CRYSTAL SUGAR COMPANY PAC",
         "total": 10000
+      },
+      {
+        "name": "INTERNATIONAL UNION OF OPERATING ENGINEERS LOCAL NO. 12 VOLUNTARY LEGISLATIVE FUND",
+        "total": 10000
       }
     ]
   },
@@ -1161,7 +1136,7 @@
     "committee_id": "C00851790",
     "cycle": 2024,
     "total_raised": 6514154,
-    "pac_count": 62,
+    "pac_count": 56,
     "donors": [
       {
         "name": "HOUSE VICTORY PROJECT 2024",
@@ -1190,7 +1165,7 @@
     "committee_id": "C00578302",
     "cycle": 2024,
     "total_raised": 1385045,
-    "pac_count": 48,
+    "pac_count": 47,
     "donors": [
       {
         "name": "US BANK",
@@ -1219,7 +1194,7 @@
     "committee_id": "C00831537",
     "cycle": 2024,
     "total_raised": 6835943,
-    "pac_count": 58,
+    "pac_count": 55,
     "donors": [
       {
         "name": "DAVE MIN VICTORY FUND",
@@ -1248,7 +1223,7 @@
     "committee_id": "C00721332",
     "cycle": 2024,
     "total_raised": 1782412,
-    "pac_count": 37,
+    "pac_count": 36,
     "donors": [
       {
         "name": "ISSA VICTORY FUND",
@@ -1277,7 +1252,7 @@
     "committee_id": "C00634253",
     "cycle": 2024,
     "total_raised": 5679155,
-    "pac_count": 60,
+    "pac_count": 58,
     "donors": [
       {
         "name": "LEVIN VICTORY FUND 2024",
@@ -1292,12 +1267,12 @@
         "total": 20000
       },
       {
-        "name": "END CITIZENS UNITED - URGENT 2024 - UNITEMIZED",
-        "total": 16985
-      },
-      {
         "name": "AMALGAMATED BANK",
         "total": 15443
+      },
+      {
+        "name": "END CITIZENS UNITED - URGENT 2024",
+        "total": 15000
       }
     ]
   },
@@ -1306,7 +1281,7 @@
     "committee_id": "C00503110",
     "cycle": 2024,
     "total_raised": 2292635,
-    "pac_count": 69,
+    "pac_count": 67,
     "donors": [
       {
         "name": "SHP VICTORY FUND",
@@ -1325,7 +1300,7 @@
         "total": 10000
       },
       {
-        "name": "NEW DEMOCRAT COALITION POLITICAL ACTION COMMITTEE",
+        "name": "AMGEN INC. POLITICAL ACTION COMMITTEE",
         "total": 10000
       }
     ]
@@ -1345,5 +1320,34 @@
     "total_raised": null,
     "pac_count": 0,
     "donors": []
+  },
+  "40": {
+    "fec_id": "H8CA39240",
+    "committee_id": "C00665638",
+    "cycle": 2024,
+    "total_raised": 9244755,
+    "pac_count": 7,
+    "donors": [
+      {
+        "name": "SCALISE LEADERSHIP FUND 2024",
+        "total": 79896
+      },
+      {
+        "name": "GOP WINNING WOMEN 2024",
+        "total": 78055
+      },
+      {
+        "name": "KIM VICTORY FUND",
+        "total": 66921
+      },
+      {
+        "name": "PROTECT THE HOUSE CALIFORNIA 2024",
+        "total": 65028
+      },
+      {
+        "name": "GROW THE MAJORITY",
+        "total": 49580
+      }
+    ]
   }
 }
