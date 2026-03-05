@@ -988,7 +988,7 @@
       drawLayer('house');
 
       // Layer toggle (exclude the interesting button, which has its own handler)
-      document.querySelectorAll('.toggle-btn:not(#interesting-btn)').forEach(btn => {
+      document.querySelectorAll('.toggle-btn:not(#interesting-btn):not(#sources-btn)').forEach(btn => {
         btn.addEventListener('click', function() {
           document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
           this.classList.add('active');
