@@ -156,6 +156,39 @@
     .info-vacant { color: #666; font-size: 0.9rem; font-style: italic; }
 
     /* --- Votes table --- */
+    .donors-section {
+      margin-top: 20px;
+      border-top: 1px solid #2a2a2a;
+      padding-top: 16px;
+    }
+    .donors-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #555;
+      margin-bottom: 10px;
+    }
+    .donors-cycle { font-weight: 400; letter-spacing: 0; text-transform: none; color: #444; }
+    .donor-row { margin-bottom: 7px; }
+    .donor-name {
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-bottom: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .donor-bar-wrap { display: flex; align-items: center; gap: 7px; }
+    .donor-bar {
+      height: 5px;
+      background: #3a5a7a;
+      border-radius: 2px;
+      flex-shrink: 0;
+      min-width: 3px;
+    }
+    .donor-amt { font-size: 0.72rem; color: #555; flex-shrink: 0; }
+
     .votes-section {
       margin-top: 20px;
       border-top: 1px solid #2a2a2a;
@@ -411,6 +444,10 @@
     let repsData       = null;
     let votesData      = null;
     let stateVotesData = null;
+    let pacDonorsData  = null;
+
+    // Fundraising platforms — not meaningful as "top donors"
+    const PAC_SKIP = new Set(['ACTBLUE', 'WINRED', 'ACTBLUE VENDOR SERVICES', 'WINRED PAC']);
     let geoCache       = {};
     let activeLayer  = 'house';
     let gPath        = null;
@@ -551,6 +588,31 @@
 
     const STATE_VOTE_CATEGORIES = ['housing', 'healthcare', 'abortion', 'lgbtq', 'immigration', 'spending'];
 
+    function buildDonorsHtml(distNum) {
+      if (!pacDonorsData || !pacDonorsData[distNum]) return '';
+      const entry = pacDonorsData[distNum];
+      const donors = (entry.donors || []).filter(d => !PAC_SKIP.has(d.name.toUpperCase()));
+      if (!donors.length) return '';
+
+      const fmt = n => n >= 1000 ? `$${(n / 1000).toFixed(0)}k` : `$${n}`;
+      const maxTotal = donors[0].total;
+
+      let html = `<div class="donors-section">
+        <div class="donors-title">top PAC donors <span class="donors-cycle">${entry.cycle} cycle</span></div>`;
+      for (const d of donors) {
+        const pct = Math.round((d.total / maxTotal) * 100);
+        html += `<div class="donor-row">
+          <div class="donor-name">${d.name}</div>
+          <div class="donor-bar-wrap">
+            <div class="donor-bar" style="width:${pct}%"></div>
+            <span class="donor-amt">${fmt(d.total)}</span>
+          </div>
+        </div>`;
+      }
+      html += `</div>`;
+      return html;
+    }
+
     function buildVotesHtml(distNum) {
       if (!votesData || !votesData[distNum]) return '';
       const repVotes = votesData[distNum];
@@ -641,9 +703,11 @@
         sinceHtml = `<div class="info-since">In office since ${votesData[distNum].since}</div>`;
       }
 
-      let votesHtml = '';
+      let donorsHtml = '';
+      let votesHtml  = '';
       if (layerKey === 'house') {
-        votesHtml = buildVotesHtml(distNum);
+        donorsHtml = buildDonorsHtml(distNum);
+        votesHtml  = buildVotesHtml(distNum);
       } else {
         votesHtml = buildStateVotesHtml(distNum, layerKey);
       }
@@ -655,6 +719,7 @@
         ${sinceHtml}
         ${rep.website ? `<a class="info-link" href="https://${rep.website}" target="_blank" rel="noopener">website ↗</a>` : ''}
         ${rep.note   ? `<div class="info-note">${rep.note}</div>` : ''}
+        ${donorsHtml}
         ${votesHtml}
       `;
     }
@@ -764,11 +829,12 @@
 
       let houseGeo;
       try {
-        [repsData, houseGeo, votesData, stateVotesData] = await Promise.all([
+        [repsData, houseGeo, votesData, stateVotesData, pacDonorsData] = await Promise.all([
           d3.json('data/ca-reps.json'),
           d3.json('data/ca-congressional.geojson'),
           d3.json('data/ca-votes.json'),
           d3.json('data/ca-state-votes.json'),
+          d3.json('data/ca-pac-donors.json'),
         ]);
         geoCache['house'] = houseGeo;
       } catch (e) {
