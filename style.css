@@ -75,11 +75,51 @@ body {
 }
 #nav .sep { margin: 0 14px; color: #333; }
 
+/* ── Columns layout ── */
+#columns {
+    display: flex;
+    align-items: stretch;
+    flex: 1;
+}
+
 /* ── Main content area ── */
 #main {
     flex: 1;
+    min-width: 0;
     padding: 30px 52px 28px;
+    border-right: 1px solid #212121;
 }
+
+/* ── Sidebar ── */
+#sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    padding: 26px 24px 26px 28px;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+}
+
+.widget { margin-bottom: 24px; }
+
+.widget-title {
+    font-size: 0.72rem;
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: 1px solid #222;
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+.widget-body {
+    color: #808078;
+    line-height: 1.5;
+}
+
+.widget-body a { color: #7a8c9e; text-decoration: none; }
+.widget-body a:hover { text-decoration: underline; color: #9aaebb; }
+.widget-body .val { color: #9a9a90; }
 
 /* ── Experiences page ── */
 .exp-section {
@@ -323,8 +363,9 @@ body {
 
 /* ── Responsive ── */
 @media (max-width: 700px) {
-    #main { padding: 20px 24px; }
+    #columns { flex-direction: column; }
+    #main { padding: 20px 24px; border-right: none; }
+    #sidebar { width: 100%; border-top: 1px solid #212121; padding: 14px 24px; }
     #header-text { padding: 14px 24px 16px; }
-    #nav { padding: 9px 24px; font-size: 0.9rem; }
     #site-title { font-size: 1.9rem; }
 }
