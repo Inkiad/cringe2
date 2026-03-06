@@ -515,7 +515,8 @@
                 <div class="widget-title">currently</div>
                 <div class="widget-body">
                     mood: <span class="val">tired</span><br>
-                    music: <span class="val" id="sidebar-music">—</span>
+                    avoiding: <span class="val">work</span><br>
+                    watching: <span class="val" id="sidebar-watching">—</span>
                 </div>
             </div>
             <div class="widget">
@@ -575,13 +576,27 @@
             }));
             document.querySelector('.player-label').textContent = nowPlaying ? 'now playing' : 'last played';
 
-            const sidebarMusic = document.getElementById('sidebar-music');
-            if (sidebarMusic) sidebarMusic.textContent = title;
-
             if (nowPlaying) {
                 document.getElementById('player-wave').classList.add('playing');
                 document.querySelector('.player-btn-play').textContent = '▶';
             }
+        })
+        .catch(() => {});
+})();
+
+// ── Letterboxd ────────────────────────────────────────────────────────────────
+(function fetchLetterboxd() {
+    const rss = 'https://letterboxd.com/inkyyy/rss/';
+    const url = 'https://api.allorigins.win/get?url=' + encodeURIComponent(rss);
+    fetch(url)
+        .then(r => r.json())
+        .then(data => {
+            const xml = data.contents;
+            const match = xml.match(/<letterboxd:filmTitle><!\[CDATA\[(.*?)\]\]><\/letterboxd:filmTitle>/) ||
+                          xml.match(/<letterboxd:filmTitle>(.*?)<\/letterboxd:filmTitle>/);
+            if (!match) return;
+            const el = document.getElementById('sidebar-watching');
+            if (el) el.textContent = match[1];
         })
         .catch(() => {});
 })();
