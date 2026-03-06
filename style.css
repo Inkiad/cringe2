@@ -1,74 +1,246 @@
+/* ── Base ── */
+html { font-size: 17px; }
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    height: 100vh;
-    background-color: #1a1a1a;
-    color: #d0d0d0;
-}
-
-.content {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
-}
-
-.content h1 {
-    color: #e8e8e8;
-    font-size: 2rem;
-}
-
-.content h4 {
-    color: #b0b0b0;
-}
-
-.sidebar {
-    background-color: #111;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 5px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    z-index: 100;
-}
-
-.sidebar a {
-    color: #ccc;
-    text-decoration: none;
-    margin: 10px 0;
-    padding: 5px 20px 5px 5px;
+    background: #171717;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #d8d8d0;
     font-size: 1rem;
 }
 
-.sidebar a:hover {
-    color: white;
+/* ── Page layout ── */
+#page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #171717;
+}
+
+/* ── Header ── */
+#header {
+    background: linear-gradient(150deg, #1e1810 0%, #161210 100%);
+    border-bottom: 2px solid #2e2416;
+    flex-shrink: 0;
+}
+
+#header-banner {
+    height: 28px;
+}
+
+#header-text {
+    padding: 12px 40px 14px;
+}
+
+#site-title {
+    font-family: Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: normal;
+    color: #eeeee6;
+    letter-spacing: 0.02em;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+#site-title a { color: inherit; text-decoration: none; }
+
+#site-tagline {
+    font-family: 'Courier New', monospace;
+    font-size: 0.62rem;
+    color: #5e5e58;
+    letter-spacing: 0.1em;
+}
+
+/* ── Nav bar ── */
+#nav {
+    background: #131313;
+    border-bottom: 1px solid #222;
+    padding: 11px 40px;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+#nav .nav-arr { color: #444; margin-right: 10px; }
+
+#nav a {
+    color: #8a8a82;
+    text-decoration: none;
+}
+#nav a:hover {
+    color: #ccccc4;
+    text-decoration: underline;
+}
+#nav .sep { margin: 0 14px; color: #333; }
+
+/* ── Main content area ── */
+#main {
+    flex: 1;
+    padding: 30px 52px 28px;
+}
+
+/* ── Experiences page ── */
+.exp-section {
+    margin-bottom: 40px;
+}
+
+.exp-section-title {
+    font-family: 'Courier New', monospace;
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: 1px solid #2c2c2c;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+
+.exp-entry {
+    margin-bottom: 24px;
+}
+
+.exp-org {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    font-weight: normal;
+    color: #e8e8e0;
+    margin-bottom: 3px;
+}
+
+.exp-role-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.exp-role {
+    font-style: italic;
+    color: #888;
+    font-size: 0.75rem;
+}
+
+.exp-date {
+    font-family: 'Courier New', monospace;
+    color: #555;
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+.exp-coursework {
+    color: #666;
+    font-size: 0.72rem;
+    line-height: 1.6;
+}
+
+.exp-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.exp-bullets li {
+    color: #9a9a90;
+    font-size: 0.75rem;
+    line-height: 1.6;
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.exp-bullets li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: #555;
+}
+
+.skills-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skill-row {
+    font-size: 0.75rem;
+    color: #9a9a90;
+    line-height: 1.5;
+}
+
+.skill-label {
+    color: #e8e8e0;
+    font-weight: 600;
+}
+
+/* ── Projects page ── */
+.project-item {
+    padding: 20px 0;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.project-item:last-child {
+    border-bottom: none;
+}
+
+.project-name {
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #e8e8e0;
+    margin-bottom: 6px;
+}
+
+.project-description {
+    color: #808078;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+    font-family: 'Courier New', monospace;
+}
+
+.project-links a {
+    color: #8a8a82;
+    text-decoration: none;
+    font-size: 0.7rem;
+}
+
+.project-links a:hover {
+    color: #ccccc4;
     text-decoration: underline;
 }
 
-
-.page-content {
-    padding: 70px 20px 20px 20px;
+/* ── Menu page ── */
+.course {
+    font-family: 'Courier New', monospace;
+    font-size: 0.58rem;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #555;
+    border-bottom: 1px solid #2c2c2c;
+    padding-bottom: 6px;
+    margin-top: 28px !important;
+    margin-bottom: 10px !important;
 }
 
-/* --- Menu page --- */
-.course {
-    font-weight: bold;
-    color: #e8e8e8;
-    margin-top: 20px !important;
-    margin-bottom: 5px !important;
+.dish-name {
+    color: #d8d8d0;
+    font-size: 0.75rem;
 }
 
 .dish-description {
     font-style: italic;
-    color: #888;
+    color: #666;
+    font-size: 0.75rem;
 }
 
 .dish-failed {
@@ -76,7 +248,7 @@ body {
     opacity: 0.4;
 }
 
-/* --- Cat animation --- */
+/* ── Cat animation ── */
 #cat {
     position: fixed;
     font-family: 'Courier New', Courier, monospace;
@@ -107,174 +279,10 @@ body {
     opacity: 1;
 }
 
-/* --- Experiences page --- */
-.experiences-container {
-    max-width: 700px;
-    width: 100%;
-    padding: 70px 20px 60px 20px;
-}
-
-.content:has(.experiences-container) {
-    align-items: flex-start;
-}
-
-.exp-section {
-    margin-bottom: 40px;
-}
-
-.exp-section-title {
-    font-size: 0.75em;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #666;
-    border-bottom: 1px solid #2c2c2c;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
-}
-
-.exp-entry {
-    margin-bottom: 24px;
-}
-
-.exp-org {
-    font-size: 1em;
-    font-weight: 600;
-    color: #e8e8e8;
-    margin-bottom: 3px;
-}
-
-.exp-role-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-
-.exp-role {
-    font-style: italic;
-    color: #888;
-    font-size: 0.9em;
-}
-
-.exp-date {
-    color: #555;
-    font-size: 0.85em;
-    white-space: nowrap;
-}
-
-.exp-coursework {
-    color: #666;
-    font-size: 0.85em;
-    line-height: 1.6;
-}
-
-.exp-bullets {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.exp-bullets li {
-    color: #aaa;
-    font-size: 0.9em;
-    line-height: 1.6;
-    padding-left: 16px;
-    position: relative;
-    margin-bottom: 4px;
-}
-
-.exp-bullets li::before {
-    content: '–';
-    position: absolute;
-    left: 0;
-    color: #555;
-}
-
-.skills-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.skill-row {
-    font-size: 0.9em;
-    color: #aaa;
-    line-height: 1.5;
-}
-
-.skill-label {
-    color: #e8e8e8;
-    font-weight: 600;
-}
-
-/* --- Projects page --- */
-.projects-list {
-    max-width: 600px;
-    width: 100%;
-    padding: 70px 20px 20px 20px;
-}
-
-.projects-list h1 {
-    color: #e8e8e8;
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-.project-item {
-    padding: 20px 0;
-    border-bottom: 1px solid #2c2c2c;
-}
-
-.project-item:last-child {
-    border-bottom: none;
-}
-
-.project-name {
-    font-size: 1.05em;
-    font-weight: 600;
-    color: #e8e8e8;
-    margin-bottom: 6px;
-}
-
-.project-description {
-    color: #888;
-    font-size: 0.95em;
-    line-height: 1.5;
-    margin-bottom: 10px;
-}
-
-.project-links {
-    display: flex;
-    gap: 15px;
-}
-
-.project-links a {
-    color: #aaa;
-    text-decoration: none;
-    font-size: 0.9em;
-}
-
-.project-links a:hover {
-    color: #e8e8e8;
-}
-
-
-/* --- Responsive --- */
-@media (max-width: 768px) {
-    .content {
-        align-items: flex-start;
-        min-height: 100vh;
-    }
-
-    .sidebar {
-        padding: 8px;
-    }
-
-    .sidebar a {
-        font-size: 0.9rem;
-        margin: 5px 0;
-    }
-
+/* ── Responsive ── */
+@media (max-width: 700px) {
+    #main { padding: 20px 24px; }
+    #header-text { padding: 14px 24px 16px; }
+    #nav { padding: 9px 24px; font-size: 0.9rem; }
+    #site-title { font-size: 1.9rem; }
 }

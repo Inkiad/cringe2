@@ -4,31 +4,663 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>inky</title>
-    <link rel="stylesheet" href="style.css"/>
     <link rel="icon" type="image/x-icon" href="images/cat4.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJX83TXMC3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VJX83TXMC3');
+    </script>
+    <style>
+    html { font-size: 20px; }
+    * { box-sizing: border-box; }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background: #171717;
+        font-family: Georgia, 'Times New Roman', serif;
+        color: #d8d8d0;
+        font-size: 1rem;
+    }
+
+    /* ── Page — full viewport, flex column ── */
+    #page {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background: #171717;
+    }
+
+    /* ── Header ── */
+    #header {
+        background: linear-gradient(150deg, #1e1810 0%, #161210 100%);
+        border-bottom: 2px solid #2e2416;
+        flex-shrink: 0;
+    }
+
+    #header-banner {
+        height: 28px;
+    }
+
+    #header-text {
+        padding: 12px 40px 14px;
+    }
+
+    #site-title {
+        font-family: Georgia, serif;
+        font-size: 1.7rem;
+        font-weight: normal;
+        color: #eeeee6;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        margin-bottom: 4px;
+    }
+    #site-title a { color: inherit; text-decoration: none; }
+
+    #site-tagline {
+        font-family: 'Courier New', monospace;
+        font-size: 0.62rem;
+        color: #5e5e58;
+        letter-spacing: 0.1em;
+    }
+
+    /* ── Nav bar ── */
+    #nav {
+        background: #131313;
+        border-bottom: 1px solid #222;
+        padding: 11px 40px;
+        font-family: 'Courier New', monospace;
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+
+    #nav .nav-arr { color: #444; margin-right: 10px; }
+
+    #nav a {
+        color: #8a8a82;
+        text-decoration: none;
+    }
+    #nav a:hover {
+        color: #ccccc4;
+        text-decoration: underline;
+    }
+    #nav .sep { margin: 0 14px; color: #333; }
+
+    /* ── Three-column row ── */
+    #columns {
+        display: flex;
+        align-items: stretch;
+        flex: 1;
+        min-height: 0;
+    }
+
+    /* ── Main content ── */
+    #main {
+        flex: 1;
+        min-width: 0;
+        padding: 30px 52px 28px;
+        border-right: 1px solid #212121;
+    }
+
+    .entry-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        border-bottom: 1px solid #222;
+        padding-bottom: 9px;
+        margin-bottom: 16px;
+    }
+
+    .entry-title {
+        font-family: Georgia, serif;
+        font-size: 1.15rem;
+        font-weight: normal;
+        color: #e8e8e0;
+    }
+
+    .entry-date {
+        font-family: 'Courier New', monospace;
+        font-size: 0.8rem;
+        color: #555550;
+    }
+
+    .entry-body {
+        font-size: 1rem;
+        color: #b8b8b0;
+        line-height: 1.75;
+    }
+
+    .entry-body p { margin: 0 0 10px; }
+
+    .site-links {
+        list-style: none;
+        padding: 0;
+        margin: 14px 0 0;
+        font-family: 'Courier New', monospace;
+        font-size: 1rem;
+    }
+
+    .site-links li {
+        padding: 8px 0;
+        border-bottom: 1px solid #1e1e1e;
+        line-height: 1.4;
+    }
+    .site-links li:last-child { border-bottom: none; }
+
+    .site-links a {
+        color: #8898b0;
+        text-decoration: none;
+    }
+    .site-links a:hover {
+        color: #b0c0d0;
+        text-decoration: underline;
+    }
+
+    .link-desc {
+        color: #555;
+        font-size: 0.84rem;
+        margin-left: 8px;
+    }
+
+    /* ── Music player column ── */
+    #music-col {
+        width: 260px;
+        flex-shrink: 0;
+        padding: 26px 32px;
+        border-right: 1px solid #212121;
+        font-family: 'Courier New', monospace;
+    }
+
+    .player-widget {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .player-label {
+        font-size: 0.72rem;
+        font-weight: bold;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #555;
+        border-bottom: 1px solid #222;
+        padding-bottom: 6px;
+        margin-bottom: 14px;
+    }
+
+    .player-screen {
+        background: #111;
+        border: 1px solid #252520;
+        border-radius: 2px;
+        padding: 12px 14px;
+        margin-bottom: 12px;
+    }
+
+    .player-track-artist {
+        font-size: 0.72rem;
+        color: #4a4a44;
+        margin-bottom: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .player-track-title {
+        font-size: 0.88rem;
+        color: #7a7a70;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: 10px;
+    }
+
+    /* Fake waveform bars */
+    .player-wave {
+        display: flex;
+        align-items: flex-end;
+        gap: 2px;
+        height: 22px;
+        margin-bottom: 2px;
+    }
+
+    .player-wave span {
+        display: block;
+        width: 3px;
+        background: #2a3a2a;
+        border-radius: 1px;
+        flex-shrink: 0;
+    }
+
+    /* Progress bar */
+    .player-progress {
+        height: 3px;
+        background: #1e1e1a;
+        border-radius: 2px;
+        margin-bottom: 6px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .player-progress-fill {
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 28%;
+        background: #3a5a3a;
+        border-radius: 2px;
+    }
+
+    .player-time {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.66rem;
+        color: #383830;
+    }
+
+    /* Controls */
+    .player-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        padding: 10px 0 4px;
+        font-size: 0.95rem;
+        color: #3a3a34;
+        user-select: none;
+    }
+
+    .player-controls span {
+        cursor: default;
+        transition: color 0.15s;
+    }
+
+    .player-btn-play {
+        font-size: 1.1rem;
+        color: #4a5a4a !important;
+    }
+
+    /* Volume */
+    .player-volume {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding-top: 10px;
+        border-top: 1px solid #1c1c1a;
+    }
+
+    .player-vol-label {
+        font-size: 0.66rem;
+        color: #383830;
+        flex-shrink: 0;
+    }
+
+    .player-vol-bar {
+        flex: 1;
+        height: 3px;
+        background: #1e1e1a;
+        border-radius: 2px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .player-vol-fill {
+        position: absolute;
+        left: 0; top: 0; bottom: 0;
+        width: 65%;
+        background: #2e3e2e;
+        border-radius: 2px;
+    }
+
+    /* ── Sidebar ── */
+    #sidebar {
+        width: 260px;
+        flex-shrink: 0;
+        padding: 26px 24px 26px 28px;
+        font-family: 'Courier New', monospace;
+        font-size: 1rem;
+    }
+
+    .widget { margin-bottom: 24px; }
+
+    .widget-title {
+        font-size: 0.72rem;
+        font-weight: bold;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #555;
+        border-bottom: 1px solid #222;
+        padding-bottom: 6px;
+        margin-bottom: 10px;
+    }
+
+    .widget-body {
+        color: #808078;
+        line-height: 1.5;
+    }
+
+    .widget-body a { color: #7a8c9e; text-decoration: none; }
+    .widget-body a:hover { text-decoration: underline; color: #9aaebb; }
+    .widget-body .val { color: #9a9a90; }
+
+    /* ── Fun zone ── */
+    #fun-zone {
+        height: 30vh;
+        flex-shrink: 0;
+        position: relative;
+        overflow: hidden;
+        border-top: 1px solid #1e1e1e;
+    }
+
+    #cat-bed {
+        position: absolute;
+        bottom: 0;
+        pointer-events: none;
+        user-select: none;
+    }
+
+    .phys-obj {
+        position: absolute;
+        pointer-events: none;
+    }
+
+    /* ── Cat ── */
+    #cat {
+        position: fixed;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.1rem;
+        color: #aaa;
+        margin-left: -100px;
+        bottom: 0;
+        z-index: 50;
+        white-space: pre;
+        line-height: 1.15;
+        cursor: grab;
+        user-select: none;
+    }
+    #cat-bubble {
+        position: fixed;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 0.85rem;
+        color: #ccc;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.15s ease;
+        z-index: 55;
+        white-space: nowrap;
+    }
+    #cat-bubble.show { opacity: 1; }
+
+    @media (max-width: 900px) {
+        #music-col { display: none; }
+    }
+    @media (max-width: 700px) {
+        #columns { flex-direction: column; }
+        #main { border-right: none; padding: 20px 24px; }
+        #sidebar { width: 100%; padding: 14px 24px; }
+        #header-text { padding: 14px 24px 16px; }
+        #nav { padding: 9px 24px; font-size: 0.9rem; }
+        #site-title { font-size: 1.9rem; }
+    }
+    </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VJX83TXMC3"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-VJX83TXMC3');
-</script>
-<script src="script.js"></script>
 <body>
-    <div class="sidebar">
-        <a href="index.html" class="tab-title">hi</a>
-        <a href="menu.html" class="tab-title">menu</a>
-        <a href="experiences.html" class="tab-title">experiences</a>
-        <a href="projects.html" class="tab-title">projects</a>
-    </div>
-    <div class="content">
-        <div class="page-content">
-            <h1>hi, i'm inky</h1>
+
+<div id="page">
+
+    <div id="header">
+        <div id="header-banner"></div>
+        <div id="header-text">
+            <div id="site-title"><a href="index.html">inky</a></div>
+            <div id="site-tagline">somewhere on the internet</div>
         </div>
     </div>
-    <div id="cat"></div>
-    <div id="cat-bubble"></div>
+
+    <div id="nav">
+        <span class="nav-arr">&gt;&gt;</span>
+        <a href="projects.html">projects</a>
+        <span class="sep">·</span>
+        <a href="experiences.html">experiences</a>
+        <span class="sep">·</span>
+        <a href="menu.html">menu</a>
+    </div>
+
+    <div id="columns">
+
+        <div id="main">
+            <div class="entry-meta">
+                <span class="entry-title">hi, i'm inky</span>
+                <span class="entry-date">march 2026</span>
+            </div>
+            <div class="entry-body">
+                <ul class="site-links">
+                    <li>
+                        <a href="projects.html">→ projects</a>
+                        <span class="link-desc">— things i've built</span>
+                    </li>
+                    <li>
+                        <a href="experiences.html">→ experiences</a>
+                        <span class="link-desc">— where i've been</span>
+                    </li>
+                    <li>
+                        <a href="menu.html">→ menu</a>
+                        <span class="link-desc">— party menu</span>
+                    </li>
+                    <li>
+                        <a href="california-voters.html">→ california reps</a>
+                        <span class="link-desc">— interactive district map</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Music player column -->
+        <div id="music-col">
+            <div class="player-widget">
+                <div class="player-label">now playing</div>
+                <div class="player-screen">
+                    <div class="player-track-artist">— — —</div>
+                    <div class="player-track-title">nothing yet</div>
+                    <div class="player-wave" id="player-wave"></div>
+                    <div class="player-progress">
+                        <div class="player-progress-fill"></div>
+                    </div>
+                    <div class="player-time">
+                        <span>0:00</span>
+                        <span>—:——</span>
+                    </div>
+                </div>
+                <div class="player-controls">
+                    <span title="prev">◁◁</span>
+                    <span class="player-btn-play" title="play">▷</span>
+                    <span title="next">▷▷</span>
+                </div>
+                <div class="player-volume">
+                    <span class="player-vol-label">vol</span>
+                    <div class="player-vol-bar">
+                        <div class="player-vol-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="sidebar">
+            <div class="widget">
+                <div class="widget-title">currently</div>
+                <div class="widget-body">
+                    mood: <span class="val">tired</span><br>
+                    music: <span class="val">—</span>
+                </div>
+            </div>
+            <div class="widget">
+                <div class="widget-title">site</div>
+                <div class="widget-body">
+                    est. <span class="val">2024</span><br>
+                    updated: <span class="val">mar '26</span>
+                </div>
+            </div>
+            <div class="widget">
+                <div class="widget-title">elsewhere</div>
+                <div class="widget-body">
+                    <a href="https://github.com/Inkiad" target="_blank">github</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Fun zone — physics live here -->
+    <div id="fun-zone">
+        <div id="cat-bed"></div>
+    </div>
+
+</div>
+
+<div id="cat"></div>
+<div id="cat-bubble"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+<script src="script.js"></script>
+<script>
+(function () {
+'use strict';
+
+// ── Fake waveform bars ────────────────────────────────────────────────────────
+(function buildWave() {
+    const wave = document.getElementById('player-wave');
+    if (!wave) return;
+    const heights = [4,7,11,8,14,10,6,16,9,12,5,18,8,13,7,10,15,6,9,12,8,5,11,7];
+    heights.forEach(h => {
+        const bar = document.createElement('span');
+        bar.style.height = h + 'px';
+        wave.appendChild(bar);
+    });
+})();
+
+// ── Physics ───────────────────────────────────────────────────────────────────
+const fz = document.getElementById('fun-zone');
+const { Engine, Runner, Bodies, Body, World, Mouse, MouseConstraint, Events } = Matter;
+
+const engine = Engine.create({ gravity: { y: 0.8 } });
+const runner = Runner.create();
+
+let floorBody, wallL, wallR;
+
+function buildBounds() {
+    const W = fz.offsetWidth;
+    const H = fz.offsetHeight;
+    if (floorBody) World.remove(engine.world, [floorBody, wallL, wallR]);
+    floorBody = Bodies.rectangle(W / 2,  H + 10,  W * 2, 20,    { isStatic: true });
+    wallL     = Bodies.rectangle(-10,    H / 2,   20,    H * 2, { isStatic: true });
+    wallR     = Bodies.rectangle(W + 10, H / 2,   20,    H * 2, { isStatic: true });
+    World.add(engine.world, [floorBody, wallL, wallR]);
+}
+
+buildBounds();
+window.addEventListener('resize', buildBounds);
+
+// ── Objects ───────────────────────────────────────────────────────────────────
+
+const COLORS = [
+    '#3a5c4a', '#5c3a2a', '#3a445c', '#5c4a2a',
+    '#4a3a5c', '#2a4a3a', '#5c3a44', '#3a4c5c',
+];
+
+const DEFS = [
+    { w: 52, h: 52, shape: 'box'    },
+    { w: 36, h: 36, shape: 'box'    },
+    { w: 70, h: 40, shape: 'box'    },
+    { w: 44, h: 44, shape: 'box'    },
+    { w: 28, h: 28, shape: 'box'    },
+    { w: 60, h: 30, shape: 'box'    },
+    { r: 22,        shape: 'circle' },
+    { r: 16,        shape: 'circle' },
+];
+
+const physObjects = [];
+
+function spawnObjects() {
+    const W = fz.offsetWidth;
+
+    DEFS.forEach((def, i) => {
+        const color  = COLORS[i % COLORS.length];
+        const spawnX = 80 + (i * (W - 160) / (DEFS.length - 1));
+        const spawnY = -80 - i * 22;
+        let body, el;
+
+        if (def.shape === 'circle') {
+            body = Bodies.circle(spawnX, spawnY, def.r, {
+                restitution: 0.55, frictionAir: 0.01, friction: 0.3,
+            });
+            el = document.createElement('div');
+            el.className = 'phys-obj';
+            el.style.cssText = `width:${def.r*2}px;height:${def.r*2}px;border-radius:50%;background:${color};box-shadow:inset 0 -3px 6px rgba(0,0,0,0.4),2px 3px 8px rgba(0,0,0,0.5);`;
+        } else {
+            body = Bodies.rectangle(spawnX, spawnY, def.w, def.h, {
+                restitution: 0.3, frictionAir: 0.015, friction: 0.5, frictionStatic: 0.5,
+            });
+            el = document.createElement('div');
+            el.className = 'phys-obj';
+            el.style.cssText = `width:${def.w}px;height:${def.h}px;border-radius:2px;background:${color};box-shadow:inset 0 1px 0 rgba(255,255,255,0.06),2px 3px 10px rgba(0,0,0,0.5);`;
+            Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.3);
+        }
+
+        fz.appendChild(el);
+        World.add(engine.world, body);
+        physObjects.push({
+            el, body,
+            hw: (def.w || def.r * 2) / 2,
+            hh: (def.h || def.r * 2) / 2,
+        });
+    });
+}
+
+spawnObjects();
+
+// ── Cat bed ───────────────────────────────────────────────────────────────────
+
+const bed = document.getElementById('cat-bed');
+
+function positionBed() {
+    const W = fz.offsetWidth;
+    bed.style.right  = Math.max(40, W * 0.07) + 'px';
+    bed.style.bottom = '2px';
+    bed.innerHTML = `<div style="width:72px;height:14px;background:#1e1a14;border-radius:7px;border:1px solid #2e2820;display:flex;align-items:center;justify-content:center;font-family:'Courier New',monospace;font-size:0.62rem;color:#3a3428;letter-spacing:0.06em;">· z z ·</div>`;
+}
+positionBed();
+window.addEventListener('resize', positionBed);
+
+// ── Sync + cat nudge ──────────────────────────────────────────────────────────
+
+Events.on(engine, 'afterUpdate', () => {
+    for (const obj of physObjects) {
+        const { x, y } = obj.body.position;
+        obj.el.style.left      = (x - obj.hw) + 'px';
+        obj.el.style.top       = (y - obj.hh) + 'px';
+        obj.el.style.transform = `rotate(${obj.body.angle}rad)`;
+    }
+});
+
+Runner.run(runner, engine);
+
+// ── Mouse drag ────────────────────────────────────────────────────────────────
+
+const mouse = Mouse.create(fz);
+const mc    = MouseConstraint.create(engine, {
+    mouse,
+    constraint: { stiffness: 0.2, render: { visible: false } },
+});
+World.add(engine.world, mc);
+
+// Remove Matter.js wheel listener so browser zoom (ctrl+scroll) still works
+fz.removeEventListener('wheel',          mouse.mousewheel);
+fz.removeEventListener('mousewheel',     mouse.mousewheel);
+fz.removeEventListener('DOMMouseScroll', mouse.mousewheel);
+
+})();
+</script>
+
 </body>
 </html>
