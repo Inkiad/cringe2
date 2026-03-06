@@ -586,17 +586,12 @@
 
 // ── Letterboxd ────────────────────────────────────────────────────────────────
 (function fetchLetterboxd() {
-    const rss = 'https://letterboxd.com/inkyyy/rss/';
-    const url = 'https://api.allorigins.win/get?url=' + encodeURIComponent(rss);
-    fetch(url)
+    fetch('/api/letterboxd')
         .then(r => r.json())
         .then(data => {
-            const xml = data.contents;
-            const match = xml.match(/<letterboxd:filmTitle><!\[CDATA\[(.*?)\]\]><\/letterboxd:filmTitle>/) ||
-                          xml.match(/<letterboxd:filmTitle>(.*?)<\/letterboxd:filmTitle>/);
-            if (!match) return;
+            if (!data.title) return;
             const el = document.getElementById('sidebar-watching');
-            if (el) el.textContent = match[1];
+            if (el) el.textContent = data.title;
         })
         .catch(() => {});
 })();
