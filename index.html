@@ -359,6 +359,19 @@
         pointer-events: none;
     }
 
+    /* ── Waveform animation (now playing) ── */
+    @keyframes bar-pulse {
+        0%, 100% { transform: scaleY(0.35); opacity: 0.5; }
+        50%       { transform: scaleY(1);    opacity: 1;   }
+    }
+    .player-wave.playing span {
+        transform-origin: bottom;
+        animation: bar-pulse 1.2s ease-in-out infinite;
+    }
+    .player-wave.playing span:nth-child(3n)   { animation-duration: 0.85s; }
+    .player-wave.playing span:nth-child(3n+1) { animation-duration: 1.35s; }
+    .player-wave.playing span:nth-child(3n+2) { animation-duration: 1.05s; }
+
     /* ── Cat ── */
     #cat {
         position: fixed;
@@ -491,7 +504,7 @@
                 <div class="widget-title">currently</div>
                 <div class="widget-body">
                     mood: <span class="val">tired</span><br>
-                    music: <span class="val">—</span>
+                    music: <span class="val" id="sidebar-music">—</span>
                 </div>
             </div>
             <div class="widget">
@@ -526,6 +539,34 @@
 <script>
 (function () {
 'use strict';
+
+// ── Last.fm ───────────────────────────────────────────────────────────────────
+(function fetchLastFm() {
+    const url = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks' +
+                '&user=inkyyyyy&api_key=f71c8c00ca634497869bf8b3adcd0d29&format=json&limit=1';
+    fetch(url)
+        .then(r => r.json())
+        .then(data => {
+            const track = data.recenttracks && data.recenttracks.track[0];
+            if (!track) return;
+            const nowPlaying = !!(track['@attr'] && track['@attr']['nowplaying'] === 'true');
+            const artist = track.artist['#text'];
+            const title  = track.name;
+
+            document.querySelector('.player-track-artist').textContent = artist;
+            document.querySelector('.player-track-title').textContent  = title;
+            document.querySelector('.player-label').textContent = nowPlaying ? 'now playing' : 'last played';
+
+            const sidebarMusic = document.getElementById('sidebar-music');
+            if (sidebarMusic) sidebarMusic.textContent = title;
+
+            if (nowPlaying) {
+                document.getElementById('player-wave').classList.add('playing');
+                document.querySelector('.player-btn-play').textContent = '▶';
+            }
+        })
+        .catch(() => {});
+})();
 
 // ── Fake waveform bars ────────────────────────────────────────────────────────
 (function buildWave() {
