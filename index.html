@@ -135,6 +135,21 @@
     }
 
     .entry-body p { margin: 0 0 10px; }
+    .blog-img {
+        display: block;
+        max-width: 100%;
+        max-height: 260px;
+        margin: 10px 0 14px;
+        border-radius: 2px;
+        opacity: 0.9;
+    }
+    .blog-img-caption {
+        font-family: 'Courier New', monospace;
+        font-size: 0.65rem;
+        color: #555;
+        margin-top: -10px;
+        margin-bottom: 14px;
+    }
 
     .site-links {
         list-style: none;
@@ -420,11 +435,13 @@
 
     <div id="nav">
         <span class="nav-arr">&gt;&gt;</span>
-        <a href="projects.html">projects</a>
+        <a href="blog.html">blog</a>
         <span class="sep">·</span>
-        <a href="experiences.html">experiences</a>
+        <a href="projects.html" title="things i've built">projects</a>
         <span class="sep">·</span>
-        <a href="menu.html">menu</a>
+        <a href="experiences.html" title="where i've been">experiences</a>
+        <span class="sep">·</span>
+        <a href="menu.html" title="dinner club ideas">menu</a>
     </div>
 
     <div id="columns">
@@ -452,7 +469,21 @@
                         <a href="california-voters.html">→ california reps</a>
                         <span class="link-desc">— interactive district map</span>
                     </li>
+                    <li>
+                        <a href="blog.html">→ blog</a>
+                        <span class="link-desc">— written things</span>
+                    </li>
                 </ul>
+            </div>
+
+            <div class="entry-meta" style="margin-top: 28px;">
+                <span class="entry-title">things i like</span>
+            </div>
+            <div class="entry-body">
+                <p>cats, games, and food.</p>
+                <p>i drive this —</p>
+                <img src="images/MY+25+GR86+Premium.png" class="blog-img" alt="2025 GR86 in red">
+                <p>check out the funzone below ↓</p>
             </div>
         </div>
 

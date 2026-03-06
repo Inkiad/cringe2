@@ -248,6 +248,48 @@ body {
     opacity: 0.4;
 }
 
+/* ── Blog / entry styles (shared with blog.html) ── */
+.entry-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #222;
+    padding-bottom: 9px;
+    margin-bottom: 16px;
+}
+.entry-title {
+    font-family: Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: normal;
+    color: #e8e8e0;
+}
+.entry-date {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    color: #555550;
+}
+.entry-body {
+    font-size: 0.9rem;
+    color: #b8b8b0;
+    line-height: 1.75;
+}
+.entry-body p { margin: 0 0 14px; }
+.blog-img {
+    display: block;
+    max-width: 100%;
+    max-height: 260px;
+    margin: 10px 0 14px;
+    border-radius: 2px;
+    opacity: 0.9;
+}
+.blog-img-caption {
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: #555;
+    margin-top: -10px;
+    margin-bottom: 14px;
+}
+
 /* ── Cat animation ── */
 #cat {
     position: fixed;
