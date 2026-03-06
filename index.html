@@ -586,7 +586,7 @@
 
 // ── Letterboxd ────────────────────────────────────────────────────────────────
 (function fetchLetterboxd() {
-    fetch('/api/letterboxd')
+    fetch('https://letterboxd-proxy.inkiad-j-ahmed.workers.dev')
         .then(r => r.json())
         .then(data => {
             if (!data.title) return;
