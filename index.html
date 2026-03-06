@@ -359,6 +359,17 @@
         pointer-events: none;
     }
 
+    /* ── Track title marquee ── */
+    @keyframes marquee-scroll {
+        0%, 15%   { transform: translateX(0); }
+        85%, 100% { transform: translateX(calc(-1 * var(--dist))); }
+    }
+    .marquee-text {
+        display: inline-block;
+        animation: marquee-scroll 7s ease-in-out infinite alternate;
+        white-space: nowrap;
+    }
+
     /* ── Waveform animation (now playing) ── */
     @keyframes bar-pulse {
         0%, 100% { transform: scaleY(0.35); opacity: 0.5; }
@@ -554,7 +565,14 @@
             const title  = track.name;
 
             document.querySelector('.player-track-artist').textContent = artist;
-            document.querySelector('.player-track-title').textContent  = title;
+            const titleEl = document.querySelector('.player-track-title');
+            titleEl.textContent = title;
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+                if (titleEl.scrollWidth > titleEl.clientWidth) {
+                    const dist = titleEl.scrollWidth - titleEl.clientWidth;
+                    titleEl.innerHTML = `<span class="marquee-text" style="--dist:${dist}px">${title}</span>`;
+                }
+            }));
             document.querySelector('.player-label').textContent = nowPlaying ? 'now playing' : 'last played';
 
             const sidebarMusic = document.getElementById('sidebar-music');
