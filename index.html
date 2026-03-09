@@ -345,6 +345,7 @@
         position: relative;
         overflow: hidden;
         border-top: 1px solid #1e1e1e;
+        touch-action: none;
     }
 
     #cat-bed {
@@ -414,11 +415,16 @@
         #music-col { display: none; }
     }
     @media (max-width: 700px) {
+        body { overflow: auto; }
+        #page { height: auto; min-height: 100vh; }
         #columns { flex-direction: column; }
         #main { border-right: none; padding: 20px 24px; }
         #sidebar { width: 100%; padding: 14px 24px; }
         #header-text { padding: 14px 24px 16px; }
         #site-title { font-size: 1.9rem; }
+    }
+    @media (max-width: 480px) {
+        #fun-zone { display: none; }
     }
     </style>
 </head>
@@ -580,18 +586,6 @@
                 document.getElementById('player-wave').classList.add('playing');
                 document.querySelector('.player-btn-play').textContent = '▶';
             }
-        })
-        .catch(() => {});
-})();
-
-// ── Letterboxd ────────────────────────────────────────────────────────────────
-(function fetchLetterboxd() {
-    fetch('https://letterboxd-proxy.inkiad-j-ahmed.workers.dev')
-        .then(r => r.json())
-        .then(data => {
-            if (!data.title) return;
-            const el = document.getElementById('sidebar-watching');
-            if (el) el.textContent = data.title;
         })
         .catch(() => {});
 })();
