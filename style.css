@@ -288,6 +288,15 @@ body {
     opacity: 0.4;
 }
 
+.dish-or {
+    display: block;
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: #383830;
+    margin: 5px 0;
+    letter-spacing: 0.08em;
+}
+
 /* ── Blog / entry styles (shared with blog.html) ── */
 .entry-meta {
     display: flex;
