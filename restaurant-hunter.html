@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>restaurant hunter - inky</title>
+    <link rel="stylesheet" href="style.css?v=2"/>
+    <link rel="icon" type="image/x-icon" href="images/cat4.png">
+</head>
+<script src="script.js"></script>
+<body>
+<div id="page">
+
+    <div id="header">
+        <div id="header-banner"></div>
+        <div id="header-text">
+            <div id="site-title"><a href="index.html">inky</a></div>
+            <div id="site-tagline">somewhere on the internet</div>
+        </div>
+    </div>
+
+    <div id="columns">
+    <div id="main">
+
+        <div class="rh-controls">
+            <input type="text" id="rh-search" class="rh-search" placeholder="search restaurants..." autocomplete="off">
+            <select id="rh-sort" class="rh-sort">
+                <option value="name">sort: name</option>
+                <option value="rating" selected>sort: rating</option>
+                <option value="added">sort: date added</option>
+            </select>
+            <span id="rh-count" class="rh-count">— places</span>
+        </div>
+
+        <div id="rh-tags-bar" class="rh-tags-bar" style="display:none"></div>
+
+        <div class="rh-filter-toggle" id="rh-filter-toggle">[ filter by tag ▾ ]</div>
+        <div class="rh-filter-groups" id="rh-filter-groups" style="display:none">
+            <div class="rh-filter-group" data-group="cuisine">
+                <div class="rh-group-label">cuisine</div>
+                <div class="rh-pills" id="pills-cuisine"></div>
+            </div>
+            <div class="rh-filter-group" data-group="price">
+                <div class="rh-group-label">price</div>
+                <div class="rh-pills" id="pills-price"></div>
+            </div>
+            <div class="rh-filter-group" data-group="vibe">
+                <div class="rh-group-label">vibe</div>
+                <div class="rh-pills" id="pills-vibe"></div>
+            </div>
+            <div class="rh-filter-group" data-group="dishes">
+                <div class="rh-group-label">dishes</div>
+                <div class="rh-pills" id="pills-dishes"></div>
+            </div>
+        </div>
+
+        <div id="rh-list"></div>
+
+    </div>
+
+    <div id="sidebar">
+        <div class="widget">
+            <div class="widget-title">nav</div>
+            <div class="widget-body">
+                <a href="blog.html">blog</a><br>
+                <a href="projects.html">projects</a><br>
+                <a href="experiences.html">experiences</a><br>
+                <a href="menu.html">menu</a><br>
+                <a href="restaurant-hunter.html">restaurants</a>
+            </div>
+        </div>
+        <div class="widget">
+            <div class="widget-title">currently</div>
+            <div class="widget-body">
+                mood: <span class="val">tired</span><br>
+                avoiding: <span class="val">work</span><br>
+                watching: <span class="val" id="sidebar-watching">—</span>
+            </div>
+        </div>
+        <div class="widget">
+            <div class="widget-title">site</div>
+            <div class="widget-body">
+                est. <span class="val">2024</span><br>
+                updated: <span class="val">mar '26</span>
+            </div>
+        </div>
+        <div class="widget">
+            <div class="widget-title">elsewhere</div>
+            <div class="widget-body">
+                <a href="https://github.com/Inkiad" target="_blank">github</a>
+            </div>
+        </div>
+        <div class="widget">
+            <div class="widget-title">about</div>
+            <div class="widget-body">
+                every restaurant in<br>
+                granada hills (91344)<br>
+                <span class="val">sfv expansion soon</span>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+<div id="cat"></div>
+<div id="cat-bubble"></div>
+
+<script>
+// ── Tag taxonomy ──────────────────────────────────────────────────────────────
+const CUISINE_TAGS = [
+    "mexican","armenian","korean","vietnamese","chinese","japanese","thai",
+    "filipino","indian","persian","salvadoran","guatemalan","peruvian",
+    "mediterranean","greek","italian","american","tex-mex","fast-mex","dim-sum",
+    "ramen","sushi","omakase","bbq-korean","hotpot","banh-mi","pizza","burgers",
+    "sandwiches","seafood","steakhouse","diner","bakery","cafe","boba","dessert"
+];
+const PRICE_TAGS = ["cheap","mid","upscale"];
+const VIBE_TAGS = [
+    "casual","family","date-night","counter","outdoor","loud","quiet","late-night",
+    "takeout-only","delivery-heavy","hole-in-the-wall","strip-mall","food-truck",
+    "bar-scene","brunch","breakfast","buffet","fast-casual","fast-food","cash-only",
+    "drive-thru","parking-easy","parking-hard"
+];
+const DISH_TAGS = [
+    "tacos","birria","tamales","enchiladas","pozole","carnitas","al-pastor",
+    "carne-asada","pupusas","pho","banh-mi","com-tam","ramen","udon","gyoza",
+    "sushi","bulgogi","bibimbap","dumplings","dim-sum","shawarma","falafel",
+    "hummus","kebab","pizza","pasta","burgers","wings","boba","horchata",
+    "birria-tacos","quesabirria"
+];
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let allRestaurants = [];
+let activeFilters = new Set();
+let searchQuery = "";
+let currentSort = "rating";
+
+// ── DOM helpers ───────────────────────────────────────────────────────────────
+function stars(rating) {
+    if (rating == null) return "";
+    const full = Math.round(rating);
+    return "★".repeat(full) + "☆".repeat(5 - full);
+}
+
+function tagList(r) {
+    const parts = [];
+    if (r.tags.cuisine.length) parts.push(...r.tags.cuisine);
+    if (r.tags.price) parts.push(r.tags.price);
+    if (r.tags.vibe.length) parts.push(...r.tags.vibe);
+    if (r.tags.dishes.length) parts.push(...r.tags.dishes);
+    return parts;
+}
+
+function buildEntry(r) {
+    const tags = tagList(r);
+    const tagsStr = tags.join(" · ") || "—";
+    const allTagsAttr = tags.join(" ");
+
+    const div = document.createElement("div");
+    div.className = "rh-entry";
+    div.dataset.name = r.name.toLowerCase();
+    div.dataset.tags = allTagsAttr.toLowerCase();
+    div.dataset.zip = r.zip || "";
+    div.dataset.rating = r.ratings.google_rating ?? 0;
+    div.dataset.added = r.meta.last_updated || "";
+
+    let ratingHtml = "";
+    if (r.ratings.google_rating != null) {
+        ratingHtml = `<span class="rh-rating">${stars(r.ratings.google_rating)} ${r.ratings.google_rating.toFixed(1)}`;
+        if (r.ratings.google_count) ratingHtml += ` <span class="rh-count-inline">(${r.ratings.google_count.toLocaleString()})</span>`;
+        ratingHtml += `</span>`;
+    }
+
+    const addedDisplay = r.meta.added || "";
+
+    div.innerHTML = `
+        <div class="rh-name">${escHtml(r.name)}</div>
+        <div class="rh-tags">${escHtml(tagsStr)}</div>
+        <div class="rh-meta-row">
+            ${ratingHtml}
+            ${addedDisplay ? `<span class="rh-added">added ${escHtml(addedDisplay)}</span>` : ""}
+        </div>
+    `;
+    return div;
+}
+
+function escHtml(str) {
+    return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+}
+
+// ── Filter + sort ─────────────────────────────────────────────────────────────
+function runFilter() {
+    const list = document.getElementById("rh-list");
+    const entries = Array.from(list.querySelectorAll(".rh-entry"));
+    const q = searchQuery.trim().toLowerCase();
+    let visible = 0;
+
+    entries.forEach(el => {
+        const nameMatch = !q || el.dataset.name.includes(q);
+        const tagsStr = el.dataset.tags;
+        const tagMatch = activeFilters.size === 0 || [...activeFilters].every(f => tagsStr.includes(f));
+        const show = nameMatch && tagMatch;
+        el.style.display = show ? "" : "none";
+        if (show) visible++;
+    });
+
+    document.getElementById("rh-count").textContent = `${visible} place${visible !== 1 ? "s" : ""}`;
+
+    // No-results message
+    let empty = list.querySelector(".rh-empty");
+    if (visible === 0) {
+        if (!empty) {
+            empty = document.createElement("div");
+            empty.className = "rh-empty";
+            empty.textContent = "no results.";
+            list.appendChild(empty);
+        }
+    } else if (empty) {
+        empty.remove();
+    }
+
+    updateTagsBar();
+}
+
+function sortEntries() {
+    const list = document.getElementById("rh-list");
+    const entries = Array.from(list.querySelectorAll(".rh-entry"));
+
+    entries.sort((a, b) => {
+        if (currentSort === "name") {
+            return a.dataset.name.localeCompare(b.dataset.name);
+        } else if (currentSort === "rating") {
+            return parseFloat(b.dataset.rating) - parseFloat(a.dataset.rating);
+        } else if (currentSort === "added") {
+            return b.dataset.added.localeCompare(a.dataset.added);
+        }
+        return 0;
+    });
+
+    entries.forEach(el => list.appendChild(el));
+    runFilter();
+}
+
+// ── Active filter pills bar ───────────────────────────────────────────────────
+function updateTagsBar() {
+    const bar = document.getElementById("rh-tags-bar");
+    if (activeFilters.size === 0) {
+        bar.style.display = "none";
+        bar.innerHTML = "";
+        return;
+    }
+    bar.style.display = "";
+    bar.innerHTML = "";
+    activeFilters.forEach(tag => {
+        const pill = document.createElement("span");
+        pill.className = "rh-tag-pill active";
+        pill.textContent = `${tag} ×`;
+        pill.style.cursor = "pointer";
+        pill.addEventListener("click", () => toggleFilter(tag));
+        bar.appendChild(pill);
+    });
+}
+
+// ── Tag filter toggle ─────────────────────────────────────────────────────────
+function toggleFilter(tag) {
+    if (activeFilters.has(tag)) {
+        activeFilters.delete(tag);
+    } else {
+        activeFilters.add(tag);
+    }
+    // Update pill highlight state
+    document.querySelectorAll(".rh-tag-pill").forEach(pill => {
+        const pillTag = pill.dataset.tag;
+        if (pillTag) {
+            pill.classList.toggle("active", activeFilters.has(pillTag));
+        }
+    });
+    runFilter();
+}
+
+// ── Build filter pill groups ──────────────────────────────────────────────────
+function buildPillGroup(containerId, tags, presentTags) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    // Only show tags that appear in the loaded data
+    const filtered = tags.filter(t => presentTags.has(t));
+    if (filtered.length === 0) {
+        container.closest(".rh-filter-group").style.display = "none";
+        return;
+    }
+    filtered.forEach(tag => {
+        const pill = document.createElement("span");
+        pill.className = "rh-tag-pill";
+        pill.dataset.tag = tag;
+        pill.textContent = tag;
+        pill.addEventListener("click", () => toggleFilter(tag));
+        container.appendChild(pill);
+    });
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+function init(data) {
+    allRestaurants = data.restaurants || [];
+    const list = document.getElementById("rh-list");
+
+    if (allRestaurants.length === 0) {
+        list.innerHTML = `<div class="rh-empty">no data yet. run the fetch script to populate.</div>`;
+        document.getElementById("rh-count").textContent = "0 places";
+        return;
+    }
+
+    // Collect all tags present in data
+    const presentTags = new Set();
+    allRestaurants.forEach(r => {
+        (r.tags.cuisine || []).forEach(t => presentTags.add(t));
+        if (r.tags.price) presentTags.add(r.tags.price);
+        (r.tags.vibe || []).forEach(t => presentTags.add(t));
+        (r.tags.dishes || []).forEach(t => presentTags.add(t));
+    });
+
+    // Build filter pills (only tags present in data)
+    buildPillGroup("pills-cuisine", CUISINE_TAGS, presentTags);
+    buildPillGroup("pills-price", PRICE_TAGS, presentTags);
+    buildPillGroup("pills-vibe", VIBE_TAGS, presentTags);
+    buildPillGroup("pills-dishes", DISH_TAGS, presentTags);
+
+    // Render entries
+    allRestaurants.forEach(r => {
+        list.appendChild(buildEntry(r));
+    });
+
+    sortEntries();
+}
+
+// ── Event listeners ───────────────────────────────────────────────────────────
+document.getElementById("rh-search").addEventListener("input", e => {
+    searchQuery = e.target.value;
+    runFilter();
+});
+
+document.getElementById("rh-sort").addEventListener("change", e => {
+    currentSort = e.target.value;
+    sortEntries();
+});
+
+document.getElementById("rh-filter-toggle").addEventListener("click", () => {
+    const groups = document.getElementById("rh-filter-groups");
+    const toggle = document.getElementById("rh-filter-toggle");
+    const open = groups.style.display !== "none";
+    groups.style.display = open ? "none" : "";
+    toggle.textContent = open ? "[ filter by tag ▾ ]" : "[ filter by tag ▴ ]";
+});
+
+// ── Load data ─────────────────────────────────────────────────────────────────
+document.addEventListener("DOMContentLoaded", () => {
+    fetch("data/restaurants-91344.json")
+        .then(r => r.json())
+        .then(data => init(data))
+        .catch(err => {
+            document.getElementById("rh-list").innerHTML =
+                `<div class="rh-empty">failed to load restaurant data.</div>`;
+            console.error(err);
+        });
+});
+</script>
+
+</body>
+</html>

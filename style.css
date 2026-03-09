@@ -370,6 +370,170 @@ body {
     opacity: 1;
 }
 
+/* ── Restaurant Hunter ── */
+.rh-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.rh-search {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    background: #1e1e1e;
+    color: #d8d8d0;
+    border: 1px solid #2c2c2c;
+    padding: 6px 10px;
+    outline: none;
+    flex: 1;
+    min-width: 160px;
+}
+
+.rh-search::placeholder { color: #484840; }
+.rh-search:focus { border-color: #3c3c38; }
+
+.rh-sort {
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    background: #1e1e1e;
+    color: #808078;
+    border: 1px solid #2c2c2c;
+    padding: 6px 8px;
+    outline: none;
+    cursor: pointer;
+}
+
+.rh-count {
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: #484840;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.rh-tags-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.rh-filter-toggle {
+    font-family: 'Courier New', monospace;
+    font-size: 0.65rem;
+    color: #4a4a44;
+    cursor: pointer;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+.rh-filter-toggle:hover { color: #7a7a72; }
+
+.rh-filter-groups {
+    margin-bottom: 16px;
+    padding: 12px 0;
+    border-top: 1px solid #1e1e1e;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+.rh-filter-group {
+    margin-bottom: 10px;
+}
+
+.rh-filter-group:last-child { margin-bottom: 0; }
+
+.rh-group-label {
+    font-family: 'Courier New', monospace;
+    font-size: 0.55rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.rh-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.rh-tag-pill {
+    font-family: 'Courier New', monospace;
+    font-size: 0.62rem;
+    background: #1e1e1e;
+    color: #606058;
+    border: 1px solid #2a2a2a;
+    padding: 2px 7px;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.1s, background 0.1s, border-color 0.1s;
+}
+
+.rh-tag-pill:hover {
+    color: #a0a098;
+    border-color: #3a3a36;
+}
+
+.rh-tag-pill.active {
+    background: #252520;
+    color: #d8d8d0;
+    border-color: #505048;
+}
+
+.rh-entry {
+    padding: 14px 0;
+    border-bottom: 1px solid #1e1e1e;
+}
+
+.rh-entry:last-of-type { border-bottom: none; }
+
+.rh-name {
+    font-family: Georgia, serif;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #e8e8e0;
+    margin-bottom: 3px;
+}
+
+.rh-tags {
+    font-family: 'Courier New', monospace;
+    font-size: 0.62rem;
+    color: #606058;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.rh-meta-row {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+}
+
+.rh-rating {
+    font-family: 'Courier New', monospace;
+    font-size: 0.62rem;
+    color: #705a38;
+}
+
+.rh-count-inline {
+    color: #4a4a44;
+}
+
+.rh-added {
+    font-family: 'Courier New', monospace;
+    font-size: 0.58rem;
+    color: #3a3a36;
+}
+
+.rh-empty {
+    font-family: 'Courier New', monospace;
+    font-size: 0.72rem;
+    color: #484840;
+    padding: 20px 0;
+}
+
 /* ── Responsive ── */
 @media (max-width: 700px) {
     #columns { flex-direction: column; }
