@@ -503,11 +503,11 @@ addEventListener('load', () => {
 });
 
 // ── Letterboxd watching widget ─────────────────────────────────────────────
-(function fetchLetterboxd() {
+document.addEventListener('DOMContentLoaded', function () {
     const el = document.getElementById('sidebar-watching');
     if (!el) return;
     fetch('https://letterboxd-proxy.inkiad-j-ahmed.workers.dev')
         .then(r => r.json())
         .then(data => { if (data.title) el.textContent = data.title; })
         .catch(() => {});
-})();
+});
