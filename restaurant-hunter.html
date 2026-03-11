@@ -189,11 +189,17 @@ function stars(rating) {
 
 function tagList(r) {
     const parts = [];
-    if (r.tags.cuisine.length) parts.push(...r.tags.cuisine);
-    if (r.tags.price) parts.push(r.tags.price);
-    if (r.tags.vibe.length) parts.push(...r.tags.vibe);
-    if (r.tags.dishes.length) parts.push(...r.tags.dishes);
+    if ((r.cuisine || []).length) parts.push(...r.cuisine);
+    if (r.price) parts.push(r.price);
+    if ((r.vibe || []).length) parts.push(...r.vibe);
+    if ((r.dishes || []).length) parts.push(...r.dishes);
     return parts;
+}
+
+function formatAdded(isoDate) {
+    if (!isoDate) return "";
+    const d = new Date(isoDate + "T00:00:00");
+    return d.toLocaleDateString("en-US", { month: "short", year: "numeric" }).toLowerCase();
 }
 
 function buildEntry(r) {
@@ -206,17 +212,17 @@ function buildEntry(r) {
     div.dataset.name = r.name.toLowerCase();
     div.dataset.tags = allTagsAttr.toLowerCase();
     div.dataset.zip = r.zip || "";
-    div.dataset.rating = r.ratings.google_rating ?? 0;
-    div.dataset.added = r.meta.last_updated || "";
+    div.dataset.rating = r.google_rating ?? 0;
+    div.dataset.added = r.added || "";
 
     let ratingHtml = "";
-    if (r.ratings.google_rating != null) {
-        ratingHtml = `<span class="rh-rating">${stars(r.ratings.google_rating)} ${r.ratings.google_rating.toFixed(1)}`;
-        if (r.ratings.google_count) ratingHtml += ` <span class="rh-count-inline">(${r.ratings.google_count.toLocaleString()})</span>`;
+    if (r.google_rating != null) {
+        ratingHtml = `<span class="rh-rating">${stars(r.google_rating)} ${r.google_rating.toFixed(1)}`;
+        if (r.google_count) ratingHtml += ` <span class="rh-count-inline">(${r.google_count.toLocaleString()})</span>`;
         ratingHtml += `</span>`;
     }
 
-    const addedDisplay = r.meta.added || "";
+    const addedDisplay = formatAdded(r.added);
 
     div.innerHTML = `
         <div class="rh-name">${escHtml(r.name)}</div>
@@ -361,10 +367,10 @@ function init(data) {
     // Collect all tags present in data
     const presentTags = new Set();
     allRestaurants.forEach(r => {
-        (r.tags.cuisine || []).forEach(t => presentTags.add(t));
-        if (r.tags.price) presentTags.add(r.tags.price);
-        (r.tags.vibe || []).forEach(t => presentTags.add(t));
-        (r.tags.dishes || []).forEach(t => presentTags.add(t));
+        (r.cuisine || []).forEach(t => presentTags.add(t));
+        if (r.price) presentTags.add(r.price);
+        (r.vibe || []).forEach(t => presentTags.add(t));
+        (r.dishes || []).forEach(t => presentTags.add(t));
     });
 
     // Build filter pills (only tags present in data)
@@ -402,7 +408,7 @@ document.getElementById("rh-filter-toggle").addEventListener("click", () => {
 
 // ── Load data ─────────────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
-    fetch("data/restaurants-91344.json")
+    fetch("data/restaurants-all.json")
         .then(r => r.json())
         .then(data => init(data))
         .catch(err => {
