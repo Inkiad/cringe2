@@ -22,6 +22,60 @@ import datetime
 import requests
 
 
+# ── Chain / fast-food / convenience blocklist ─────────────────────────────────
+# Substring match against lowercased place name. Any match → excluded from output.
+CHAIN_BLOCKLIST = {
+    # Convenience stores
+    "7-eleven", "circle k", "am/pm", "ampm",
+    # Fast food burgers
+    "mcdonald", "burger king", "wendy's", "wendys", "jack in the box",
+    "in-n-out", "five guys", "shake shack", "fatburger", "habit burger",
+    "the habit", "carl's jr", "carls jr", "hardee's", "whataburger",
+    "sonic drive", "rally's", "checkers",
+    # Fast food chicken
+    "kfc", "chick-fil-a", "popeyes", "raising cane", "wingstop",
+    "el pollo loco", "church's chicken", "zaxby's",
+    "dave's hot chicken",
+    # Fast food mexican / tex-mex
+    "taco bell", "del taco", "chipotle", "qdoba", "moe's southwest",
+    "baja fresh", "taco john",
+    # Fast food pizza
+    "domino's", "dominoes", "pizza hut", "little caesar",
+    "papa john", "papa murphy",
+    # Fast food sandwiches / subs
+    "subway", "quiznos", "jersey mike", "firehouse subs",
+    "jimmy john", "potbelly", "which wich",
+    # Fast food asian
+    "panda express", "pei wei", "yoshinoya", "waba grill",
+    # Fast casual chains
+    "panera", "jason's deli", "corner bakery",
+    "noodles & company", "zoes kitchen",
+    # Coffee chains
+    "starbucks", "dunkin'", "dunkin donuts", "dutch bros",
+    "peet's coffee", "peets coffee",
+    # Chain diners / family restaurants
+    "denny's", "dennys", "ihop", "perkins", "waffle house",
+    "coco's", "sizzler", "golden corral", "hometown buffet",
+    "old country buffet",
+    # Chain casual dining
+    "applebee's", "applebees", "chili's", "chilis", "tgi friday",
+    "red lobster", "olive garden", "buffalo wild wings", "bj's restaurant",
+    "cheesecake factory", "p.f. chang", "pf chang", "benihana",
+    "outback steakhouse", "red robin", "bob evans", "cracker barrel",
+    # Chain smoothies / juice
+    "robeks", "jamba juice", "smoothie king", "tropical smoothie",
+    # Chain bakery / dessert
+    "nothing bundt", "cold stone", "baskin-robbins", "baskin robbins",
+    "dairy queen", "orange julius",
+}
+
+
+def is_chain(name: str) -> bool:
+    """Return True if the place name matches a known chain."""
+    lower = name.lower()
+    return any(chain in lower for chain in CHAIN_BLOCKLIST)
+
+
 # ── Zip centroid map ───────────────────────────────────────────────────────────
 # Add more zip codes here for SFV expansion.
 ZIP_CENTROIDS = {
@@ -243,8 +297,12 @@ def fetch_all_for_zip(api_key, zip_code, fetch_details=True):
         new = [p for p in places if p["place_id"] not in seen_ids]
         for p in new:
             seen_ids.add(p["place_id"])
-        all_places.extend(new)
-        print(f"{len(places)} found, {len(new)} new (total: {len(all_places)})")
+        blocked = [p for p in new if is_chain(p["name"])]
+        kept = [p for p in new if not is_chain(p["name"])]
+        for p in blocked:
+            print(f"    [blocked] {p['name']}")
+        all_places.extend(kept)
+        print(f"{len(places)} found, {len(kept)} kept, {len(blocked)} blocked (total: {len(all_places)})")
         time.sleep(0.5)
 
     if fetch_details:
