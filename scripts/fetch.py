@@ -400,7 +400,7 @@ def fetch_zip(zip_code, global_seen):
     n_new_total = len(raw_new)
     n_updated = len(to_update)
     print(f"  Saved {len(restaurants)} total ({n_new_total} new, {n_updated} updated) "
-          f"→ restaurants-{zip_code}.json")
+          f"-> restaurants-{zip_code}.json")
 
 
 def main():
